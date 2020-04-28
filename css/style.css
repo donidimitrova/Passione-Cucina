@@ -1,108 +1,310 @@
-
-/* Links */
-a,
-a:focus,
-a:hover {color: #fff;}
-
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {color: #333; text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff; border: .05rem solid #fff; }
 
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-  background:url(../img/piatto.jpg) no-repeat center / cover;
-  position: fixed; top: 0; left: 0; width: 100%;  min-width: 1024px; z-index: -9999; }
-
-body {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  html,body{height:100%;}
+  body{background: #eee;}
   
+  /*-----------------------------
+  general
+  -----------------------------*/
   
-}
+  .button{display: inline-block; background: #fff; color:#000;padding: 15px 30px; border-radius:3px; text-decoration: none; }
+  
+  /*-----------------------------
+  header
+  -----------------------------*/
+  
+  .header{background: #333; height: 69px;}
+  .header__menu{float:right;margin:0; padding:0;}
+  .header__menu__item{display: inline-block;}
+  .header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
+  .header__menu__item a:hover{background: #000 }
+  .header__icon-bar{display: block;float: right;padding:20px;display: none;}
+  .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+  
+  /*-----------------------------
+  Cover
+  -----------------------------*/
+  .cover{height:70%;
+    background-image: url(../img/piatto.jpg);
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-position: center center;
+    position:relative;
+  }
+  .cover__filter{ background: #000; width:100%; height:100%; position: absolute; z-index: 0; opacity: 0.5; }
+  .cover__caption{ display: table; height: 100%; width:100%; position: relative; z-index:1; padding: 0 20px}
+  .cover__caption__copy{ display: table-cell; vertical-align: middle; text-align: center; color:#fff; }
+  .cover__caption__copy a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: rgb(0, 0, 0); 
+    background-color: #fff; border: 2px solid rgb(95, 94, 94); 
+  
+    
+  }
+  .cover--single{height: 50%}
+  .cover--single h1{font-size: 42px;}
+  video {
+    /* override other styles to make responsive */
+    width: 100%    !important;
+    height: auto   !important;
+  }
 
-.cover-container {
-  max-width: 42em;
-}
+/********
+LOGO
+*********/
 
-
-/*
- * Header
- */
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color:rgb(230, 230, 230);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-/*LOGO*/
-@media (min-width: 48em) {
-  .masthead-brand {
+@media (min-width: 30em) {
+  .header__logo  {
     display: inline-block;
 			height: inherit;
-			left: 1.5em;
+			left: 1px;
 			line-height: inherit;
 			margin: 0;
 			padding: 0;
 			position: absolute;
       top: 0;
-      opacity: 0.6;
+      
   }
-  
-  .nav-masthead {
-    float: right;
-  }
+ 
 }
 
+/*************************************************
+ MARKETING CONTENT
+-------------------------------------------------- */
 
-/*
- * Cover
- */
-.cover { padding: 0 1.5rem; }
-.cover .btn-lg { padding: .75rem 1.25rem; font-weight: 700; }
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+  font-style: italic;
+  font-family: fantasy;
+  color: rgba(0, 0, 0, 0.452);
+}
 
+.marketing p{
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  text-shadow: none;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
 
-/*
- * Footer
- */
+/**************
+ Footer
+ *************/
 .mastfoot {
+  padding-top: 20px;
   color: rgba(255, 255, 255, .5);
 }
 
+/*-----------------------------
+Tablet
+-----------------------------*/
+@media (max-width: 998px){
+	/* banner */
+	.banner__image,
+	.banner__copy{width:50%;height:100%}
 
+}
+
+
+/*-----------------------------
+Smartphone
+-----------------------------*/
+@media (max-width: 767px){
+
+	.header{position:fixed; z-index: 100;width:100%}
+  .header__icon-bar{display: block;}
+  .header__logo{
+    float: left;
+  }
+
+	.header__menu{width:100%;height:0px; overflow: hidden; }
+	.header__menu__item{display: block;}
+	.is-open{height:300px; overflow: auto;}
+
+	/* Cover */
+	.cover{height:100%;}
+
+
+}
+
+
+/* clearfix */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.carousel-inner .carousel-item{
+  height: 300px;
+  overflow: hidden;
+  background-size:cover;
+  background-position: center center;
+  }
+  
+  .carousel-control-prev-icon ,
+.carousel-control-next-icon  {
+  height: 50px;
+  width: 50px;
+  background-size: 100%, 100%;
+  background-color: rgba(51, 51, 51, 0.192);
+}
+
+
+
+
+
+
+*{
+	padding:0;
+	margin:0;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.clrd-font{
+	background: #FF512F;
+	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+	background: linear-gradient(to right, #F09819, #FF512F);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: auto;
+}
+
+.btn-primary:hover {
+	background-color:transparent;
+	border-color: #d6962c;
+	color: #d6962c;
+	border-radius: 20px;
+}
+
+.single_portfolio_text{
+	display:inline-block;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+}
+.single_portfolio_text img{
+  width:100%;
+  hei
+}
+
+.single_portfolio_text:hover .portfolio_images_overlay{
+	top:5%;
+	left: 5%;
+}
+
+.portfolio_images_overlay{
+	width: 90%;
+	height: 90%;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	margin: 0 auto;
+	top: -100%;
+	left: 5%;
+	position: absolute;
+	transition:.6s;
+	
+}
+.portfolio_images_overlay h6{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 900;
+	border: 2px solid #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+.zoom{
+	width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    border-radius: 50%;
+
+	background: #FF512F;
+	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+	background: linear-gradient(to right, #F09819, #FF512F);
+    box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
+	opacity:0.9;
+}
+.zoom:before {
+	content: "\f00e";
+    font-family: FontAwesome;
+    color: transparent;
+    font-size: 70px;
+    padding-right: 20px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    background-image: url(../img/zoom.jpg);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+}
+@media (min-width:769px) and (max-width:991px) {
+	.portfolio_images_overlay {
+		padding: 0px;
+	}
+}
+@media (max-width:768px) {
+	.portfolio_images_overlay{
+		padding: 170px 20px;
+	}
+}
+@media (max-width:580px) {
+	.portfolio_images_overlay{
+		padding: 100px 20px;
+	}
+}
+@media (max-width:480px) {
+	.portfolio_images_overlay{
+		padding: 40px 20px;
+	}
+}
+@media (max-width:320px) {
+	.portfolio_images_overlay{
+		padding: 20px;
+	}
+}
+
+.portfolio_images_overlay .clrd-font{
+	font-size: inherit;
+	color: #fff;
+	font-weight:800;
+	line-height:30px;
+}
+.portfolio_images_overlay .clrd-font i{
+    margin-right: -10px;
+    font-size: ;
+}
