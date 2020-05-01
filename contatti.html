@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML5 Contact Form To Send Email On Form Submission - reusable form</title>
+
+        <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- File Css Nostro che dobbiamo modificare -->
+    <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    <body >
+
+        <header class="header clearfix ">
+            <a href="chi-siamo.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;" ></a>
+            <a href="" class="header__icon-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            <ul class="header__menu ">
+              <li class="header__menu__item"><a href="chi-siamo.html">Home</a></li>
+              <li class="header__menu__item"><a href="#">Chi siamo</a></li>
+              <li class="header__menu__item"><a href="#">Login</a></li>
+            </ul>
+          </header>
+          
+
+
+          
+<!-- Page Content -->
+<div class="container " style="padding-top: 50px;">
+    <div class="row justify-content-center">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/aurora.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Aurora Colacchi</h5>
+              <p class="card-text"> <ul>
+                <li> Età: 21 anni</li>
+                <li>Professione: Studentessa</li>
+                <li>Università: La Sapienza Roma </li>
+                <li></li>
+              </ul></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/donika.JPG" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Donika T. Dimitrova</h5>
+              <p class="card-text"> <ul>
+                <ul>
+                  <li> Età: 23 anni</li>
+                  <li>Professione: Studentessa</li>
+                  <li>Università: La Sapienza Roma </li>
+                  <li></li>
+                </ul></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+    <div class="col-lg-8">
+      <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              
+                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder = 'Enter Message'></textarea>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder = 'Enter your name'>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Enter email address'>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder = 'Enter Subject'>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <button type="submit" class="button button-contactForm btn_4 boxed-btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </footer>
+          <script src="js/ajax-form.js"></script>
+          <script src="js/mail-script.js"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+          <script>
+            $(document).ready(function(){
+         
+               $(".header__icon-bar").click(function(e){
+         
+                 $(".header__menu").toggleClass('is-open');
+                 e.preventDefault();
+         
+               });
+            });
+         </script>    
+    </body>
+</html>
