@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head >
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>HTML5 Contact Form To Send Email On Form Submission - reusable form</title>
+        <title>Contatti</title>
 
         <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +12,8 @@
     <link href="css/contatti.css" rel="stylesheet">
         
     </head>
-    <body >
+    <body class="text-center">
+      
 
         <header class="header clearfix ">
             <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;" ></a>
@@ -24,96 +25,141 @@
             <ul class="header__menu ">
               <li class="header__menu__item"><a href="homepage.html">Home</a></li>
               <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
-              <li class="header__menu__item"><a href="#">Login</a></li>
+              <li class="header__menu__item">
+                <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; margin-right: 30px;"  >Login</button>
+                <div class="modal"id="LoginModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
+                        <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" role="form">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="user" placeholder="Email" style="margin-bottom: 1rem;" />
+                            <input type="password" class="form-control" id="password" placeholder="Password" style="margin-bottom: 1rem;"/>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-info">Sign in</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </li>
             </ul>
           </header>
           
 
 
-          
+  
 <!-- Page Content -->
-<div class="container" style="padding-top: 20px;">
-    <div class="row justify-content-center" style="padding-top: 30px;">
-    <div class="col-md-6">
-      <div class="card mb-3" style="max-width: 540px;">
+<div class="container justify-content-center" style="padding-top: 20px;">
+
+    <div class="row justify-content-center" style="padding: 30px;">
+      <div class="col-md-5" style="padding: 10px;">
+      <div class="card mb-6" >
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="img/aurora.jpg" class="card-img" alt="...">
+          <div class="col-md-5">
+            <img src="img/aurora.jpg"  class="card-img"  style="size: 100%;" alt="...">
           </div>
-          <div class="col-md-8">
+          <div class="col-md-7">
             <div class="card-body">
               <h5 class="card-title">Aurora Colacchi</h5>
-              <p class="card-text"> <ul>
-                <li> <b> Et&agrave;:</b> 21 anni</li>
-                <li> <b>Professione:</b> Studentessa</li>
-                <li><b>Universit&agrave;:</b> La Sapienza Roma </li>
-              </ul></p>
+              <p class="card-text"> 
+
+                <b> Et&agrave;:</b> 21 anni <br>
+                <b>Professione:</b> Studentessa <br>
+                <b>Universit&agrave;:</b> La Sapienza Roma 
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card mb-3" style="max-width: 540px;">
+   
+    
+    <div class="col-md-5" style="padding: 10px;">
+      <div class="card mb-6" >
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col-md-5">
             <img src="img/donika.JPG" class="card-img" alt="...">
           </div>
-          <div class="col-md-8">
+          <div class="col-md-7">
             <div class="card-body">
               <h5 class="card-title">Donika T. Dimitrova</h5>
-              <p class="card-text"> <ul>
-                <ul>
-                  <li> <b> Et&agrave;:</b> 23 anni</li>
-                <li> <b>Professione:</b> Studentessa</li>
-                <li><b>Universit&agrave;:</b> La Sapienza Roma </li>
-                <li></li>
-                </ul></p>
+              <p class="card-text"> 
+                
+                 <b> Et&agrave;:</b> 23 anni <br>
+                 <b>Professione:</b> Studentessa <br>
+                <b>Universit&agrave;:</b> La Sapienza Roma 
+                
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
-
-  <div class="form" >
-    <div class="col-lg-8">
-      <form class="form-contact contact-form "  action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-        <div class="row ">
-          <div class="col-12">
-            <div class="form-group ">
-              
-              <h2 > Modulo di contatto </h2>
-          </div>
-            <div class="form-group">
-              
-                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="6" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder = 'Enter Message'></textarea>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder = 'Enter your name' >
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <input  class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Enter email address'>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="form-group">
-              <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder = 'Enter Subject' >
-            </div>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <button type="submit" class="button button-contactForm btn_4 boxed-btn btn btn-outline-secondary" >Send Message</button>
-        </div>
-      </form>
-    </div>
   </div>
   
+
+
+
+  
+
+ <!-- ajax contact form -->
+  <div class="container " style="margin-top: 30px;">
+      <div class="row justify-content-center">
+          <div class="col-md-10">
+              <div class="card" >
+                  <h5 class="card-header" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Times New Roman', Times, serif'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Modulo di contatti</h5>
+                  <div class="card-body" >
+                      <form class="contact__form" method="post" action="mail.php">
+                          
+                          <!-- form message -->
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                      Il tuo messaggio è stato inviato con successo!
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end message -->
+
+                          <!-- form element -->
+                          <div class="row">
+                              <div class="col-md-6 form-group">
+                                  <input name="name" type="text" class="form-control" placeholder="Name" required>
+                              </div>
+                              <div class="col-md-6 form-group">
+                                  <input name="email" type="email" class="form-control" placeholder="Email" required>
+                              </div>
+                              <div class="col-md-12 form-group">
+                                  <input name="subject" type="text" class="form-control" placeholder="Subject" required>
+                              </div>
+                              <div class="col-12 form-group">
+                                  <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+                              </div>
+                              <div class="col-12">
+                                  <input name="submit" type="submit" class="btn btn-success" value="Send Message">
+                              </div>
+                          </div>
+                          <!-- end form element -->
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
 
 
 
@@ -130,9 +176,8 @@
 
 
 
-
-          <script src="js/ajax-form.js"></script>
-          <script src="js/mail-script.js"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+          <script src="/js/mail.js"></script>
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
           <script src="js/bootstrap.min.js"></script>

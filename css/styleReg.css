@@ -12,6 +12,7 @@ body {
     .header__menu__item{display: inline-flex;}
     .header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
     .header__menu__item a:hover{background: #000}
+    .header__menu__item button:hover{background: #000}
     .header__icon-bar{display: block;float: right;padding:20px;display: none;}
     .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
 /********
@@ -33,6 +34,14 @@ LOGO
    
   }
 
+
+
+
+
+.page-container{
+    display: flex;
+    justify-content: center;
+}
   /*-----------------------------
 Smartphone
 -----------------------------*/
@@ -51,8 +60,9 @@ Smartphone
 
 
     .page-container {
-    margin: 120px auto 0 auto;
+   margin-top: 3px;
     display:flex;
+    
     }
 h1{
     font-size: 80px;
@@ -67,7 +77,7 @@ h1{
     form {
     position:relative;
     width:400px;
-    margin:15px auto 0 auto;
+    justify-content: center;
     text-align:center;
     
     }
@@ -117,11 +127,11 @@ h1{
     height:44px;
     margin-top:25px;
     padding:0;
-    background:#ef4300;
+    background:#a30f0f;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
-    border:1px solid #ff730e;
+    border:1px solid #8b140b;
     -moz-box-shadow:
             0 15px 30px 0 rgba(255,255,255,.25) inset,
             0 2px 7px 0 rgba(0,0,0,.2);
@@ -161,16 +171,46 @@ h1{
             0 5px 8px 0 rgba(0,0,0,.1) inset,
             0 1px 4px 0 rgba(0,0,0,.1);
     
-        border: 0px solid #ef4300;
+        border: 0px solid #ef1c00;
     }
     .page-container{width:93%}
     @media (max-width:990px){
         .page-container{
             height: 700px;
-            margin-top: 300px;
+            margin-top: 3px;
             background-position: center;
         }
     }
    
 
-   
+   /**************
+   Footer
+   *************/
+   .mastfoot {
+    padding-top: 20px;
+    color: rgba(143, 131, 131, 0.5);
+    text-align: center;
+
+  }
+  
+/* clearfix */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
