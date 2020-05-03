@@ -19,7 +19,8 @@
 .header__menu__item{display: inline-block;}
 .header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
 .header__menu__item a:hover{background: #000}
-.header__menu__item button:hover{background: #000;}
+.header__menu__item button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
+.header__menu__item button{ border-color: transparent;}
 .header__icon-bar{display: block;float: right;padding:20px;display: none;}
 .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
   
@@ -120,8 +121,9 @@ Smartphone
 	.is-open{height:200px; overflow: auto; }
 
 	/* Cover */
-  .cover{height:100%;}
-  
+	.cover{height:100%;}
+
+
 }
 
 
@@ -175,7 +177,7 @@ Tabella Immagini con nome
 	background: #FF512F;
 	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
 	background: linear-gradient(to right, #F09819, #FF512F);
-	background-clip: text;
+	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: auto;
 }
@@ -195,6 +197,7 @@ Tabella Immagini con nome
 }
 .single_portfolio_text img{
   width:100%;
+  hei
 }
 
 .single_portfolio_text:hover .portfolio_images_overlay{

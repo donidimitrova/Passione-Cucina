@@ -1,63 +1,65 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
+<!doctype html>
 <html>
-<head><title>Registrazione</title>
-<link href="css/styleReg.css" rel="stylesheet" type="text/css" />
-
-
-
-
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Colacchi A. , Dimitrova D.T.">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <title>Registrazione</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="/css/styleReg.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <header class="header clearfix">
-        <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;"></a>
-        <a href="" class="header__icon-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        <ul class="header__menu ">
-          <li class="header__menu__item"><a href="homepage.html">Home</a></li>
-          <li class="header__menu__item">
-            <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; margin-right: 30px;margin-top:0px;" >Login</button>
-            <div class="modal"id="LoginModal" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
-                    <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
+<body class="text-center">
+
+  <header class="header clearfix" >
+    <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;"></a>
+    <a href="" class="header__icon-bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <ul class="header__menu ">
+      <li class="header__menu__item"><a href="homepage.html">Home</a></li>
+      <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
+      <li class="header__menu__item">   
+          <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; "  >Login</button>
+        <div class="modal"id="LoginModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content"style="flex-direction:columns">
+              <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
+                <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
+              </div>
+              <div class="modal-body">
+                <form action="" role="form" style="flex-direction: column;">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="Email" placeholder="Email" style="margin-bottom: 1rem;" />
+                    <input type="password" class="form-control" id="Password" placeholder="Password" style="margin-bottom: 1rem;"/>
                   </div>
-                  <div class="modal-body">
-                    <form action="" method="POST" role="form">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="user" placeholder="Email" style="margin-bottom: 1rem;" required />
-                        <input type="password" class="form-control" id="password" placeholder="Password" style="margin-bottom: 1rem;" required/>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-info">Sign in</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+                </form>
+              </div>
+              <div class="modal-footer"style="flex-direction:row">
+                <button type="submit" class="btn btn-info">Sign in</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
-        </li>
-        </ul>
-      </header>
+          </div>
+        </div>
+    </ul>
+  </header>
 
         <div class="page-container " >
             <form action="#" method="POST">
-			<h1>Registrati</h1>
-                <input type="text" name="nome" class="Nome" placeholder="Nome" required>
-                <input type="text" name="cognome" class="Cognome" placeholder="Cognome" required>
-                <input type="datetime-local" name="DataNascita" class="Data" placeholder="Data di nascita" required>
-				<input type="email" name="email" class="Email" placeholder="Email" required>
-                <input type="password" name="password" class="pass" placeholder="Password" required>
-				<input type="password" name="ConfPass" class="ConfPass" placeholder="Conferma password" required>
-                <button type="submit" value="Registrati" name="submit">Registrati</button>
+			   <div class="title"><h1 >Registrazione</h1></div> 
+              <div> <input type="text" name="nome" class="Nome" placeholder="Nome" required></div>
+              <div> <input type="text" name="cognome" class="Cognome" placeholder="Cognome" required></div>
+              <div> <input type="date" name="DataNascita" class="Data" placeholder="Data di nascita" required></div>
+              <div><input type="email" name="email" class="Email" placeholder="Email" required></div>
+              <div><input type="password" name="password" class="pass" placeholder="Password" required></div>
+              <div><input type="password" name="ConfPass" class="ConfPass" placeholder="Conferma password"required></div>
+              <div> <button class="btn-reg" type="submit" value="Registrati" name="submit">Registrati</button></div>
             </form>
         </div>
 
@@ -71,12 +73,14 @@
         </div>
       </footer>
 
-
-        <script src="js/js.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
  <script>
             $(document).ready(function(){
          
