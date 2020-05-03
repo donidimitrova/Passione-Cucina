@@ -120,9 +120,8 @@ Smartphone
 	.is-open{height:200px; overflow: auto; }
 
 	/* Cover */
-	.cover{height:100%;}
-
-
+  .cover{height:100%;}
+  
 }
 
 
@@ -176,7 +175,7 @@ Tabella Immagini con nome
 	background: #FF512F;
 	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
 	background: linear-gradient(to right, #F09819, #FF512F);
-	-webkit-background-clip: text;
+	background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: auto;
 }
@@ -196,7 +195,6 @@ Tabella Immagini con nome
 }
 .single_portfolio_text img{
   width:100%;
-  hei
 }
 
 .single_portfolio_text:hover .portfolio_images_overlay{
