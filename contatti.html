@@ -32,18 +32,18 @@
                   <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
                     <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
                   </div>
+                  <form action="login.php" method="POST" role="form" style="flex-direction: column;">
                   <div class="modal-body">
-                    <form action="" method="POST" role="form" style="flex-direction: column;">
                       <div class="form-group">
-                        <input type="text" class="form-control" id="Email" placeholder="Email" style="margin-bottom: 1rem;" required />
-                        <input type="password" class="form-control" id="Password" placeholder="Password" style="margin-bottom: 1rem;"required/>
+                        <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" style="margin-bottom: 1rem;" required />
+                        <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" style="margin-bottom: 1rem;"required/>
                       </div>
-                    </form>
                   </div>
                   <div class="modal-footer"style="flex-direction:row">
-                    <button type="submit" class="btn btn-info">Sign in</button>
+                    <button type="submit" class="btn btn-info" name="signIn">Sign in</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
+                </form>
                 </div>
               </div>
             </div>
