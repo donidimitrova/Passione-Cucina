@@ -27,13 +27,16 @@
       <li class="header__menu__item">   
           <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; ">Login</button>
         <div class="modal fade"id="LoginModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-" role="document">
             <div class="modal-content"style="flex-direction:columns">
               <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
                 <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
               </div>
               <form action="login.php" method="POST" name="formL" id="formL" role="form" style="flex-direction: column;">
-               <div class="modal-body">
+                <div class="alert alert-success contact__msg" id="SAlert" style="display: none" role="alert">
+                  Il tuo messaggio è stato inviato con successo!
+              </div>
+               <div class="modal-body"> 
                   <div class="form-group">
                     <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" style="margin-bottom: 1rem;"/>
                     <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" style="margin-bottom: 1rem;"/>
@@ -90,7 +93,10 @@
                  e.preventDefault();
          
                });
-               $(".")
+               
+                $(".btn-outline-danger").click(function(e) {
+                  ("#SAlert").css('style','display:block');
+                });
  
             });
          </script>

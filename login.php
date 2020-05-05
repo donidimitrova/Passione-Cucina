@@ -1,11 +1,5 @@
 <html>
     <head>
-      <!--<script  type="text/javascript" language="javascript">
-      var errorMsg = '<? echo addslashes($messaggio); ?>';
-      if (errorMsg != '') {
-         alert(errorMsg);
-      }
-      </script>-->
    </head>
     </head>
     <body>
@@ -24,24 +18,22 @@
                 $q1="select * from login where email=$1";
                 $result=pg_query_params($dbconn,$q1,array($email));
                 if(!($line=pg_fetch_array($result,null, PGSQL_ASSOC))){
-                     header("Location:/pagReg.html?login=false&error=email");
-                      /*"<script>
-                        window.location.href = '/contatti.html';
-                        </script>";*/
+                     $status='err';
                 }
                 else{
                     $password=md5($_POST ['Password']);
                     $q2="select * from login where email=$1 and password=$2";
                     $data=pg_query_params($dbconn,$q2,array($email,$password));
                     if(!($line=pg_fetch_array($data, null, PGSQL_ASSOC))){
-                        header("Location:/login.php?");
+                        $status='err';
                        
                     }
                     else{
-                        header("Location:/login.php?");
+                        $status='ok';
                     }
                 
                 }
+                echo $status;
             }
         ?>
     </body>

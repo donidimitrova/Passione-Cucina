@@ -27,15 +27,16 @@
       <ul class="header__menu ">
         <li class="header__menu__item"><a href="homepage.html">Home</a></li>
         <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
-        <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; margin-top:0px;"  >Login</button>
-          <div class="modal"id="LoginModal" tabindex="-1" role="dialog">
+        <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
+          <div class="modal fade"id="LoginModal" tabindex="-1" role="dialog"style="z-index:9999">
             <div class="modal-dialog" role="document">
               <div class="modal-content"style="flex-direction:columns">
                 <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
                   <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
                 </div>
-                <form action="login.php" method="POST" role="form" style="flex-direction: column;">
+                <form action="" method="POST" role="form" style="flex-direction: column;">
                 <div class="modal-body">
+                  <p class='statusMsg'></p>
                   <form action="login.php" method="POST" role="form" style="flex-direction: column;">
                     <div class="form-group">
                       <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" style="margin-bottom: 1rem;" required />
@@ -43,19 +44,20 @@
                     </div>
                 </div>
                 <div class="modal-footer"style="flex-direction:row">
-                  <button type="submit" class="btn btn-info" name="signIn">Sign in</button>
+                  <button type="submit" class="btn btn-info" id="signUp" name="signIn"onclick="submitLogin()">Sign in</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
               </form>
               </div>
             </div>
           </div>
+        </div>
+        </li>
       </ul>
     </header>
     
     <section class="cover">
       <div class="cover__filter">
-      </div>
       <div class="cover__caption">
         <div class="cover__caption__copy">
           <h1>Benvenuto!</h1>
@@ -333,9 +335,40 @@
    
            $(".header__menu").toggleClass('is-open');
            e.preventDefault();
-   
          });
+         /*$("#login").click(function(e){
+           $(".modal").toggleClass('is-open-modal');
+           e.preventDefault();
+   
+         });*/
       });
+   </script>
+   <script>
+     function submitLogin(){
+       var email= $('#Email');
+       var password=$('#Password')
+       $.ajax({
+         type:'POST',
+         url:'login.php',
+         data='contactLogin=1&email='+email+'&password='+password,
+         beforeSend: function(){
+           $('#signUp').attr("disabled","disabled");
+           $('.modal-body').css('opacity','.5');
+         },
+         success:function(){
+           if(msg== 'ok'){
+             $('#Email').val('');
+             $('#Password').val('');
+             $('.statusMsg').html('<span style="color:green;"> Login effettuato con successo</span>');
+           }
+           else{
+            $('.statusMsg').html('<span style="color:green;"> email o password errata</span>');
+           }
+           $('#signUp').removeAttr("disabled");
+           $('.modal-body').css('opacity','');
+         }
+       })
+     }
    </script>
   </body>
 </html>
