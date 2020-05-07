@@ -24,32 +24,40 @@
     <ul class="header__menu ">
       <li class="header__menu__item"><a href="homepage.html">Home</a></li>
       <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
-      <li class="header__menu__item">   
-          <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#LoginModal" style="color: aliceblue; width:100px; ">Login</button>
-        <div class="modal fade"id="LoginModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog modal-" role="document">
-            <div class="modal-content"style="flex-direction:columns">
-              <div class="modal-header" style="padding-top: 30px; text-align: center;display: block;">
-                <b><h5 class="modal-title" style="color: black;font-style: normal;font-family: sans-serif;font-size: xx-large;font-weight: 700;">Login</h5></b>
-              </div>
-              <form action="login.php" method="POST" name="formL" id="formL" role="form" style="flex-direction: column;">
-                <div class="alert alert-success contact__msg" id="SAlert" style="display: none" role="alert">
-                  Il tuo messaggio è stato inviato con successo!
-              </div>
-               <div class="modal-body"> 
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" style="margin-bottom: 1rem;"/>
-                    <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" style="margin-bottom: 1rem;"/>
-                  </div>
-              </div>
-              <div class="modal-footer" style="flex-direction:row">
-                <button type="submit" class="btn btn-info" name="signIn">Sign in</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
-              </div>
-            </form>
-            </div>
-          </div>
+      <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
+       <!-- Modal -->
+<div class="modal fade" id="modalForm" role="dialog">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Login</h4>
         </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <p class="statusMsg"></p>
+            <form role="form" action="login.php">
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password"></textarea>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary submitBtn" id="submit">SUBMIT</button>
+        </div>
+    </div>
+</div>
+</div>
+      </li>
     </ul>
   </header>
 
@@ -100,5 +108,45 @@
  
             });
          </script>
+          <script>
+            $(document).ready(function(){
+                    $("#submit").click(function(){
+                          var email = $('#inputEmail').val();
+                          var password= $('#inputPassword').val();
+                          $.ajax({
+                              type: "POST",
+                              url: "login.php",
+                              data: "email="+email+"&password="+password,
+                              success: function(html){
+                                    switch(html)
+                                        {
+      
+                                           case '1': // Login successful 
+                                                $('#inputEmail').val('');
+                                                $('#inputPassword').val('');
+                                                $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                                                break;
+      
+                                            case '2': // Empty Field
+                                                $('.statusMsg').html('<span style="color:red;">Errore campi vuoti.</span>');
+                                                break;
+                                            case '3': // username doesn't exist
+                                                $('.statusMsg').html('<span style="color:red;">Errore email</span>');
+                                                break;
+                                            case '4': //Password is wrong
+                                                $('.statusMsg').html('<span style="color:red;">Errore password</span>');
+                                                break;
+                                            case '5': //Querry error
+                                                $('.statusMsg').html('<span style="color:red;">Errore query</span>');
+                                                break;
+                                          }
+                                  }
+                      
+                            });
+                      });
+              });
+            
+                      
+          </script>
 </body>
 </html>

@@ -1,12 +1,10 @@
-<html>
-    <head></head>
-    <body>
+
         <?php
             $dbconn = pg_connect("host=localhost port=5434 dbname=login user=postgres password=12345") or
              die('Could not connect:' . pg_last_error());
             if(!(isset($_POST['submit']))){
                 echo"<script>console.log('Regi')</script>";
-                header("Location: registrazione.html");
+                header("Location: registrazione.php");
             }
             else{
                 $email=$_POST['email'];
@@ -32,5 +30,3 @@
                 }
             }
         ?>
-    </body>
-</html>

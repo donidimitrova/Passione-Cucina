@@ -1,40 +1,34 @@
-<html>
-    <head>
-   </head>
-    </head>
-    <body>
-        <?php
-            $dbconn = pg_connect("host=localhost port=5434 dbname=login user=postgres password=12345") or
-             die('Could not connect:' . pg_last_error());
-            if(!(isset($_POST['signIn']))){
-                echo"<script>
-                        window.location.href = '/contatti.html';
-                    console.log('email sbagliata');
-                        </script>";
-                
-            }
-            else{
-                $email=$_POST['Email'];
-                $q1="select * from login where email=$1";
-                $result=pg_query_params($dbconn,$q1,array($email));
-                if(!($line=pg_fetch_array($result,null, PGSQL_ASSOC))){
-                     $status='err';
+<?php
+        $dbconn = pg_connect("host=localhost port=5434 dbname=login user=postgres password=12345") or
+        die('Could not connect:' . pg_last_error());
+        $email = $_POST['email'];
+        $password=$_POST ['password'];
+        // Check if any of the fields is empty
+        if(empty($email) || empty($password)){
+            echo '2';
+        } else {
+            
+            $query = "SELECT * FROM login WHERE email = '$email' ";
+            $result = pg_query($dbconn, $query);
+            if (!$result) {
+                echo '5';
+                exit;
+              }
+
+            $num_row = pg_num_rows($result);
+            if($num_row == 0){
+                echo '3';
+            } else {
+                $query2 = "SELECT * FROM login WHERE email = '$email' AND password = md5('$password');";
+                $res = pg_query($dbconn, $query2);
+                $num_r = pg_num_rows($res);
+                if( $num_r == 0 ) {
+                    echo '4';
+                    //$_SESSION['email']=$row['email'];
                 }
                 else{
-                    $password=md5($_POST ['Password']);
-                    $q2="select * from login where email=$1 and password=$2";
-                    $data=pg_query_params($dbconn,$q2,array($email,$password));
-                    if(!($line=pg_fetch_array($data, null, PGSQL_ASSOC))){
-                        $status='err';
-                       
-                    }
-                    else{
-                        $status='ok';
-                    }
-                
+                    echo '1';
                 }
-                echo $status;
             }
-        ?>
-    </body>
-</html>
+        }
+?>
