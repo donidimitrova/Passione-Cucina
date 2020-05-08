@@ -207,7 +207,7 @@ width:100%;
 hei
 }
 
-.single_portfolio_text:hover .portfolio_images_overlay{
+.single_portfolio_text:hover , .portfolio_images_overlay{
 top:5%;
 left: 5%;
 }

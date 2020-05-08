@@ -29,16 +29,16 @@
         <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
         <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
          <!-- Modal -->
-  <div class="modal fade" id="modalForm" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal fade" id="modalForm" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
       <div class="modal-content">
           <!-- Modal Header -->
-          <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Login</h4>
+          <div class="modal-header text-center">
+              <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel">Login</h4>
           </div>
           
           <!-- Modal Body -->
-          <div class="modal-body">
+          <div class="modal-body mx-3">
               <p class="statusMsg"></p>
               <form role="form" action="login.php">
                   <div class="form-group">
@@ -354,6 +354,7 @@
    
            $(".header__menu").toggleClass('is-open');
            e.preventDefault();
+           $('.modal').appendTo("body") ;
          });
          /*$("#login").click(function(e){
            $(".modal").toggleClass('is-open-modal');
