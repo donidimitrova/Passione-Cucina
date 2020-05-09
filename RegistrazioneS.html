@@ -76,14 +76,67 @@
  <p style="color:aliceblue">Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
 </div>
 </footer>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+     $(".header__icon-bar").click(function(e){
+
+       $(".header__menu").toggleClass('is-open');
+       e.preventDefault();
+       $('.modal').appendTo("body") ;
+     });
+   
+  });
+</script>
+<script>
+  $(document).ready(function(){
+          $("#submit").click(function(){
+                var email = $('#inputEmail').val();
+                var password= $('#inputPassword').val();
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data: "email="+email+"&password="+password,
+                    success: function(html){
+                          switch(html)
+                              {
+
+                                 case '1': // Login successful 
+                                      $('#inputEmail').val('');
+                                      $('#inputPassword').val('');
+                                      $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                                      break;
+
+                                  case '2': // Empty Field
+                                      $('.statusMsg').html('<span style="color:red;">Errore campi vuoti.</span>');
+                                      break;
+                                  case '3': // username doesn't exist
+                                      $('.statusMsg').html('<span style="color:red;">Errore email</span>');
+                                      break;
+                                  case '4': //Password is wrong
+                                      $('.statusMsg').html('<span style="color:red;">Errore password</span>');
+                                      break;
+                                  case '5': //Querry error
+                                      $('.statusMsg').html('<span style="color:red;">Errore query</span>');
+                                      break;
+                                }
+                        }
+            
+                  });
+            });
+    });
+  
+            
+</script>
+</body>
+</html>
 
 </body>
 </html>
