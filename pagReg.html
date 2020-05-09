@@ -11,6 +11,24 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link href="/css/styleReg.css" rel="stylesheet" type="text/css" />
+  <script> 
+  function showPwd() {
+    var input = document.getElementById('password');
+    if (input.type === "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+  }
+  </script>
+  <script>
+    function myFunction(){
+    var url=new URL(window.location.href);
+                    if(url.searchParams.get("registrazione")=="false"){
+                      document.getElementById("msgErr").innerHTML()="utente già registrato";
+                    }  
+                  }
+  </script>
 </head>
 <body class="text-center" onload="myFunction()">
 
@@ -36,7 +54,7 @@
         
         <!-- Modal Body -->
         <div class="modal-body">
-            <p class="statusMsg"></p>
+            <h4 class="statusMsg"> cIAOO </h4>
             <form role="form" action="login.php">
                 <div class="form-group">
                     <label for="inputEmail">Email</label>
@@ -61,16 +79,21 @@
     </ul>
   </header>
 
-        <div class="page-container " >
-            <form action="registrazione.php" method="POST">
+        <div class="page-container " name="cont" >
+            <form action="registrazione.php" name="reg" method="POST">
+              <p id="msgErr"></p>
          <div class="title"><h1 >Registrazione</h1></div>
               <div><input type="email" name="email" class="Email" placeholder="Email" required></div>
               <div> <input type="text" name="nome" class="Nome" placeholder="Nome" required></div>
               <div> <input type="text" name="cognome" class="Cognome" placeholder="Cognome" required></div>
               <div> <input type="date" name="DataNascita" class="Data" placeholder="Data di nascita" required></div>
-              <div><input type="password" name="password" class="pass" placeholder="Password" required></div>
-              <div><input type="password" name="ConfPass" class="ConfPass" placeholder="Conferma password"required></div>
-              <div> <button class="btn-reg" type="submit" value="Registrati" name="submit">Registrati</button></div>
+              <div>
+                <input type="password" name="password" id="password" class="pass" placeholder="Password" required>
+              </div>
+              <div>
+                <input class="btn-link" type="button" onclick="showPwd()" value="Mostra/Nascondi Password">
+              </div>
+              <div> <button class="btn-reg" type="submit" value="Registrati" name="submit"id ="Sr">  Registrati</button></div>
             </form>
         </div>
 
@@ -80,9 +103,11 @@
       
       <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          <p style="color:aliceblue">Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         </div>
       </footer>
+      
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -102,9 +127,6 @@
          
                });
                
-                $(".btn-outline-danger").click(function(e) {
-                  ("#SAlert").css('style','display:block');
-                });
  
             });
          </script>
@@ -144,9 +166,15 @@
                       
                             });
                       });
+                     
               });
-            
-                      
+
+        
+              
+
+                
           </script>
+          
+
 </body>
 </html>

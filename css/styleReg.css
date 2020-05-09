@@ -68,10 +68,7 @@ Smartphone
 
 	/* Cover */
 	.cover{height:100%;}
-
-
 }
-
 
 /* clearfix */
 
@@ -96,11 +93,13 @@ Smartphone
 
 
 
+
+
  /**************
    Footer
    *************/
    .mastfoot {
-    padding-top: 20px;
+    padding-top: 140px;
     color: rgba(0, 0, 0, 0.5);
     text-align: center;
   }
@@ -246,5 +245,30 @@ input:focus {
         form {
           width: 100%;
           padding-right: 15px;
-          padding-left: 15px; } }
+          padding-left: 15px; }
+        .mastfoot{ padding-top: 20px;} 
+        }
 
+
+  /*************************************************
+  ****SCRITTA REGISTRAZIONE ANDATA CON SUCCESSO ****
+  *************************************************/
+  .contenitore{
+    padding-top: 200px;
+    padding-bottom: 150px;
+  }
+  .h1_conf{ color:lightgreen;
+    font-variant: small-caps;}
+  h3{ color:white;
+    font-style: italic;
+    }
+  h6{color: white;
+    font-style: oblique;
+  }
+  
+  .btn-link{
+    border: none;
+    background: none;
+    margin-top: 0px;
+    color: white;
+  }
