@@ -137,7 +137,7 @@ form {
 input {
     width:270px;
     height:42px;
-    margin-top:20px;
+    margin-top:15px;
     background:#2d2d2d;
     background:rgba(45,45,45,.15);
     -moz-border-radius: 6px;
@@ -154,6 +154,13 @@ input {
     color:#fff;
     text-shadow:0 1px 2px rgba(0,0,0,.1);
     }
+    input[type=checkbox]  {
+      vertical-align: middle;
+      position: relative;
+      bottom: 1px;
+      margin-top: 0;
+  }
+  
 
     input:-moz-placeholder { color: #fff; }
 input:-ms-input-placeholder { color: #fff; }
@@ -172,6 +179,12 @@ input:focus {
             0 2px 7px 0 rgba(0,0,0,.2);
     }
 
+
+  .g-recaptcha{
+    display: inline-block;
+    background-color: #2d2d2d;
+    margin-top: 11px;
+  }
     .btn-reg {
         cursor:pointer;
         width: 270px;
@@ -197,10 +210,6 @@ input:focus {
         font-weight:700;
         color:#fff;
         text-shadow:0 1px 2px rgba(0,0,0,.1);
-        -o-transition: all .2s;
-            -moz-transition: all .2s;
-            -webkit-transition: all .2s;
-            -ms-transition: all .2s;
         }
 
 
@@ -272,3 +281,13 @@ input:focus {
     margin-top: 0px;
     color: white;
   }
+
+
+  @media screen and (max-height: 575px){
+    #rc-imageselect, .g-recaptcha {
+    transform:scale(0.77);
+    -webkit-transform:scale(0.77);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+    }
+    }
