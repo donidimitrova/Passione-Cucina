@@ -54,7 +54,7 @@
         
         <!-- Modal Body -->
         <div class="modal-body">
-            <h4 class="statusMsg"> cIAOO </h4>
+          <p class="statusMsg"></p>
             <form role="form" action="login.php">
                 <div class="form-group">
                     <label for="inputEmail">Email</label>
@@ -81,7 +81,6 @@
 
         <div class="page-container " name="cont" >
             <form action="registrazione.php" name="reg" method="POST">
-              <p id="msgErr"></p>
          <div class="title"><h1 >Registrazione</h1></div>
               <div><input type="email" name="email" class="Email" placeholder="Email" required></div>
               <div> <input type="text" name="nome" class="Nome" placeholder="Nome" required></div>
@@ -124,6 +123,7 @@
          
                  $(".header__menu").toggleClass('is-open');
                  e.preventDefault();
+                 $('.modal').appendTo("body") ;
          
                });
                
