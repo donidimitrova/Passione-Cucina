@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Colacchi A. , Dimitrova D.T.">
+    
+
+    <title>Passione Cucina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- File Css Nostro che dobbiamo modificare -->
+    <link href="/css/iniziale.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <header class="header clearfix" >
+      <a href="/homepage.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
+      <a href="" class="header__icon-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <ul class="header__menu ">
+        <li class="header__menu__item"><a href="/homepage.html">Home</a></li>
+        <li class="header__menu__item"><a href="/contatti.html">Contatti</a></li>
+        <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
+         <!-- Modal -->
+  <div class="modal fade" id="modalForm" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
+      <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header text-center">
+              <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel">Login</h4>
+          </div>
+          
+          <!-- Modal Body -->
+          <div class="modal-body mx-3">
+              <p class="statusMsg"></p>
+              <form role="form" action="/login.php">
+                  <div class="form-group">
+                      <label for="inputEmail">Email</label>
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="inputPassword">Password</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password"></textarea>
+                  </div>
+              </form>
+          </div>
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary submitBtn" id="submit">SUBMIT</button>
+          </div>
+      </div>
+  </div>
+  </div>
+        </li>
+      </ul>
+    </header>
+    
+
+    <section class="cover" >
+        <div class="cover__filter">
+        </div>
+        <div class="cover__caption">
+          <div class="cover__caption__copy">
+            <div id="app" class="app">
+                <p  v-if="isMorning">Buona Mattina! </p>
+                <p v-if="isAfternoon">Buongiorno! </p>
+                <p v-if="isEvening">Buonasera!></p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      
+        
+        <!----------------------------------------------->
+        <!--DA MODIFICARE FOOTER -->
+        <!----------------------------------------------->
+      
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    
+   
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    
+  
+  
+    
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script>
+        var hours = new Date().getHours();
+      
+        new Vue({
+          el: '#app',
+          data: {
+            isMorning: hours < 12,
+            isAfternoon: hours >= 12 && hours < 18,
+            isEvening: hours >= 18
+          }
+        });
+      </script>
+  
+    
+    <script>
+      $(document).ready(function(){
+   
+         $(".header__icon-bar").click(function(e){
+   
+          $(".header__menu").toggleClass('is-open');
+           e.preventDefault();
+           $('.modal').appendTo("body") ;
+   
+         });
+         
+
+      });
+   </script>
+    <script>
+      $(document).ready(function(){
+              $("#submit").click(function(){
+                    var email = $('#inputEmail').val();
+                    var password= $('#inputPassword').val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/login.php",
+                        data: "email="+email+"&password="+password,
+                        success: function(html){
+                              switch(html)
+                                  {
+
+                                     case '1': // Login successful 
+                                          $('#inputEmail').val('');
+                                          $('#inputPassword').val('');
+                                          $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                                          break;
+
+                                      case '2': // Empty Field
+                                          $('.statusMsg').html('<span style="color:red;">Errore campi vuoti.</span>');
+                                          break;
+                                      case '3': // username doesn't exist
+                                          $('.statusMsg').html('<span style="color:red;">Errore email</span>');
+                                          break;
+                                      case '4': //Password is wrong
+                                          $('.statusMsg').html('<span style="color:red;">Errore password</span>');
+                                          break;
+                                      case '5': //Querry error
+                                          $('.statusMsg').html('<span style="color:red;">Errore query</span>');
+                                          break;
+                                    }
+                            }
+                
+                      });
+                });
+        });
+      
+                
+    </script>
+  </body>
+</html>
