@@ -23,9 +23,8 @@
 
   <body class="text-center">
     <header class="header clearfix" >
-      <a href="/homepage.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
+      <a href="iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
       <a href="" class="header__icon-bar">
-        <span></span>
         <span></span>
         <span></span>
       </a>
@@ -40,8 +39,8 @@
           </div>
           </form>
       </li>
-        <li class="header__menu__item"><a href="/contatti.html">Contatti</a></li>
-        <li class="header__menu__item"><a href="/contatti.html">Logout</a></li>
+        <li class="header__menu__item"><a href="contatti2.html">Contatti</a></li>
+        <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
         
         
       </ul>
@@ -70,7 +69,7 @@
 
 
         <div class="container">
-          <p><h4>Di che cosa hai voglia? </h4></p>
+          <p><h4 style="font-family: Helvetica, sans-serif; font-size: 23px;color: rgb(223, 41, 35);font-weight: 700; text-shadow: 0.2px 0.2px;">Di che cosa hai voglia? </h4></p>
           <div class="grid">
               <div class="row">
                   <div class="col-md-3">
@@ -98,7 +97,7 @@
                   </div>
                   <div class="col-md-3">
                       <figure class="effect-ravi">
-                          <img src="https://picsum.photos/1000/802/?random" alt="img25" />
+                          <img src="/img/antipasto.jpg" alt="antipasto" />
                           <figcaption>
                               <h2> <span>Antipasto</span></h2>
                               <p>
@@ -110,7 +109,7 @@
                   </div>
                   <div class="col-md-3">
                     <figure class="effect-ravi">
-                        <img src="https://picsum.photos/1000/800/?random" alt="img17" />
+                        <img src="/img/dolci.jpg" alt="dolci" />
                         <figcaption>
                             <h2> <span>Dolce</span></h2>
                             <p>
@@ -191,44 +190,16 @@
       });
    </script>
     <script>
-      $(document).ready(function(){
-              $("#submit").click(function(){
-                    var email = $('#inputEmail').val();
-                    var password= $('#inputPassword').val();
-                    $.ajax({
-                        type: "POST",
-                        url: "/login.php",
-                        data: "email="+email+"&password="+password,
-                        success: function(html){
-                              switch(html)
-                                  {
+      function myFunction() {
+        
+  var txt;
+  if (confirm("Sei sicuro di voler uscire?")) {
+    window.location.replace("../homepage.html");
+  } 
+}
 
-                                     case '1': // Login successful 
-                                          $('#inputEmail').val('');
-                                          $('#inputPassword').val('');
-                                          $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
-                                          break;
-
-                                      case '2': // Empty Field
-                                          $('.statusMsg').html('<span style="color:red;">Errore campi vuoti.</span>');
-                                          break;
-                                      case '3': // username doesn't exist
-                                          $('.statusMsg').html('<span style="color:red;">Errore email</span>');
-                                          break;
-                                      case '4': //Password is wrong
-                                          $('.statusMsg').html('<span style="color:red;">Errore password</span>');
-                                          break;
-                                      case '5': //Querry error
-                                          $('.statusMsg').html('<span style="color:red;">Errore query</span>');
-                                          break;
-                                    }
-                            }
+</script>
                 
-                      });
-                });
-        });
-      
-                
-    </script>
+ 
   </body>
 </html>
