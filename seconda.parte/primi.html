@@ -27,6 +27,7 @@
       <a href="" class="header__icon-bar">
         <span></span>
         <span></span>
+        <span></span>
       </a>
       <ul class="header__menu ">
         <li class="header__menu__item">
@@ -46,12 +47,12 @@
       </ul>
     </header>
   </div>
-<div class="contenitore">
+<div class="contenitore container-fluid" >
     <div class="title">
-        <h1 style="font-size: 65px;">Primi Piatti</h1>
+        <h1 style="font-size: 65px;margin-top: 55px;">Primi Piatti</h1>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col-md-6">
       <div class="card">
         <img src="/img/gnocchi-speck.jpg" class="card-img-top" height="334px" alt="...">
         <div class="card-body">
@@ -61,7 +62,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-6">
       <div class="card">
         <img src="/img/fusilli-baffo.png" class="card-img-top" height="334px" alt="...">
         <div class="card-body">
@@ -73,7 +74,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col-md-4">
       <div class="card">
         <img src="/img/zuppa-pesce.jpg" class="card-img-top" width="250px" height="250px"  alt="...">
         <div class="card-body">
@@ -83,7 +84,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/Lasagne-con-noci-e-primosale.jpg" class="card-img-top" width="250px" height="250px"  alt="...">
         <div class="card-body">
@@ -93,7 +94,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/fusilli-pesto-zucchine.jpg" class="card-img-top"  width="250px" height="250px"   alt="...">
         <div class="card-body">
@@ -105,7 +106,7 @@
     </div>
   </div>
   <div class="row">
-      <div class="col">
+      <div class="col-md-6">
       <div class="card">
         <img src="/img/mezze-penne-carciofi.webp" class="card-img-top" height="334px" alt="...">
         <div class="card-body">
@@ -115,7 +116,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-6">
       <div class="card">
         <img src="/img/trofie-al-forno-con-salsiccia-e-provola.jpg" class="card-img-top" height="334px"  alt="...">
         <div class="card-body">
@@ -127,7 +128,7 @@
 </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-md-4">
     <div class="card">
       <img src="/img/spaghettoni.jpg" class="card-img-top"  height="250px" width="250px" alt="...">
       <div class="card-body">
@@ -138,7 +139,7 @@
     </div>
     
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/penne-arrabbiata.webp" class="card-img-top" width="250px" height="250px" alt="...">
         <div class="card-body">
@@ -149,7 +150,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/pasta-crema-patate.jpg" class="card-img-top" width="250px" height="250px" alt="...">
         <div class="card-body">
@@ -161,7 +162,7 @@
 </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-md-6">
     <div class="card">
       <img src="/img/zuppaCeci.jpg" class="card-img-top" height="334px"  alt="...">
       <div class="card-body">
@@ -171,7 +172,7 @@
         <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
     </div>
   </div>
-  <div class="col">
+  <div class="col-md-6">
     <div class="card">
       <img src="/img/risotto-zucchine.jpg" class="card-img-top" height="334px" alt="...">
       <div class="card-body">
@@ -227,5 +228,16 @@
 
       });
    </script>
+     <script>
+      function myFunction() {
+        
+  var txt;
+  if (confirm("Sei sicuro di voler uscire?")) {
+    window.location.replace("../homepage.html");
+  } 
+}
+
+</script>
+
   </body>
 </html>

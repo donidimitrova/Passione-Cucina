@@ -96,79 +96,44 @@ Smartphone
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     }
-
-.card{
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+  
+    .card {
+      position: relative;
+      background: #fff;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0px 0px 30px 2px #000;
+      border-color:transparent;
+      height: 550px;
+    }
+    .card .header {
+      background-size: cover;
+      min-height: 350px;
+    }
+   
+    .card .text .food {
+      color: #212129;
+      text-align: left;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 5px 30px;
+    }
     
-}
-
-.contenitore{
-  margin-left: 40px;
-  margin-right:40px ;
-  margin-top: 100px;
-}
-
-.card-img-top {
-  border-top-left-radius: calc(1rem - 1px);
-    border-top-right-radius: calc(1rem - 1px);
-}
-
-.title{
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-family: times, Times New Roman, times-roman, georgia, serif;
- color: #444;
- margin: 0;
- padding: 0px 0px 6px 0px;
- font-size: 51px;
- line-height: 44px;
- letter-spacing: -2px;
- font-weight: bold; 
-}
-
-h1{
-  font-size: 65px;
-}
-
-
-.card-title{
-  justify-content: center;
-  color: #212129;
-  text-align: center;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 5px 30px;
-}
-
-.card-text{
-  text-emphasis: none;
-  text-align: center;
-  font-style: oblique;
-}
-
-.col{
-  margin-top:1rem;
-  margin-bottom: 1rem;
-}
-
-.card a.btn {
-  display: block;
-  background: #EF3E36;
-  color: #fff;
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-align: center;
-  padding: 10px;
-  transition: 250ms;
-}
-
-.card a.btn:hover {
-  background: #17BEBB;
-  transition: 250ms;
-}
+    
+    .card a.btn {
+      display: block;
+      background: #EF3E36;
+      color: #fff;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: 10px;
+      transition: 250ms;
+      border-color:transparent;
+    }
+    .card a.btn:hover {
+      background: rgb(122, 13, 13);
+      transition: 250ms;
+    }

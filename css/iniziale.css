@@ -65,7 +65,8 @@ Smartphone
     
     .header__menu{width:100%;height:0px; overflow: hidden; }
     .header__menu__item{display: block;}
-    .is-open{height:200px; overflow: auto; z-index: 100;}
+    .is-open{height:150px; overflow: auto; z-index: 100;}
+    .is-open form{ margin-top: 13px; }
     .is-open-modal{height:250px;}
     /* Cover */
     .cover{height:50%;}
@@ -94,6 +95,17 @@ Smartphone
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     }
+
+    
+ /**************
+   Footer
+   *************/
+   .mastfoot {
+    margin-bottom: 3px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
     
 /***************************
 IMMAGINI DOPO IL BUONGIORNO
@@ -175,9 +187,7 @@ figure.effect-ravi {
   margin: 0;
 }
 
-.grid [class^="col"] {
-  padding: 2px;
-}
+
 
 figure.effect-ravi h2 {
   font-size: 158.75%;
@@ -223,38 +233,27 @@ figure.effect-ravi p {
 figure.effect-ravi p a {
   color: #fff;
 }
-
+/********************************
+quando clicchi sullo zoom diventa opaco
+*********************************/
 figure.effect-ravi p a:hover,
 figure.effect-ravi p a:focus {
   opacity: 0.6;
 }
-
+/***********************************
+fa vedere lo zoom nascosto
+************************************/
 figure.effect-ravi p a i {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-ravi p a:first-child i {
-  -webkit-transform: translate3d(-60px, -60px, 0);
-  transform: translate3d(-60px, -60px, 0);
-}
 
-figure.effect-ravi p a:nth-child(2) i {
-  -webkit-transform: translate3d(60px, -60px, 0);
-  transform: translate3d(60px, -60px, 0);
-}
 
-figure.effect-ravi p a:nth-child(3) i {
-  -webkit-transform: translate3d(-60px, 60px, 0);
-  transform: translate3d(-60px, 60px, 0);
-}
-
-figure.effect-ravi p a:nth-child(4) i {
-  -webkit-transform: translate3d(60px, 60px, 0);
-  transform: translate3d(60px, 60px, 0);
-}
-
+/***********************************************
+ROMBO
+************************************************/
 figure.effect-ravi:hover figcaption::before {
   opacity: 1;
   -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
@@ -276,3 +275,204 @@ figure.effect-ravi:hover p i:empty {
 /*********************************
 FINE IMMAGINI DOPO IL BUONGIORNO
 **********************************/
+
+
+/*******************************************
+VINITALY
+********************************************/
+
+.healthy-snacks {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 680px;
+  background: #fff;
+}
+.healthy-snacks .featured-image {
+  position: relative;
+  overflow: hidden;
+}
+.healthy-snacks .featured-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+/*********************************************
+padding tra immagine e testo
+**********************************************/
+
+.healthy-snacks article {
+  padding: 1em 1em 2em;
+}
+/*********************************************
+mette lo spazio bianco sottto all'immagine
+**********************************************/
+.healthy-snacks article::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/*******************************************
+dichiara la linea verde ma (vedi sotto)
+la mette vericale
+********************************************/
+.healthy-snacks article header {
+  border-bottom: 2px solid #9bb068;
+}
+.healthy-snacks article header h3 {
+  margin: 0 0 0.25em;
+  font-family: 'McLaren', cursive;
+  color: #767d2e;
+  text-align: center;
+  text-transform: uppercase;
+}
+.healthy-snacks article .excerpt {
+  font-family: 'Open Sans', sans-serif;
+}
+.healthy-snacks article .excerpt p {
+  line-height: 24px;
+}
+.healthy-snacks article .excerpt a {
+  display: block;
+  margin-top: 1em;
+  color: #c00413;
+  text-decoration: none;
+}
+.healthy-snacks article .excerpt a:hover {
+  color: #fb2f40;
+}
+.healthy-snacks article .excerpt a span:first-child {
+  padding-right: 1em;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 680px) {
+  /******************************************
+  .healthy-snacks article header {
+    width: 40%;
+    float: left;
+    border-bottom: none;
+    border-right: 2px solid #9bb068;
+  } mette la linea verticale
+  *******************************************/
+  .healthy-snacks article header {
+    width: 40%;
+    float: left;
+    border-bottom: none;
+    border-right: 2px solid #9bb068;
+  }
+  .healthy-snacks article header h3 {
+    margin: 1em 0;
+    font-size: 2em;
+  }
+  .healthy-snacks article header h3 span {
+    display: block;
+  }
+  .healthy-snacks article .excerpt {
+    width: 60%;
+    float: left;
+    padding-left: 2em;
+  }
+}
+  /*****************************************************
+  FINE VINITALY
+  ******************************************************/
+
+  /*****************************************************
+  INIZIO OLIO DI OLIVA
+  ******************************************************/
+  
+  .portfolio-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    max-width: 530px;
+    margin: auto auto 1rem;
+  
+  }
+  
+  .portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .portfolio-item .caption .caption-content {
+    color: #fff;
+    margin: auto 2rem 2rem;
+    
+  }
+  
+  .portfolio-item .caption .caption-content h2 {
+  
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    
+  }
+  
+  .portfolio-item .caption .caption-content p {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  
+  @media (min-width: 992px) {
+    .portfolio-item {
+      max-width: none;
+      margin: 0;
+    }
+    .portfolio-item .caption {
+      -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+      -webkit-clip-path: inset(0px);
+      clip-path: inset(0px);
+    }
+    .portfolio-item .caption .caption-content {
+      transition: opacity 0.25s;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-bottom: 5rem;
+    }
+    .portfolio-item img {
+      -webkit-transition: -webkit-clip-path 0.25s ease-out;
+      -webkit-clip-path: inset(-1px);
+      clip-path: inset(-1px);
+      height: 250px;
+      width: inherit;
+    }
+    .portfolio-item:hover img {
+      -webkit-clip-path: inset(2rem);
+      clip-path: inset(2rem);
+    }
+    .portfolio-item:hover .caption {
+      background-color: rgba(32, 32, 32, 0.719);
+      -webkit-clip-path: inset(2rem);
+      clip-path: inset(2rem);
+    }
+  }
+  
+  .content-section {
+    padding-top: 10px;
+    padding-bottom: 7.5rem;
+  }
+  
+  .content-section-heading h2 {
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin: 10px;
+    font-size: 51px;
+    line-height: 44px;
+    letter-spacing: -2px;
+    font-weight: bold;color: rgb(223, 41, 35);
+  }
+  
+  .content-section-heading h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+/************************************************
+FINE OLIO DI OLIVA
+*************************************************/

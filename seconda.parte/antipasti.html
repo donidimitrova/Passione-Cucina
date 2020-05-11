@@ -27,6 +27,7 @@
       <a href="" class="header__icon-bar">
         <span></span>
         <span></span>
+        <span></span>
       </a>
       <ul class="header__menu ">
         <li class="header__menu__item">
@@ -46,12 +47,12 @@
       </ul>
     </header>
   </div>
-<div class="contenitore">
-    <div class="title">
+<div class="contenitore container-fluid">
+    <div class="title" style="margin-top: 55px;">
         <h1 style="font-size: 65px;">Antipasti</h1>
     </div>
-    <div class="row">
-      <div class="col">
+    <div class="row ">
+      <div class="col-md-4" >
       <div class="card">
         <img src="/IMG/involtinimelanzanepescespada.jpg" class="card-img-top" height="334px" alt="...">
         <div class="card-body">
@@ -61,7 +62,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/InvoltiniPrimavera.webp" class="card-img-top" height="334px" alt="...">
         <div class="card-body">
@@ -71,7 +72,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
       </div>
-      <div class="col">
+      <div class="col-md-4">
         <div class="card">
           <img src="/img/panettone-salato.jpg" class="card-img-top" height="334px"  alt="...">
           <div class="card-body">
@@ -83,8 +84,8 @@
   </div>
     </div>
 
-    <div class="row">
-      <div class="col">
+    <div class="row ">
+      <div class="col-md-4">
       <div class="card">
         <img src="/img/girelle-pasta-sfoglia.jpg" class="card-img-top" width="250px" height="250px"  alt="...">
         <div class="card-body">
@@ -94,7 +95,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/rotolo-zucchine.jpg" class="card-img-top" width="250px" height="250px"  alt="...">
         <div class="card-body">
@@ -104,7 +105,7 @@
           <a href="#" class="btn btn-primary">SCOPRI LA RICETTA</a>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
       <div class="card">
         <img src="/img/involtiniRipieniSalsicciaProvolone.webp" class="card-img-top"  width="250px" height="250px"   alt="...">
         <div class="card-body">
@@ -160,5 +161,16 @@
 
       });
    </script>
+     <script>
+      function myFunction() {
+        
+  var txt;
+  if (confirm("Sei sicuro di voler uscire?")) {
+    window.location.replace("../homepage.html");
+  } 
+}
+
+</script>
+
   </body>
 </html>
