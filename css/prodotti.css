@@ -1,0 +1,217 @@
+
+/* Custom default button */
+
+html,body{height:100%;}
+body{background: #eee;}
+
+/*-----------------------------
+general
+-----------------------------*/
+
+.button{display: inline-block; background: #fff; color:#000;padding: 15px 30px; border-radius:3px; text-decoration: none; }
+
+/*-----------------------------
+header
+-----------------------------*/
+
+.header{background: #333; padding-bottom: 5px;}
+.header__logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
+.header__menu{float:right;margin:0; padding:0;}
+.header__menu__item{display: inline-block;}
+.header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
+.header__menu__item a:hover{background: #000; text-decoration: none; color: white;}
+.header__menu__item button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
+.header__menu__item button{ border-color: transparent;}
+.header__icon-bar{display: block;float: right;padding:20px;display: none;}
+.header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+
+
+.app{color: #f8d059d7; font-family: 'Droid serif', serif; font-size: 65px; font-style: italic;line-height: 44px; text-align: center;text-shadow: 2px 1px;}
+
+/********
+LOGO
+*********/
+
+@media (min-width: 30em) {
+.header__logo  {display: inline-block; height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
+}
+
+/*-----------------------------
+Smartphone
+-----------------------------*/
+@media (max-width: 767px){
+
+    .header{position:0 ; z-index: 100;width:100%}
+    .header__icon-bar{display: block; }
+    .header__logo{
+      float: left;
+    }
+    
+    .header__menu{width:100%;height:0px; overflow: hidden; }
+    .header__menu__item{display: block;}
+    .is-open{height:150px; overflow: auto; z-index: 100;}
+    .is-open form{ margin-top: 13px; }
+    .is-open-modal{height:250px;}
+    
+    
+    }
+    @media (max-width: 640px) {
+      h2.section-heading.mb-0 {
+        text-transform: none;
+    }
+      .product-item .product-item-title {
+        display: block;
+        size: 35px;
+        width: auto;
+        position: inherit;
+
+        margin-top: 3px;
+        width: 250px;
+        justify-content: inherit;
+        overflow: hidden;
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+      
+      }
+
+      .product-item .product-item-title h2 {
+        display: block;
+        size: 35px;
+       
+      
+      }
+      .product-item .product-item-img {
+        position: inherit;
+        height: 250px;
+        width: 250px;
+      }
+      .product-item .product-item-description {
+        position: inherit;
+
+        margin-top: 3px;
+        width: 250px;
+        justify-content: inherit;
+        overflow: hidden;
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+      }
+      
+    }
+    
+    
+    /* clearfix */
+    
+    .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+    * html .clearfix             { zoom: 1; } /* IE6 */
+    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+    
+    *,
+    *:before,
+    *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    }
+
+    
+ /**************
+   Footer
+   *************/
+   .mastfoot {
+    margin-bottom: 3px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+
+
+
+
+
+
+
+
+.site-heading {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Raleway';
+  }
+  
+  .site-heading .site-heading-upper {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  
+  .site-heading .site-heading-lower {
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 4rem;
+  }
+  
+  .page-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .section-heading {
+    text-transform: uppercase;
+  }
+  
+  .section-heading .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  
+  .section-heading .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+  
+  .bg-faded {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  
+  
+
+
+
+  
+  
+  @media (min-width: 992px) {
+    .product-item .product-item-title {
+      position: relative;
+      z-index: 1;
+      margin-bottom: -3rem;
+    }
+    .product-item .product-item-img {
+      position: relative;
+      z-index: 0;
+      height: 350px;
+    }
+    .product-item .product-item-description {
+      position: relative;
+      z-index: 1;
+      margin-top: -3rem;
+      max-width: 450px;
+    }
+  }
+  
+.imag{
+ 
+  box-shadow: 0 7px 13px rgba(0, 0, 0, 0.692);
+  z-index: -1;
+
+}
+  
