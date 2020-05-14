@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Colacchi A. , Dimitrova D.T.">
+    
+
+    <title>Zuppa di pesce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <!--IL MIO CODICE PER ICONE BELLE-->
+    <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+   
+
+    <!-- File Css Nostro che dobbiamo modificare -->
+    <link href="/css/ricetta.css" rel="stylesheet">
+   
+
+
+  <body class="text-center">
+    <header class="header clearfix" >
+      <a href="iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
+      <a href="" class="header__icon-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <ul class="header__menu ">
+        <li class="header__menu__item">
+          <form class="navbar-form" role="search">
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Cerca una ricetta" name="q">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
+              </div>
+          </div>
+          </form>
+      </li>
+      <li class="header__menu__item"><a href="/seconda.parte/contatti2.html">Contatti</a></li>
+      <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
+        
+        
+      </ul>
+    </header>
+
+    <h1>Zuppa di pesce</h1>
+
+
+
+
+
+
+
+<div class="recepie_details_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-md-6">
+                <div class="recepies_thumb">
+                    <img  src="/img/zuppa-pesce.jpg" alt="" style="position: relative;
+                    -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 ">
+                <div id="Vue"> 
+                    <div class="Recipe-IngredientList " style="position: relative;
+                    -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
+                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <div id="app">
+                            <star-rating value="3"></star-rating>
+                            </div>
+                  <label for="serving">Porzioni :</label>
+                  <input type="number" v-model="serving" >
+                  <button @click="decreaseServing">-</button>
+                  <button @click="increaseServing">+</button>
+                    <serving-ingredient name="Cozze" :serving="serving" base-value="500" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Vongole" :serving="serving" base-value="500" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Aglio" :serving="serving" base-value="1" metric=" spicchio"></serving-ingredient>
+                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="6" metric=" cucchiai"></serving-ingredient>
+                    <serving-ingredient name="Scampi" :serving="serving" base-value="300" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Gamberi" :serving="serving" base-value="300" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Burro" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Seppie" :serving="serving" base-value="300" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Prezzemolo" :serving="serving" base-value="2" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Pomodorini ciliegino" :serving="serving" base-value="150" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Coda di rospo" :serving="serving" base-value="1" metric="kg"></serving-ingredient>
+                    <serving-ingredient name="Gallinella" :serving="serving" base-value="250" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Rombo" :serving="serving" base-value="1" metric="kg"></serving-ingredient>
+                    <serving-ingredient name="Vino bianco" :serving="serving" base-value="100" metric="mL"></serving-ingredient>
+                    <serving-ingredient name="RanaPescatrice" :serving="serving" base-value="1" metric="kg"></serving-ingredient>
+                    <serving-ingredient name="Pagnotta di pane" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <h4 class="subtitle fancy">PER IL FUMETTO</h4>
+                    <serving-ingredient name="Sedano" :serving="serving" base-value="1" metric=" costa"></serving-ingredient>
+                    <serving-ingredient name="Carote" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <serving-ingredient name="Cipolla bianca" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <serving-ingredient name="Acqua" :serving="serving" base-value="2" metric="L"></serving-ingredient>
+                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="3" metric=" cucchiai"></serving-ingredient>
+                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <video controls loop>
+        <source src="/video/PRIMI/ZUPPADIPESCE.mp4" type="video/mp4">
+      </video>
+    
+      <h2 class="subtitle fancy">Preparazione</h2>
+    <div class="container ">
+        <div class="filter"></div>
+     <div class="procedura">
+         
+              <section class='steps' data-step='step1' >
+                <h3>Step 1</h3>
+                <p> Pulire il rombo: per prima cosa eliminare le interiora dall'apertura posta sotto la testa,intaccate la pelle vicino all'apertura e tiratela viacon forza, aiutandovi con un canovaccio. Eseguite  tale procedura ambo i lati.</p></section>
+              
+              <section class='steps' data-step='step2' >
+                <h3>Step 2</h3>
+               <p>Con un coltello eliminate le pinne superiore e inferiore e la coda e sfilettate il rombo, eliminando la lisca centrale. Tenete da parte tutti gli scarti, tranne le interiora perchè serviranno per il fumetto di pesce.</p></section>
+              
+              <section class='steps' data-step='step3'>
+                <h3>Step 3</h3> 
+                <p>Ora passate alla pulitura della rana pescatrice: se intera privatela della testa, della pelle e della membrana trasparente che la avvolge. Tagliate il filetto al centro, tutto intorno alla lisca centrale in modo da facilitare la sua eliminazione.  Dividete la rana pescatrice a metà.</p>
+              
+          </section>
+          <section class='steps' data-step='step4'>
+            <h3>Step 4</h3>
+            <p>Prendete ora la gallinella: puntate il coltello nel foro sotto la pancia, praticate un taglio verso la testa ed eliminate le interiora, poi intaccate la testa  e la coda e tenete da parte gli scarti. Togliete le squame e sfilettate la galinella partendo dal dorso ricavandone dei filetti che se necessario dovrete spinare con l'aiuto di una pinzetta.</p>
+      </section>
+      <section class='steps' data-step='step5'>
+        <h3>Step 5</h3>
+        <p>Tagliate a pezzi i filetti di rana pescatrice e pulite anche le seppie, svuotatando la sacca dalle interiora ed eliminando gli occhi e il rostro che si trova fra i tentacoli.Tagliate le seppie a striscioline e mettetele da parte.</p>
+  </section>
+  <section class='steps' data-step='step6'>
+    <h3>Step 6</h3>
+    <p> Tagliate a dadini la cipolla, la carota e il sedano e fateli soffriggere insieme all'olio extravergine in pentola  per un paio di minuti. Se lo gradite potete aggiungere anche del peperoncino fresco.</p>
+</section>
+<section class='steps' data-step='step7'>
+  <h3>Step 7</h3>
+  <p>Prendete gli scarti dei pesci che avete tenuto da parte e aggiungeteli in pentola insieme a 2 litri di acqua e lasciate bollire per almeno mezz'ora. Durante questo tempo eliminate la schiuma dalla superficie del fumetto con l'aiuto di una schiumarola. Quando sarà pronto scolate il fumetto, raccogliendo con un colino tutto il liquido.</p>
+</section>
+<section class='steps' data-step='step8'>
+  <h3>Step 8</h3>
+  <p>Pulite le cozze, eliminando il bisso e i cirripedi dalla superficie. Sciacquate le vongole sotto acqua corrente e battetele su di un tagliere di legno con il taglio rivolto verso il basso: se la vongola è pulita può essere cotta, se fuorisce della sabbia la vogola è da scartare.</p>
+</section>
+<section class='steps' data-step='step9'>
+  <h3>Step 9</h3>
+  <p>In una padella capiente mettete l‘olio e l’aglio tritato o intero, fatelo rosolare e aggiungete le cozze e le vongole.</p>
+</section>
+<section class='steps' data-step='step10'>
+  <h3>Step 10</h3>
+  <p>Alzate la fiamma e cuocete i molluschi per qualche minuto, coprendo con il coperchio per farle dischiudere. </p>
+</section>
+<section class='steps' data-step='step11'>
+  <h3>Step 11</h3>
+  <p>Bagnate con vino bianco e aggiungete un cucchiaio di prezzemolo, lasciando cuocere per un altro minuto.</p>
+</section>
+<section class='steps' data-step='step12'>
+  <h3>Step 12</h3>
+  <p> Spegnete il fuoco e scolateli, in modo da raccogliere il loro fondo di cottura. Se ci dovessero essere dei residui di sabbia, filtrate il liquido con una garza in modo da eliminare le impurità. Sgusciate le cozze e le vongole, lasciandone qualcuna intera per la decorazione finale del piatto.</p>
+</section>
+<section class='steps' data-step='step13'>
+<h3>Step 13</h3>
+  <p>Prendete ogni scampo e tirate verso l’alto, spezzando la parte finale della coda dove risiede l’intestino, che eliminerete, con l’aiuto di uno stuzzicadente.Praticate un taglio nella testa dello scampo e date dei colpetti con la parte piatta del coltello anche alle chele, così che i succhi presenti in queste parti fuoriescano, durante la cottura, per insaporire la zuppa. </p>
+</section>
+<section class='steps' data-step='step14'>
+<h3>Step 14</h3>
+  <p> Prendete ora i gamberi (o le mazzancolle): togliete la testa, il carapace e le zampe. Potete lasciare attaccata la coda in quanto è decorativa. Raccogliete tutte le teste e i carapaci che serviranno per preparare un fondo di cottura dei crostacei.</p>
+</section>
+<section class='steps' data-step='step15'>
+<h3>Step 15</h3>
+  <p> In una padella mettete dell'olio e una noce di burro: prendete gli scampi e posizionateli in padella con la testa rivolta verso il basso, schiacciandoli un po’ in modo che fuoriescano i succhi all’interno. Fateli rosolare per qualche minuto.</p>
+<section class='steps' data-step='step16'>
+<h3>Step 16</h3>
+  <p>Togliete dalla padella gli scampi e aggiungete gli scarti dei gamberi.</p>
+</section>
+<section class='steps' data-step='step17'>
+    <h3>Step 17</h3>
+      <p>Fate rosolare molto bene, sfumate con vino bianco, schiacciate bene le teste e a fine cottura, filtrate il fondo di cottura ottenuto.</p>
+    </section>
+    <section class='steps' data-step='step18'>
+        <h3>Step 18</h3>
+          <p>In una pentola capiente trasferite il fumetto di pesce, unite il fondo di cottura dei crostacei e quello dei molluschi e portate ad ebbolizione tutto il liquido.</p>
+        </section>
+     <section class='steps' data-step='step19'>
+            <h3>Step 19</h3>
+              <p>Aggiustate di sale e iniziate ad aggiungere il pesce. Per primi inserite i pesci più coriacei: le seppie a listarelle,gli scampi, aiutandovi con un paio di pinze da cucina 28, i pomodorini precedentemente tagliati a metà e la rana pescatrice tagliata a pezzi.</p>
+            </section>
+            <section class='steps' data-step='step20'>
+                <h3>Step 20</h3>
+                  <p>Portate un'altra volta ad ebbolizione. </p>
+                </section>   
+                <section class='steps' data-step='step21'>
+                    <h3>Step 21</h3>
+                      <p>Unite i filetti di rombo e galinella interi, i gamberi , le cozze e le vongole sgusciate. Coprite e fate cuocere la vostra zuppa a fuoco bassissimo per 15-20 minuti. </p>
+                    </section>    
+                    <section class='steps' data-step='step22'>
+                        <h3>Step 22</h3>
+                          <p>Aggiungete le cozze e le vongole lasciate nel guscio e spolverate con abbondante prezzemolo </p>
+                        </section> 
+                        <section class='steps' data-step='step23'>
+                            <h3>Step 23</h3>
+                              <p>Preparare dei crostoni di pane ricavando delle fette spesse un paio di centimetri da una pagnotta di pane, irrorateli con un filo d'olio e passateli in forno per 5 minuti fino a che non saranno dorati. </p>
+                            </section> 
+                            <section class='steps' data-step='step23'>
+                                <h3>Step 23</h3>
+                                  <p> Disponete due o tre fette di crostini in un piatto fondo e versateci due o tre mescoli di zuppa sopra.</p>
+                                </section> 
+                        
+    <section class='steps' data-step='consigli'>
+        <h3>CONSIGLIO</h3>
+          <p> Potete utilizzare anche dei pesci diversi: chiedete al vostro pescivendolo di fiducia quali sono i pesci di stagione e quali quelli più indicati per la zuppa.
+            Se non volete sfilettare tutti i pesci potete anche cuocerli nella zuppa interi, puliti dalle interiora, dalle pinne e dalle squame. In questo caso allungate i tempi di cottura di 15 minuti.</p>
+        </section> 
+</div>
+    
+
+
+
+
+    
+ 
+        <!----------------------------------------------->
+        <!--DA MODIFICARE FOOTER -->
+        <!----------------------------------------------->
+      
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    
+   
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    
+  
+  
+    
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js'></script>
+
+    <script>
+        var hours = new Date().getHours();
+      
+        new Vue({
+          el: '#app',
+          data: {
+            isMorning: hours < 12,
+            isAfternoon: hours >= 12 && hours < 18,
+            isEvening: hours >= 18
+          }
+        });
+      </script>
+  
+    
+    <script>
+      $(document).ready(function(){
+   
+         $(".header__icon-bar").click(function(e){
+   
+          $(".header__menu").toggleClass('is-open');
+           e.preventDefault();
+           $('.modal').appendTo("body") ;
+   
+         });
+         
+
+      });
+   </script>
+    <script>
+      function myFunction() {
+        
+  var txt;
+  if (confirm("Sei sicuro di voler uscire?")) {
+    window.location.replace("../homepage.html");
+  } 
+}
+
+</script>
+<script>
+Vue.component('serving-ingredient', {
+    template: '<div class="Recipe-Ingredient">{{ name }} : <span>{{ serving * baseValue }}</span>{{ metric }}</div>',
+    props: ['name', 'serving', 'baseValue', 'metric']
+  })
+  new Vue({
+    el: '#Vue',
+    data() {
+      return {
+        serving: 1
+      }
+    },
+    methods: {
+      decreaseServing() {
+        this.serving = this.serving - 1
+      },
+      increaseServing() {
+        this.serving = this.serving + 1
+      }
+    }
+  })
+</script>
+
+<script>
+    window.console = window.console || function(t) {};
+  </script>
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  <script id="rendered-js">
+    Vue.component('star-rating', {
+    
+      props: {
+        'name': String,
+        'value': null,
+        'id': String,
+        'disabled': Boolean,
+        'required': Boolean },
+    
+    
+      template: '<div class="star-rating">\
+            <label class="star-rating__star" v-for="rating in ratings" \
+            :class="{\'is-selected\': ((value >= rating) && value != null), \'is-disabled\': disabled}" \
+            v-on:click="set(rating)" v-on:mouseover="star_over(rating)" v-on:mouseout="star_out">\
+            <input class="star-rating star-rating__checkbox" type="radio" :value="rating" :name="name" \
+            v-model="value" :disabled="disabled">★</label></div>',
+    
+      /*
+                                                                    * Initial state of the component's data.
+                                                                    */
+      data: function () {
+        return {
+          temp_value: null,
+          ratings: [1, 2, 3, 4, 5] };
+    
+      },
+    
+      methods: {
+        /*
+                  * Behaviour of the stars on mouseover.
+                  */
+        star_over: function (index) {
+          var self = this;
+    
+          if (!this.disabled) {
+            this.temp_value = this.value;
+            return this.value = index;
+          }
+    
+        },
+    
+        /*
+            * Behaviour of the stars on mouseout.
+            */
+        star_out: function () {
+          var self = this;
+    
+          if (!this.disabled) {
+            return this.value = this.temp_value;
+          }
+        },
+    
+        /*
+            * Set the rating.
+            */
+        set: function (value) {
+          var self = this;
+    
+          if (!this.disabled) {
+            this.temp_value = value;
+            return this.value = value;
+          }
+        } } });
+    
+    
+    
+    new Vue({
+      el: '#app' });
+    //# sourceURL=pen.js
+        </script>
+
+  </body>
+</html>
