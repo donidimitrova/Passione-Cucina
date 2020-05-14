@@ -150,6 +150,8 @@ Smartphone
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  max-height: 500px;
+  overflow-y: auto;
 }
 .Recipe-Ingredient {
  border-bottom: transparent;
@@ -188,11 +190,8 @@ Smartphone
   border-radius: 20px;
   margin-top: 20px;
   max-height: 450px;
-  overflow-y: scroll;
   border: 2px solid rgba(15, 15, 15, 0.384);
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(3rem);
-  scroll-snap-type: y mandatory;
+  overflow-y:auto;
   background-image: url(/img/bay2.jpg);
   background-position: center;
   background-repeat: no-repeat;
