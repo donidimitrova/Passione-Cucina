@@ -7,7 +7,7 @@
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
     
 
-    <title>Baileys al cioccolato</title>
+    <title>Pastiera</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!--IL MIO CODICE PER ICONE BELLE-->
     <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
@@ -47,20 +47,14 @@
       </ul>
     </header>
 
-    <h1>Baileys al cioccolato</h1>
-
-
-
-
-
-
+    <h1>Pastiera Napoletana</h1>
 
 <div class="recepie_details_area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
                 <div class="recepies_thumb">
-                    <img  src="/img/bay.jpg" alt="" style="position: relative;
+                    <img  src="/img/Pastiera-napoletana.jpg" alt="" style="position: relative;
                     -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
@@ -78,24 +72,33 @@
                   <input type="number" v-model="serving">
                   <button @click="decreaseServing">-</button>
                   <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Farina" :serving="serving" base-value="260" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Zucchero" :serving="serving" base-value="414" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cacao" :serving="serving" base-value="85" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Uova" :serving="serving" base-value="2" metric=""></serving-ingredient>
-                    <serving-ingredient name="Latte" :serving="serving" base-value="180" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Olio vegetale" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Baileys Irish Cream" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Cucchiaino di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Acqua bollente" :serving="serving" base-value="180" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Latte condensato zuccherato" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Gocce di cioccolato" :serving="serving" base-value="127" metric="g"></serving-ingredient>
-                    <h4 class="subtitle fancy">TOPPING DI CREMA FRUTTA</h4>
-                    <serving-ingredient name="Panna da montare" :serving="serving" base-value="480" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Zucchero a velo" :serving="serving" base-value="86" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cacao in polvere" :serving="serving" base-value="29" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Baileys Irish Cream" :serving="serving" base-value="30" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Cucchiaino di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                  </div>
+                  <h4 >PER LA PASTA FROLLA</h4>
+                    <serving-ingredient name="Farina 00" :serving="serving" base-value="315" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Strutto freddo" :serving="serving" base-value="180" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Burro" :serving="serving" base-value="150" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Tuorli" :serving="serving" base-value="3" metric=""></serving-ingredient>
+                    <serving-ingredient name="Zucchero " :serving="serving" base-value="135" metric="g"></serving-ingredient>
+                    
+                    <h4>PER CUOCERE IL GRANO</h4>
+                    <serving-ingredient name="Scorza di limone" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <serving-ingredient name="Grano cotto" :serving="serving" base-value="350" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Strutto" :serving="serving" base-value="30" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Latte intero" :serving="serving" base-value="250" metric="g"></serving-ingredient>
+                    <h4 >PER LA CREMA</h4>
+                    <serving-ingredient name="Ricotta vaccina" :serving="serving" base-value="200" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Ricotta di pecora" :serving="serving" base-value="200" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Zucchero" :serving="serving" base-value="350" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Uova" :serving="serving" base-value="3" metric=""></serving-ingredient>
+                    <serving-ingredient name="Cedro candito" :serving="serving" base-value="50" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Arancia candita" :serving="serving" base-value="50" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Acqua di fiori d'arancio" :serving="serving" base-value="15" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Cannella in polvere (1 pizzico)" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                    <serving-ingredient name="Baccello di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                   
+                    <h4 >PER UNGERE E INFARINARE LO STAMPO</h4>
+                    <serving-ingredient name="Strutto" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                    <serving-ingredient name="Farina 00" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                </div>
                 </div>
                 </div>
             </div>
@@ -104,7 +107,7 @@
 
     <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
-        <source src="/video/DOLCI/Baileys al cioccolato!.mp4" type="video/mp4">
+        <source src="/video/DOLCI/PASTIERA.mp4" type="video/mp4">
       </video>
     
       <h2 class="subtitle fancy">Preparazione</h2>
@@ -114,54 +117,97 @@
          
               <section class='steps' data-step='step1' >
                 <h3>Step 1</h3>
-                <p> Preparare una tortiera ungendo i lati. Preriscalda il forno a 148 ° C . </p></section>
+                <p>Per preparare la pastiera napoletana iniziate dalla pasta frolla. In una ciotola versate la farina e lo zucchero, poi unite lo strutto e iniziate ad impastare a mano. </p></section>
               
               <section class='steps' data-step='step2' >
                 <h3>Step 2</h3>
-               <p>Aggiungi tutti gli ingredienti secchi in una ciotola capiente e unisci.</p></section>
+               <p>Non appena avrete ottenuto un composto sabbioso unite anche i tuorli. Lavorate ancora con le mani e non appena avrete ottenuto un composto uniforme trasferitelo su un piano di lavoro.</p></section>
               
               <section class='steps' data-step='step3'>
                 <h3>Step 3</h3>
-                <p>Aggiungi uova, latte, olio vegetale, 1/2 tazza di crema irlandese e vaniglia agli ingredienti asciutti e mescola bene.</p>
+                <p> Continuate a lavorare l'impasto, giusto il tempo di compattare gli ingredienti, fino a che avrete ottenuto un panetto liscio ed uniforme . </p>
               
           </section>
           <section class='steps' data-step='step4'>
             <h3>Step 4</h3>
-            <p>Versa lentamente l'acqua nella pastella, mescolando bene e facendo attenzione agli schizzi.</p>
+            <p>Avvolgete nella pellicola per alimenti e lasciate riposare per un'oretta in frigorifero.</p>
       </section>
       <section class='steps' data-step='step5'>
         <h3>Step 5</h3>
-        <p>Versare l'impasto nella tortiera e infornare per circa 40-45 minuti, o fino a quando uno stecchino esce con qualche briciola.</p>
+        <p>Nel frattempo versate il latte in un pentolino, aggiungete il grano precotto, lo strutto e la scorza del limone grattugiata . </p>
   </section>
   <section class='steps' data-step='step6'>
     <h3>Step 6</h3>
-    <p>Rimuovere la torta dal forno e fare dei buchi dappertutto. Uso una bacchetta per affilare i coltelli, ma potresti anche usare una cannuccia.</p>
+    <p>Accendete il fuoco e mescolando spesso, lasciate cuocere per circa 20 minuti a fuoco medio fino ad ottenere un composto cremoso e lasciate raffreddare.Solo quando sarà ben freddo iniziate a preparare la crema. </p>
 </section>
 <section class='steps' data-step='step7'>
   <h3>Step 7</h3>
-  <p>Mentre la torta è ancora calda, aggiungi le gocce di cioccolato in una ciotola di medie dimensioni. Accantonare.</p>
+  <p>In una ciotola setacciate sia la ricotta vaccina che quella di pecora; Unite lo zucchero e mescolate con una frusta o con una spatola.  </p>
 </section>
 <section class='steps' data-step='step8'>
   <h3>Step 8</h3>
-  <p>Aggiungere il latte condensato zuccherato e la restante 1/2 tazza di crema irlandese in un misurino per microonde. Scaldare il latte e la panna fino a quando iniziano a bollire, quindi versare sopra le gocce di cioccolato.</p>
+  <p>Aggiungete poi le uova e il grano ormai freddo.</p>
 </section>
 <section class='steps' data-step='step9'>
   <h3>Step 9</h3>
-  <p>Sbattere il cioccolato fino a che liscio, quindi versare immediatamente sopra la torta, spalmandola nei fori. Non lasciare che il composto si sieda prima di versarlo sopra la torta o inizierà ad addensarsi e non immergersi anche nei fori.</p>
+  <p>Aggiungete anche i semi della bacca di vaniglia; poi tagliate a cubetti sia l'arancia che il cedro candito e inseriteli nel composto, insieme ad un pizzico di cannella e all'acqua di fiori d'arancio.  </p>
 </section>
 <section class='steps' data-step='step10'>
   <h3>Step 10</h3>
-  <p> Mettere la torta in frigorifero per raffreddare e immergere.</p>
+  <p>A questo punto mescolate il tutto per amalgamare tutti gli ingredienti e passate alla composizione della pastiera. </p>
 </section>
 <section class='steps' data-step='step11'>
   <h3>Step 11</h3>
-  <p> Quando la torta si è raffreddata, aggiungi gli ingredienti per la panna montata in una ciotola grande. Frusta ad alta velocità fino a formare picchi rigidi.</p>
+  <p> Ungete con lo strutto e infarinate uno stampo in alluminio da pastiera da 20 cm alla base e 26 cm in superficie.</p>
 </section>
 <section class='steps' data-step='step12'>
   <h3>Step 12</h3>
-  <p> Distribuire uniformemente la panna montata sulla torta. Completa la torta con mini gocce di cioccolato e un filo di salsa al cioccolato, se lo desideri. Conservare in frigorifero fino al momento di servire.</p>
+  <p>Poi riprendete la pasta frolla e iniziate a stenderla con il mattarello fino ad ottenere uno spessore di circa mezzo cm.</p>
 </section>
-       
+<section class='steps' data-step='step13'>
+    <h3>Step 13</h3>
+    <p>A questo punto trasferitelo nello stampo e con le mani fate in modo che aderisca bene su tutta la superficie . </p>
+  </section>
+  <section class='steps' data-step='step14'>
+    <h3>Step 14</h3>
+    <p>Eliminate poi l'eccesso di pasta con un coltellino e impastatelo nuovamente, servir&agrave; per realizzare le losanghe. </p>
+  </section>
+  <section class='steps' data-step='step15'>
+    <h3>Step 15</h3>
+    <p> Versate poi la crema all'interno del guscio di frolla e livellatela. Quindi stendete il resto della pasta, sempre fino ad ottenere uno spessore di mezzo cm e realizzate le losanghe, larghe circa 1 cm e mezzo con una rotella taglia pasta. </p>
+  </section>
+  <section class='steps' data-step='step16'>
+    <h3>Step 16</h3>
+    <p>Poi posizionatele sulla pastiera prima in un verso e poi nell'altro, avendo cura di far coincidere le estremità con i bordi dello stampo.  </p>
+  </section>
+  <section class='steps' data-step='step17'>
+    <h3>Step 17</h3>
+    <p>A questo punto cuocete in forno statico preriscaldato a 180° per circa 80 minuti, avendo cura di spostare la pastiera sul ripiano più basso negli ultimi 20 minuti di cottura.Se le losanghe dovessero scurirsi troppo coprite la pastiera con un foglio di alluminio. </p>
+  </section>
+  <section class='steps' data-step='step18'>
+    <h3>Step 18</h3>
+    <p> Poi sfornate la pastiera napoletana e lasciatela raffreddare completamente.Prima di servirla potete spolverizzare la superficie con dello zucchero a velo a piacere. </p>
+  </section>
+  <section class='steps' data-step='step19'>
+    <h3>CONSERVAZIONE</h3>
+    <p>La pastiera napoletana cotta si conserva tranquillamente per una settimana in frigorifero sotto una campana di vetro, o in un luogo fresco e asciutto.  
+        Sia la crema che la pasta frolla si possono preparare con qualche ora d'anticipo, ma una volta preparata la pastiera consigliamo di cuocerla subito. 
+        La pastiera pu&ograve; anche essere congelata, per comodit&agrave; tagliatela a fette così potrete scongelare la vostra porzione al bisogno!</p>
+  </section>
+  <section class='steps' data-step='step20'>
+    <h3>CONSIGLIO</h3>
+    <p>Se preferite al posto dello strutto per preparare la frolla potete utilizzare 155 g di burro, mentre per la crema mantenete le stesse dosi. 
+      <br>  Se la ricotta dovesse essere troppo umida potete lasciarla scolare in un colino per qualche ora. 
+        <br> Se volete optare per una versione meno rustica potete frullare una parte del grano cotto, o tutto!
+      <br> Non amate i canditi? Potete frullare anche questi!    
+      <br>Per rendere il ripieno più fine e dalla consistenza meno rustica, potreste macinare tutto o metà del grano cotto prima di aggiungerlo alla restante crema.
+      <br> Se preferite una crema senza canditi potete ometterli, risulterà ugualmente golosa.
+    </p>
+  </section>
+  <section class='steps' data-step='step21'>
+    <h3>CURIOSIT&Agrave;</h3>
+    <p>Il nome Pastiera sembrerebbe derivare dall’abitudine, consolidata per un certo periodo di tempo, che vedeva utilizzare al posto del grano cotto la pasta cotta; tutt’oggi ci sono ancora massaie che preparano la pastiera utilizzando paste del tipo spaghetti o capellini.
+    </p>
     </div>
 </div>
     
