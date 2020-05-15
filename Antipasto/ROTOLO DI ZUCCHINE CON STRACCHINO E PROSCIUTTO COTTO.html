@@ -7,7 +7,7 @@
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
     
 
-    <title>TORTA FREDDA ROCHER</title>
+    <title>ROTOLO DI ZUCCHINE CON STRACCHINO E PROSCIUTTO COTTO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!--IL MIO CODICE PER ICONE BELLE-->
     <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
@@ -18,8 +18,8 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/ricetta.css" rel="stylesheet">
-   
-</head>
+   </head>
+
 
   <body class="text-center">
     <header class="header clearfix" >
@@ -46,22 +46,24 @@
         
       </ul>
     </header>
-    <nav class="p-3" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
-        <li class="breadcrumb-item"><a href="/seconda.parte/dolci.html">Dolci</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Torta fredda Rocher</li>
-      </ol>
-    </nav>
 
-    <h1>Torta fredda Rocher</h1>
+    <nav class="p-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
+          <li class="breadcrumb-item"><a href="/seconda.parte/antipasti.html">Antipasto</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Rotolo di zucchine con stracchino e prosciutto cotto</li>
+        </ol>
+      </nav>
+    <h1>Rotolo di zucchine con stracchino e prosciutto cotto</h1>
+   
+       
 
 <div class="recepie_details_area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
                 <div class="recepies_thumb">
-                    <img  src="/img/rocher.jpg" alt="" style="position: relative;
+                    <img  src="/img/rotolo-zucchine.jpg" alt="" style="position: relative;
                     -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
@@ -79,20 +81,13 @@
                   <input type="number" v-model="serving">
                   <button @click="decreaseServing">-</button>
                   <button @click="increaseServing">+</button>
-                  <h4 >PER LA BASE </h4>
-                    <serving-ingredient name="Wafer" :serving="serving" base-value="180" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Nocciole" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Latte" :serving="serving" base-value="70" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Caccao cucchiani" :serving="serving" base-value="2" metric=""></serving-ingredient>
-                    <h4 >PER LA CREMA </h4>
-                    <serving-ingredient name="Ricotta" :serving="serving" base-value="400" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Nutella" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Panna montata" :serving="serving" base-value="150" metric="mL"></serving-ingredient>
-                    <h4 >PER LA DECORAZIONE </h4>
-                    <serving-ingredient name="Panna montata" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Nocciole" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Nutella" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Granella di Nocciole" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                    <serving-ingredient name="Uova" :serving="serving" base-value="4" metric=""></serving-ingredient>
+                    <serving-ingredient name="Zucchine" :serving="serving" base-value="500" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Stracchino" :serving="serving" base-value="150" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Prosciutto cotto" :serving="serving" base-value="100" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Parmigiano" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Pepe" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <serving-ingredient name="Sale" :serving="serving" base-value="qb" metric=""></serving-ingredient>
                   </div>
                 </div>
                 </div>
@@ -102,7 +97,7 @@
 
     <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
-        <source src="/video/DOLCI/TORTA FREDDA ROCHER.mp4" type="video/mp4">
+        <source src="/video/ANTIPASTO/Il ROTOLO DI ZUCCHINE CON STRACCHINO E PROSCIUTTO COTTO.mp4" type="video/mp4">
       </video>
     
       <h2 class="subtitle fancy">Preparazione</h2>
@@ -112,52 +107,36 @@
          
               <section class='steps' data-step='step1' >
                 <h3>Step 1</h3>
-                <p>Metti i wafer e le nocciole in un mixer.</p></section>
+                <p>Lava bene le zucchine e grattugiale con la parte grossa della grattugia in una ciotola.</p></section>
               
               <section class='steps' data-step='step2' >
                 <h3>Step 2</h3>
-               <p>Frulla ed aggiungi il latte.</p></section>
+               <p> Prendi un’altra ciotola e sbatti le uova con il parmigiano, aggiungi le zucchine ed aggiusta di sale e pepe.</p></section>
               
               <section class='steps' data-step='step3'>
                 <h3>Step 3</h3>
-                <p>Frulla di nuovo e aggiungi il cacao.</p>
+                <p>Versa il composto in una teglia o stampo da forno delle dimensioni di 30×20 cm foderata con carta da forno. </p>
               
           </section>
           <section class='steps' data-step='step4'>
             <h3>Step 4</h3>
-            <p>Un’ultima frullata veloce e trasferisci il composto in uno stampo a cerniera del diametro di 24 cm rivestito di carta da forno.</p>
+            <p> Cuoci nel forno a 180° C per circa 20 minuti.</p>
       </section>
       <section class='steps' data-step='step5'>
         <h3>Step 5</h3>
-        <p>Schiaccia per bene e metti in frigo mentre prepari la crema.</p>
+        <p>Una volta sfornato, arrotolalo aiutandoti con la carta da forno e lascialo raffreddare. </p>
   </section>
   <section class='steps' data-step='step6'>
     <h3>Step 6</h3>
-    <p>Lavora la ricotta setacciata con la nutella.</p>
+    <p> Quando si sar&agrave; raffreddato, apri il rotolo facendo molta attenzione a non romperlo: spalmaci sopra lo stracchino e stendi le fette di prosciutto cotto sopra il formaggio.</p>
 </section>
 <section class='steps' data-step='step7'>
   <h3>Step 7</h3>
-  <p>Aggiungi la panna montata ed incorporala delicatamente con una spatola.</p>
+  <p> A questo punto arrotola nuovamente la frittata sempre aiutandoti con la carta da forno e lascialo in frigo così avvolto a raffreddare per almeno un’ora.</p>
 </section>
 <section class='steps' data-step='step8'>
   <h3>Step 8</h3>
-  <p>Versa nello stampo e livella la superficie.</p>
-</section>
-<section class='steps' data-step='step9'>
-  <h3>Step 9</h3>
-  <p>Copri e metti in frigo per almeno 4 ore.</p>
-</section>
-<section class='steps' data-step='step10'>
-  <h3>Step 10</h3>
-  <p> Trasferisci la torta in un piatto da portata e decora con dei ciuffetti di panna montata e le nocciole intere.</p>
-</section>
-<section class='steps' data-step='step11'>
-  <h3>Step 11</h3>
-  <p>Aggiungi delle strisce di nutella e un po’ di granella di nocciole.</p>
-</section>
-<section class='steps' data-step='step12'>
-  <h3>Step 12</h3>
-  <p> Ed eccovi una bella fetta di torta fredda rocher.</p>
+  <p>Taglia il rotolo di frittata alle zucchine con stracchino e prosciutto cotto e servi.</p>
 </section>
        
     </div>

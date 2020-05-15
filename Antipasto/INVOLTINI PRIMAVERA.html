@@ -7,7 +7,7 @@
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
     
 
-    <title>TORTA FREDDA ROCHER</title>
+    <title>Involtini Primavera</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!--IL MIO CODICE PER ICONE BELLE-->
     <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
@@ -18,8 +18,8 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/ricetta.css" rel="stylesheet">
-   
-</head>
+   </head>
+
 
   <body class="text-center">
     <header class="header clearfix" >
@@ -46,22 +46,24 @@
         
       </ul>
     </header>
-    <nav class="p-3" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
-        <li class="breadcrumb-item"><a href="/seconda.parte/dolci.html">Dolci</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Torta fredda Rocher</li>
-      </ol>
-    </nav>
 
-    <h1>Torta fredda Rocher</h1>
+    <nav class="p-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
+          <li class="breadcrumb-item"><a href="/seconda.parte/antipasti.html">Antipasto</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Involtini Primavera</li>
+        </ol>
+      </nav>
+    <h1>Involtini Primavera</h1>
+   
+       
 
 <div class="recepie_details_area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
                 <div class="recepies_thumb">
-                    <img  src="/img/rocher.jpg" alt="" style="position: relative;
+                    <img  src="/img/InvoltiniPrimavera.webp" alt="" style="position: relative;
                     -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
@@ -79,20 +81,18 @@
                   <input type="number" v-model="serving">
                   <button @click="decreaseServing">-</button>
                   <button @click="increaseServing">+</button>
-                  <h4 >PER LA BASE </h4>
-                    <serving-ingredient name="Wafer" :serving="serving" base-value="180" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Nocciole" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Latte" :serving="serving" base-value="70" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Caccao cucchiani" :serving="serving" base-value="2" metric=""></serving-ingredient>
-                    <h4 >PER LA CREMA </h4>
-                    <serving-ingredient name="Ricotta" :serving="serving" base-value="400" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Nutella" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Panna montata" :serving="serving" base-value="150" metric="mL"></serving-ingredient>
-                    <h4 >PER LA DECORAZIONE </h4>
-                    <serving-ingredient name="Panna montata" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Nocciole" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Nutella" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Granella di Nocciole" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                    <serving-ingredient name="Pasta fillo da 37x25cm" :serving="serving" base-value="8" metric="fogli"></serving-ingredient>
+                    <serving-ingredient name="Lonza di maiale (a fette)" :serving="serving" base-value="150" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Carote" :serving="serving" base-value="110" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Cipollotto fresco" :serving="serving" base-value="100" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Germogli di soia" :serving="serving" base-value="80" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Verza" :serving="serving" base-value="70" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Sedano" :serving="serving" base-value="50" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Salsa di soia" :serving="serving" base-value="50" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Olio di semi di arachide" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Acqua per spennallare" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <h4 >PER FRIGGERE</h4>
+                    <serving-ingredient name="Olio di semi di arachide" :serving="serving" base-value="qb" metric=""></serving-ingredient>
                   </div>
                 </div>
                 </div>
@@ -102,7 +102,7 @@
 
     <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
-        <source src="/video/DOLCI/TORTA FREDDA ROCHER.mp4" type="video/mp4">
+        <source src="/video/ANTIPASTO/INVOLTINI PRIMAVERA.mp4" type="video/mp4">
       </video>
     
       <h2 class="subtitle fancy">Preparazione</h2>
@@ -112,53 +112,77 @@
          
               <section class='steps' data-step='step1' >
                 <h3>Step 1</h3>
-                <p>Metti i wafer e le nocciole in un mixer.</p></section>
+                <p>Per realizzare gli involtini primavera, per prima cosa preparate gli ingredienti per il ripieno.  </p></section>
               
               <section class='steps' data-step='step2' >
                 <h3>Step 2</h3>
-               <p>Frulla ed aggiungi il latte.</p></section>
+               <p> Tagliate le fettine di maiale prima a striscioline e poi a cubetti molto piccoli. </p></section>
               
               <section class='steps' data-step='step3'>
                 <h3>Step 3</h3>
-                <p>Frulla di nuovo e aggiungi il cacao.</p>
+                <p>Mondate le carote e tagliatele a listarelle sottili della lunghezza di circa 6 cm.</p>
               
           </section>
           <section class='steps' data-step='step4'>
             <h3>Step 4</h3>
-            <p>Un’ultima frullata veloce e trasferisci il composto in uno stampo a cerniera del diametro di 24 cm rivestito di carta da forno.</p>
+            <p>Fate la stessa cosa anche con il cipollotto, la verza e il sedano, dopo averlo privato dei filamenti.</p>
       </section>
       <section class='steps' data-step='step5'>
         <h3>Step 5</h3>
-        <p>Schiaccia per bene e metti in frigo mentre prepari la crema.</p>
+        <p>Scaldate l’olio di semi in un wok, aggiungete i cubetti di carne e saltate a fuoco vivace per 3 minuti, poi unite le carote, il sedano e il cipollotto .</p>
   </section>
   <section class='steps' data-step='step6'>
     <h3>Step 6</h3>
-    <p>Lavora la ricotta setacciata con la nutella.</p>
+    <p>Dopo un paio di minuti sfumate con la salsa di soia e cuocete ancora per qualche minuto, finché le verdure risulteranno cotte ma ancora croccanti.</p>
 </section>
 <section class='steps' data-step='step7'>
   <h3>Step 7</h3>
-  <p>Aggiungi la panna montata ed incorporala delicatamente con una spatola.</p>
+  <p> Ora aggiungete la verza e i germogli di soia e saltate il tutto per qualche secondo, poi distribuite il ripieno su un vassoio per farlo intiepidire.  In questo modo la pasta fillo non rischier&agrave; di bucarsi. </p>
 </section>
 <section class='steps' data-step='step8'>
   <h3>Step 8</h3>
-  <p>Versa nello stampo e livella la superficie.</p>
+  <p>A questo punto prendete un foglio di pasta fillo per volta, coprendo il resto dei fogli con un canovaccio leggermente inumidito. </p>
 </section>
 <section class='steps' data-step='step9'>
   <h3>Step 9</h3>
-  <p>Copri e metti in frigo per almeno 4 ore.</p>
+  <p> Dividete il foglio a met&agrave; in modo da ottenere 2 rettangoli di circa 18x25 cm , poi sovrapponeteli.</p>
 </section>
 <section class='steps' data-step='step10'>
   <h3>Step 10</h3>
-  <p> Trasferisci la torta in un piatto da portata e decora con dei ciuffetti di panna montata e le nocciole intere.</p>
+  <p>Posizionate alla base una cucchiaiata di ripieno, ormai freddo, poi sollevate il lembo inferiore di pasta per coprirlo e ripiegate i lembi laterali.</p>
 </section>
 <section class='steps' data-step='step11'>
-  <h3>Step 11</h3>
-  <p>Aggiungi delle strisce di nutella e un po’ di granella di nocciole.</p>
-</section>
-<section class='steps' data-step='step12'>
-  <h3>Step 12</h3>
-  <p> Ed eccovi una bella fetta di torta fredda rocher.</p>
-</section>
+    <h3>Step 11</h3>
+    <p>Continuate ad arrotolare l’involtino fino all’altra estremit&agrave; del rettangolo, spennellando la parte interna con un po’ di acqua per sigillare la chiusura.</p>
+  </section>
+  <section class='steps' data-step='step12'>
+    <h3>Step 12</h3>
+    <p>Spennellate la chiusura anche all’esterno e adagiate l’involtino su un vassoio con la chiusura rivolta verso l’alto, in modo che non si attacchi.</p>
+  </section>
+  <section class='steps' data-step='step13'>
+    <h3>Step 13</h3>
+    <p>Dopo aver formato tutti gli involtini, scaldate l’olio di semi in un pentolino fino alla temperatura di 160° e friggete un pezzo per volta per circa 2 minuti.</p>
+  </section>
+  <section class='steps' data-step='step14'>
+    <h3>Step 14</h3>
+    <p>Quando si sar&agrave; dorato in modo uniforme, scolate l’involtino su carta assorbente e proseguite con la frittura degli altri pezzi.</p>
+  </section>
+  <section class='steps' data-step='step15'>
+    <h3>Step 15</h3>
+    <p>Servite subito i vostri involtini primavera!</p>
+  </section>
+  <section class='steps' data-step='step16'>
+    <h3> CONSERVAZIONE</h3>
+    <p>Si consiglia di consumare gli involtini primavera appena pronti; in alternativa potete conservarli in frigorifero per un giorno al massimo. Si sconsiglia la congelazione.</p>
+  </section>
+  <section class='steps' data-step='step17'>
+    <h3>CONSIGLIO</h3>
+    <p>Variate il ripieno a vostro piacimento sostituendo la carne con i gamberetti o utilizzando altre verdure di stagione!</p>
+  </section>
+  <section class='steps' data-step='step18'>
+    <h3> CURIOSIT&Agrave;</h3>
+    <p>Gli involtini primavera sono chiamati in questo modo perché in origine venivano preparati in occasione dei festeggiamenti del Capodanno cinese che cade verso la fine dell’inverno o all’inizio della primavera!</p>
+  </section>
        
     </div>
 </div>
