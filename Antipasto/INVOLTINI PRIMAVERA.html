@@ -7,7 +7,7 @@
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
     
 
-    <title>Baileys al cioccolato</title>
+    <title>Involtini Primavera</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!--IL MIO CODICE PER ICONE BELLE-->
     <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
@@ -46,30 +46,24 @@
         
       </ul>
     </header>
+
     <nav class="p-3" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
-        <li class="breadcrumb-item"><a href="/seconda.parte/dolci.html">Dolci</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Baileys al cioccolato</li>
-      </ol>
-    </nav>
- 
- 
-
-    <h1>Baileys al cioccolato</h1>
-
-
-
-
-
-
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
+          <li class="breadcrumb-item"><a href="/seconda.parte/antipasti.html">Antipsto</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Involtini Primavera</li>
+        </ol>
+      </nav>
+    <h1>Involtini Primavera</h1>
+   
+       
 
 <div class="recepie_details_area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
                 <div class="recepies_thumb">
-                    <img  src="/img/bay.jpg" alt="" style="position: relative;
+                    <img  src="/img/InvoltiniPrimavera.webp" alt="" style="position: relative;
                     -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
@@ -87,23 +81,18 @@
                   <input type="number" v-model="serving">
                   <button @click="decreaseServing">-</button>
                   <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Farina" :serving="serving" base-value="260" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Zucchero" :serving="serving" base-value="414" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cacao" :serving="serving" base-value="85" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Uova" :serving="serving" base-value="2" metric=""></serving-ingredient>
-                    <serving-ingredient name="Latte" :serving="serving" base-value="180" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Olio vegetale" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Baileys Irish Cream" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Cucchiaino di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Acqua bollente" :serving="serving" base-value="180" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Latte condensato zuccherato" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Gocce di cioccolato" :serving="serving" base-value="127" metric="g"></serving-ingredient>
-                    <h4 >TOPPING DI CREMA FRUTTA</h4>
-                    <serving-ingredient name="Panna da montare" :serving="serving" base-value="480" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Zucchero a velo" :serving="serving" base-value="86" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cacao in polvere" :serving="serving" base-value="29" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Baileys Irish Cream" :serving="serving" base-value="30" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Cucchiaino di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <serving-ingredient name="Pasta fillo da 37x25cm" :serving="serving" base-value="8" metric="fogli"></serving-ingredient>
+                    <serving-ingredient name="Lonza di maiale (a fette)" :serving="serving" base-value="150" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Carote" :serving="serving" base-value="110" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Cipollotto fresco" :serving="100" base-value="" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Germogli di soia" :serving="serving" base-value="80" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Verza" :serving="serving" base-value="70" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Sedano" :serving="serving" base-value="50" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Salsa di soia" :serving="serving" base-value="50" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Olio di semi di arachide" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Acqua per spennallare" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <h4 >PER FRIGGERE</h4>
+                    <serving-ingredient name="Olio di semi di arachide" :serving="serving" base-value="qb" metric=""></serving-ingredient>
                   </div>
                 </div>
                 </div>
@@ -113,7 +102,7 @@
 
     <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
-        <source src="/video/DOLCI/Baileys al cioccolato!.mp4" type="video/mp4">
+        <source src="/video/ANTIPASTO/INVOLTINI PRIMAVERA.mp4" type="video/mp4">
       </video>
     
       <h2 class="subtitle fancy">Preparazione</h2>
@@ -123,53 +112,77 @@
          
               <section class='steps' data-step='step1' >
                 <h3>Step 1</h3>
-                <p> Preparare una tortiera ungendo i lati. Preriscalda il forno a 148 ° C . </p></section>
+                <p>Per realizzare gli involtini primavera, per prima cosa preparate gli ingredienti per il ripieno.  </p></section>
               
               <section class='steps' data-step='step2' >
                 <h3>Step 2</h3>
-               <p>Aggiungi tutti gli ingredienti secchi in una ciotola capiente e unisci.</p></section>
+               <p> Tagliate le fettine di maiale prima a striscioline e poi a cubetti molto piccoli. </p></section>
               
               <section class='steps' data-step='step3'>
                 <h3>Step 3</h3>
-                <p>Aggiungi uova, latte, olio vegetale, 1/2 tazza di crema irlandese e vaniglia agli ingredienti asciutti e mescola bene.</p>
+                <p>Mondate le carote e tagliatele a listarelle sottili della lunghezza di circa 6 cm.</p>
               
           </section>
           <section class='steps' data-step='step4'>
             <h3>Step 4</h3>
-            <p>Versa lentamente l'acqua nella pastella, mescolando bene e facendo attenzione agli schizzi.</p>
+            <p>Fate la stessa cosa anche con il cipollotto, la verza e il sedano, dopo averlo privato dei filamenti.</p>
       </section>
       <section class='steps' data-step='step5'>
         <h3>Step 5</h3>
-        <p>Versare l'impasto nella tortiera e infornare per circa 40-45 minuti, o fino a quando uno stecchino esce con qualche briciola.</p>
+        <p>Scaldate l’olio di semi in un wok, aggiungete i cubetti di carne e saltate a fuoco vivace per 3 minuti, poi unite le carote, il sedano e il cipollotto .</p>
   </section>
   <section class='steps' data-step='step6'>
     <h3>Step 6</h3>
-    <p>Rimuovere la torta dal forno e fare dei buchi dappertutto. Uso una bacchetta per affilare i coltelli, ma potresti anche usare una cannuccia.</p>
+    <p>Dopo un paio di minuti sfumate con la salsa di soia e cuocete ancora per qualche minuto, finché le verdure risulteranno cotte ma ancora croccanti.</p>
 </section>
 <section class='steps' data-step='step7'>
   <h3>Step 7</h3>
-  <p>Mentre la torta è ancora calda, aggiungi le gocce di cioccolato in una ciotola di medie dimensioni. Accantonare.</p>
+  <p> Ora aggiungete la verza e i germogli di soia e saltate il tutto per qualche secondo, poi distribuite il ripieno su un vassoio per farlo intiepidire.  In questo modo la pasta fillo non rischier&agrave; di bucarsi. </p>
 </section>
 <section class='steps' data-step='step8'>
   <h3>Step 8</h3>
-  <p>Aggiungere il latte condensato zuccherato e la restante 1/2 tazza di crema irlandese in un misurino per microonde. Scaldare il latte e la panna fino a quando iniziano a bollire, quindi versare sopra le gocce di cioccolato.</p>
+  <p>A questo punto prendete un foglio di pasta fillo per volta, coprendo il resto dei fogli con un canovaccio leggermente inumidito. </p>
 </section>
 <section class='steps' data-step='step9'>
   <h3>Step 9</h3>
-  <p>Sbattere il cioccolato fino a che liscio, quindi versare immediatamente sopra la torta, spalmandola nei fori. Non lasciare che il composto si sieda prima di versarlo sopra la torta o inizierà ad addensarsi e non immergersi anche nei fori.</p>
+  <p> Dividete il foglio a met&agrave; in modo da ottenere 2 rettangoli di circa 18x25 cm , poi sovrapponeteli.</p>
 </section>
 <section class='steps' data-step='step10'>
   <h3>Step 10</h3>
-  <p> Mettere la torta in frigorifero per raffreddare e immergere.</p>
+  <p>Posizionate alla base una cucchiaiata di ripieno, ormai freddo, poi sollevate il lembo inferiore di pasta per coprirlo e ripiegate i lembi laterali.</p>
 </section>
 <section class='steps' data-step='step11'>
-  <h3>Step 11</h3>
-  <p> Quando la torta si è raffreddata, aggiungi gli ingredienti per la panna montata in una ciotola grande. Frusta ad alta velocità fino a formare picchi rigidi.</p>
-</section>
-<section class='steps' data-step='step12'>
-  <h3>Step 12</h3>
-  <p> Distribuire uniformemente la panna montata sulla torta. Completa la torta con mini gocce di cioccolato e un filo di salsa al cioccolato, se lo desideri. Conservare in frigorifero fino al momento di servire.</p>
-</section>
+    <h3>Step 11</h3>
+    <p>Continuate ad arrotolare l’involtino fino all’altra estremit&agrave; del rettangolo, spennellando la parte interna con un po’ di acqua per sigillare la chiusura.</p>
+  </section>
+  <section class='steps' data-step='step12'>
+    <h3>Step 12</h3>
+    <p>Spennellate la chiusura anche all’esterno e adagiate l’involtino su un vassoio con la chiusura rivolta verso l’alto, in modo che non si attacchi.</p>
+  </section>
+  <section class='steps' data-step='step13'>
+    <h3>Step 13</h3>
+    <p>Dopo aver formato tutti gli involtini, scaldate l’olio di semi in un pentolino fino alla temperatura di 160° e friggete un pezzo per volta per circa 2 minuti.</p>
+  </section>
+  <section class='steps' data-step='step14'>
+    <h3>Step 14</h3>
+    <p>Quando si sar&agrave; dorato in modo uniforme, scolate l’involtino su carta assorbente e proseguite con la frittura degli altri pezzi.</p>
+  </section>
+  <section class='steps' data-step='step15'>
+    <h3>Step 15</h3>
+    <p>Servite subito i vostri involtini primavera!</p>
+  </section>
+  <section class='steps' data-step='step16'>
+    <h3> CONSERVAZIONE</h3>
+    <p>Si consiglia di consumare gli involtini primavera appena pronti; in alternativa potete conservarli in frigorifero per un giorno al massimo. Si sconsiglia la congelazione.</p>
+  </section>
+  <section class='steps' data-step='step17'>
+    <h3>CONSIGLIO</h3>
+    <p>Variate il ripieno a vostro piacimento sostituendo la carne con i gamberetti o utilizzando altre verdure di stagione!</p>
+  </section>
+  <section class='steps' data-step='step18'>
+    <h3> CURIOSIT&Agrave;</h3>
+    <p>Gli involtini primavera sono chiamati in questo modo perché in origine venivano preparati in occasione dei festeggiamenti del Capodanno cinese che cade verso la fine dell’inverno o all’inizio della primavera!</p>
+  </section>
        
     </div>
 </div>
