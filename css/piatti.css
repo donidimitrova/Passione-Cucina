@@ -1,4 +1,6 @@
 /* Custom default button */
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruluko&display=swap');
 html{
   display:flex;
 }
@@ -135,4 +137,11 @@ Smartphone
     .card a.btn:hover {
       background: rgb(122, 13, 13);
       transition: 250ms;
+    }
+
+    .title h1{
+      font-family: 'Merienda', cursive !important;
+    }
+    .card-title{
+      font-family: 'Titillium Web', sans-serif;
     }

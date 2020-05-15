@@ -7,7 +7,7 @@
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
     
 
-    <title> Fusilli al baffo</title>
+    <title>Involtini di melanzane e pesce spada</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!--IL MIO CODICE PER ICONE BELLE-->
     <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
@@ -40,21 +40,22 @@
           </div>
           </form>
       </li>
-      <li class="header__menu__item"><a href="/seconda.parte/contatti2.html">Contatti</a></li>
-      <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
+        <li class="header__menu__item"><a href="/seconda.parte/contatti2.html">Contatti</a></li>
+        <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
         
         
       </ul>
     </header>
 
-    <h1>Fusilli al baffo</h1>
+    <h1>Involtini di melanzane e pesce spada</h1>
+
 
 <div class="recepie_details_area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
                 <div class="recepies_thumb">
-                    <img  src="/img/fusilli-baffo.png" alt="" style="position: relative;
+                    <img  src="/img/involtinimelanzanepescespada.jpg" alt="" style="position: relative;
                     -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
@@ -69,17 +70,20 @@
                             <star-rating value="3"></star-rating>
                             </div>
                   <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
+                  <input type="number" v-model="serving">
                   <button @click="decreaseServing">-</button>
                   <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Fusilli" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Panna Liquida" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Prezzemolo" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Guanciale" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Passata di pomodoro" :serving="serving" base-value="12" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pecorino" :serving="serving" base-value="5" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="1" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Melanzane" :serving="serving" base-value="2" metric=""></serving-ingredient>
+                    <serving-ingredient name="Aceto di vino bianco" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <serving-ingredient name="Sale" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <serving-ingredient name="Olio extra vergine di oliva" :serving="qb" base-value="" metric=""></serving-ingredient>
+                    <serving-ingredient name="Spicchio di aglio" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <serving-ingredient name="Pecorino siciliano grattugiato" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Pane grattugiato" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Origano" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <serving-ingredient name="Pesce spada affettato molto finemente" :serving="serving" base-value="250" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Pinoli" :serving="serving" base-value="40" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Pepe nero macinato al momento" :serving="serving" base-value="qb" metric=""></serving-ingredient>
                   </div>
                 </div>
                 </div>
@@ -89,46 +93,57 @@
 
     <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
-        <source src="/video/PRIMI/Fusilli al baffo con guanciale.mp4" type="video/mp4">
+        <source src="/video/ANTIPASTO/INVOLTINI di MELANZANE e PESCE SPADA.mp4" type="video/mp4">
       </video>
     
       <h2 class="subtitle fancy">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">
-
-         <section class='steps' data-step='step1' >
+         
+              <section class='steps' data-step='step1' >
                 <h3>Step 1</h3>
-                <p> Mettete sul fuoco una pentola con abbondante acqua salata.</p></section>
+                <p>Lavare le melanzane, eliminare l'estremit&agrave; con il picciolo e tagliarle a fette nel senso della lunghezza di un centimetro scarso di spessore. </p></section>
+              
               <section class='steps' data-step='step2' >
                 <h3>Step 2</h3>
-                <p> Rosolare in un'altra pentola il guanciale.</p></section>
+               <p>Man mano che si tagliano metterle in una ciotola con acqua e aceto. La proporzione giusta &egrave; un cucchiaio di aceto per ogni litro d'acqua.</p></section>
               
-              <section class='steps' data-step='step3' >
+              <section class='steps' data-step='step3'>
                 <h3>Step 3</h3>
-               <p>Una volta dorato, versare la panna fresca, la passata di pomodoro, sale e pepe.</p></section>
+                <p>Quando sono tutte pronte, metterle su uno strofinaccio pulito, asciugarle e salarle in superficie. Metterle in un colapasta tutte in verticale e lasciarle scolare per una decina di minuti. Tamponarle con carta da cucina dopo il riposo per eliminare il siero in eccesso.</p>
               
-              <section class='steps' data-step='step4'>
-                <h3>Step 4</h3> 
-                <p> Cuocere il tutto circa 10 minuti.</p>              
           </section>
-          <section class='steps' data-step='step5'>
-            <h3>Step 5</h3>
-            <p>Quando l'acqua è arrivata a bollore, buttare la pasta e scolarla al dente</p>
+          <section class='steps' data-step='step4'>
+            <h3>Step 4</h3>
+            <p>Scaldare una piastra, ungerla con un filo d'olio e grigliare le melanzane due minuti per lato. Devono diventare morbide, ma non spaccarsi. Ritirarle e disporle tutte stese su un tagliere.</p>
       </section>
-      <section class='steps' data-step='step6'>
-        <h3>Step 6</h3>
-        <p>Versare i fusilli al dente nella pentola insieme al guanciale, la panna e la passata di pomodoro e mescolare. </p>
+      <section class='steps' data-step='step5'>
+        <h3>Step 5</h3>
+        <p>Spellare l'aglio e tritarlo finemente, oppure spremerlo con l'apposito attrezzo.</p>
   </section>
-      <section class='steps' data-step='step7'>
-        <h3>Step 7</h3>
-        <p>Impiattate e concludere conspargendo il prezzemolo fresco e il pecorino.</p>
-  </section>
-  
-                        
-    <section class='steps' data-step='consiglio'>
-        <h3>CONSIGLIO</h3>
-          <p>I fusilli al baffo possono essere arricchiti a piacimento con aggiunta di verdure di stagione come piselli, asparagi, spinaci freschi tritati, zucchine oppure gamberi, speck o pancetta! Se non gradite l’aggiunta di passata di pomodoro, potete sostituirla con dei pomodorini freschi precedentemente rosolati e aggiunti in seguito alla panna fresca.</p>
+  <section class='steps' data-step='step6'>
+    <h3>Step 6</h3>
+    <p>Mescolare in una ciotola il pecorino grattugiato con il pangrattato, l'aglio tritato e un pizzico di origano.</p>
+</section>
+<section class='steps' data-step='step7'>
+  <h3>Step 7</h3>
+  <p>Distribuire sulle fette di melanzana le fettine di pesce spada, i pinoli e il trito aromatico. Spolverizzare con una macinata di pepe e condire con un filo d'olio.</p>
+</section>
+<section class='steps' data-step='step8'>
+  <h3>Step 8</h3>
+  <p>Arrotolare ogni melanzana a involtino, compattare bene con le mani e utilizzare uno stuzzicadenti per tenere in forma.</p>
+</section>
+<section class='steps' data-step='step9'>
+  <h3>Step 9</h3>
+  <p>Ungere una teglia da forno, disporvi gli involtini, unire un filo d'olio e cuocere per 10 minuti a 220 gradi C.</p>
+</section>
+<section class='steps' data-step='step10'>
+  <h3>Step 10</h3>
+  <p>Servire gli involtini caldi o tiepidi. Sono ottimi anche freddi, soprattutto dopo un giorno di riposo.</p>
+</section>
+       
+    </div>
 </div>
     
 
