@@ -1,5 +1,6 @@
 
 /* Custom default button */
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 html,body{height:100%;}
 body{background: #eee;}
@@ -215,3 +216,6 @@ Smartphone
 
 }
   
+h4{
+  font-family: 'Merienda', cursive !important;
+}

@@ -1,4 +1,5 @@
 /* Custom default button */
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 html,body{height:100%;}
 body{background: #eee;}
@@ -107,6 +108,16 @@ Smartphone
   }
   
     
+
+
+  h4{
+    margin: 30px;
+ font-size: 51px;
+ line-height: 44px;
+ letter-spacing: -2px;
+ font-weight: bold;color: rgb(223, 41, 35);
+ font-family: 'Merienda', cursive !important;
+  }
 /***************************
 IMMAGINI DOPO IL BUONGIORNO
 ****************************/
@@ -413,6 +424,10 @@ la mette vericale
     text-align: center;
     text-shadow: 1px 1px black;
     
+    
+  }
+  .titolo{
+    font-family: 'Merienda', cursive !important;
   }
   
   .portfolio-item .caption .caption-content p {
