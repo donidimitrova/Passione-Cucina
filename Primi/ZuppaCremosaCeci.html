@@ -7,7 +7,7 @@
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
     
 
-    <title> Fusilli al baffo</title>
+    <title>Zuppa cremosa di ceci</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!--IL MIO CODICE PER ICONE BELLE-->
     <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>
@@ -47,7 +47,7 @@
       </ul>
     </header>
 
-    <h1>Fusilli al baffo</h1>
+    <h1>Zuppa cremosa di ceci</h1>
 
 
 
@@ -60,7 +60,7 @@
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
                 <div class="recepies_thumb">
-                    <img  src="/img/fusilli-baffo.png" alt="" style="position: relative;
+                    <img  src="/img/zuppaCeci.jpg" alt="" style="position: relative;
                     -webkit-box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
@@ -78,14 +78,18 @@
                   <input type="number" v-model="serving" >
                   <button @click="decreaseServing">-</button>
                   <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Fusilli" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Panna Liquida" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Prezzemolo" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Guanciale" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Passata di pomodoro" :serving="serving" base-value="12" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pecorino" :serving="serving" base-value="5" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="1" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Ceci già lessati" :serving="serving" base-value="350" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Carota piccola" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <serving-ingredient name="Sedano piccolo" :serving="serving" base-value="1" metric=" gambo"></serving-ingredient>
+                    <serving-ingredient name="Porro" :serving="serving" base-value="5" metric=" rondelle"></serving-ingredient>
+                    <serving-ingredient name="Coriandolo" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
+                    <serving-ingredient name="Cumino" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
+                    <serving-ingredient name="Curcuma" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
+                    <serving-ingredient name="Alloro" :serving="serving" base-value="3" metric=" foglie"></serving-ingredient>
+                    <serving-ingredient name="Rosmarino" :serving="serving" base-value="1" metric=" rametto"></serving-ingredient>
+                    <serving-ingredient name="Acqua" :serving="serving" base-value="1" metric=" tazza"></serving-ingredient>
+                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
+                    <serving-ingredient name="Pepe" :serving="serving" base-value="2" metric="g"></serving-ingredient>
                   </div>
                 </div>
                 </div>
@@ -95,46 +99,56 @@
 
     <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
-        <source src="/video/PRIMI/Fusilli al baffo con guanciale.mp4" type="video/mp4">
+        <source src="/video/PRIMI/ZUPPA CREMOSA DI CECI.mp4" type="video/mp4">
       </video>
     
       <h2 class="subtitle fancy">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">
-
-         <section class='steps' data-step='step1' >
+         
+              <section class='steps' data-step='step1' >
                 <h3>Step 1</h3>
-                <p> Mettete sul fuoco una pentola con abbondante acqua salata.</p></section>
+                <p>Tagliare a piccoli pezzi la carota ed il sedano. </p></section>
+              
               <section class='steps' data-step='step2' >
                 <h3>Step 2</h3>
-                <p> Rosolare in un'altra pentola il guanciale.</p></section>
+               <p>Mettere le verdure, il porro ed un filo d’olio evo in una casseruola; quando comincia a rosolare aggiungere i ceci e falli cuocere qualche minuto.</p></section>
               
-              <section class='steps' data-step='step3' >
-                <h3>Step 3</h3>
-               <p>Una volta dorato, versare la panna fresca, la passata di pomodoro, sale e pepe.</p></section>
+              <section class='steps' data-step='step3'>
+                <h3>Step 3</h3> 
+                <p>Aggiungere l’acqua e tutte le spezie.</p>
               
-              <section class='steps' data-step='step4'>
-                <h3>Step 4</h3> 
-                <p> Cuocere il tutto circa 10 minuti.</p>              
           </section>
-          <section class='steps' data-step='step5'>
-            <h3>Step 5</h3>
-            <p>Quando l'acqua è arrivata a bollore, buttare la pasta e scolarla al dente.</p>
+          <section class='steps' data-step='step4'>
+            <h3>Step 4</h3>
+            <p>Portare a bollore, abbassare la fiamma e cuocere a coperchio chiuso per 15 minuti.</p>
       </section>
-      <section class='steps' data-step='step6'>
-        <h3>Step 6</h3>
-        <p>Versare i fusilli al dente nella pentola insieme al guanciale, la panna e la passata di pomodoro e mescolare. </p>
+      <section class='steps' data-step='step5'>
+        <h3>Step 5</h3>
+        <p> Spegnere e togliere l’alloro ed il rametto di rosmarino. </p>
   </section>
-      <section class='steps' data-step='step7'>
-        <h3>Step 7</h3>
-        <p>Impiattate e concludere conspargendo il prezzemolo fresco e il pecorino.</p>
-  </section>
-  
-                        
-    <section class='steps' data-step='consiglio'>
-        <h3>CONSIGLIO</h3>
-          <p>I fusilli al baffo possono essere arricchiti a piacimento con aggiunta di verdure di stagione come piselli, asparagi, spinaci freschi tritati, zucchine oppure gamberi, speck o pancetta! Se non gradite l’aggiunta di passata di pomodoro, potete sostituirla con dei pomodorini freschi precedentemente rosolati e aggiunti in seguito alla panna fresca.</p>
+  <section class='steps' data-step='step6'>
+    <h3>Step 6</h3>
+    <p>Aggiungere un pizzico di sale nella pentola e mescolare. </p>
+</section>
+<section class='steps' data-step='step7'>
+  <h3>Step 7</h3>
+  <p>Mettere da parte in una ciotola due mestoli di ceci.</p>
+</section>
+<section class='steps' data-step='step8'>
+  <h3>Step 8</h3>
+  <p>Con un frullatore ad immersione riducere in crema il resto della zuppa.</p>
+</section>
+<section class='steps' data-step='step9'>
+  <h3>Step 9</h3>
+  <p>Rimettere nella casseruola i ceci interi e mescolare.</p>
+</section>
+<section class='steps' data-step='step10'>
+  <h3>Step 10</h3>
+  <p>Servire calda con un filo di olio evo a crudo.</p>
+</section>
+                    
 </div>
     
 
