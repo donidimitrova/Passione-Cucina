@@ -25,6 +25,14 @@ body {
 .header__menu__item button{ border-color: transparent;}
 .header__icon-bar{display: block;float: right;padding:20px;display: none;}
 .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+
+.ui-autocomplete {
+  max-height: 300px;
+  width: 100px;
+  overflow-y: scroll;   /* prevent horizontal scrollbar */
+  overflow-x: hidden; /* add padding to account for vertical scrollbar */
+  z-index:1000 !important;
+}
   
 /********
 LOGO
@@ -63,7 +71,13 @@ Smartphone
 
 	/* Cover */
 	.cover{height:100%;}
-
+  .ui-autocomplete {
+    max-height: 300px;
+    width: 100px;
+    overflow-y: scroll;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
+  }
 
 }
 

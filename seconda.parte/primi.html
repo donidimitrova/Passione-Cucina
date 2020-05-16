@@ -17,6 +17,7 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/piatti.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 
@@ -33,7 +34,7 @@
         <li class="header__menu__item">
           <form class="navbar-form" role="search">
           <div class="input-group">
-              <input type="text" class="form-control" placeholder="Cerca una ricetta" name="q">
+              <input type="text" class="form-control" id="tags" placeholder="Cerca una ricetta" name="q">
               <div class="input-group-btn">
                   <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
               </div>
@@ -218,6 +219,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/ricette.js"></script>
   
     
     <script>

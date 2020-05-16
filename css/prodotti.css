@@ -25,7 +25,14 @@ header
 .header__menu__item button{ border-color: transparent;}
 .header__icon-bar{display: block;float: right;padding:20px;display: none;}
 .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
-
+.ui-autocomplete {
+  background-color: #eee;
+  max-height: 300px;
+  width: 100px;
+  overflow-y: scroll;   /* prevent horizontal scrollbar */
+  overflow-x: hidden; /* add padding to account for vertical scrollbar */
+  z-index:1000 !important;
+}
 
 .app{color: #f8d059d7; font-family: 'Droid serif', serif; font-size: 65px; font-style: italic;line-height: 44px; text-align: center;text-shadow: 2px 1px;}
 
@@ -53,6 +60,13 @@ Smartphone
     .is-open{height:150px; overflow: auto; z-index: 100;}
     .is-open form{ margin-top: 13px; }
     .is-open-modal{height:250px;}
+    .ui-autocomplete {
+      max-height: 300px;
+      width: 100px;
+      overflow-y: scroll;   /* prevent horizontal scrollbar */
+      overflow-x: hidden; /* add padding to account for vertical scrollbar */
+      z-index:1000 !important;
+    }
     
     
     }
