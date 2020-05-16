@@ -26,6 +26,13 @@ header
 .header__icon-bar{display: block;float: right;padding:20px;display: none;}
 .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
 
+.ui-autocomplete {
+  max-height: 300px;
+  width: 100px ;
+  overflow-y: scroll;   /* prevent horizontal scrollbar */
+  overflow-x: hidden; /* add padding to account for vertical scrollbar */
+  z-index:1000 !important;
+}
 /*-----------------------------
 Cover
 -----------------------------*/
@@ -72,6 +79,13 @@ Smartphone
     .is-open-modal{height:250px;}
     /* Cover */
     .cover{height:50%;}
+    .ui-autocomplete {
+      max-height: 300px;
+      width: 100px !important;
+      overflow-y: scroll;   /* prevent horizontal scrollbar */
+      overflow-x: hidden; /* add padding to account for vertical scrollbar */
+      z-index:1000 !important;
+    }
     
     .fancy span:before {
       right: 100%;
