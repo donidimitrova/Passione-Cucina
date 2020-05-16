@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
-    
+    <script type="text/javascript" src="script.js"></script>
 
     <title>Passione Cucina</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
@@ -32,9 +32,9 @@
       </a>
       <ul class="header__menu ">
         <li class="header__menu__item">
-          <form class="navbar-form" role="search">
+          <form class="navbar-form" role="search" action="ajax.php" method="POST">
           <div class="input-group">
-              <input type="text" id="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
+              <input type="text" id="tags" name="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
               <div class="input-group-btn">
                   <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
               </div>
