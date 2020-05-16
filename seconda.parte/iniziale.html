@@ -18,6 +18,7 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/iniziale.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
    </head>
 
 
@@ -33,7 +34,7 @@
         <li class="header__menu__item">
           <form class="navbar-form" role="search">
           <div class="input-group">
-              <input type="text" class="form-control" placeholder="Cerca una ricetta" name="q">
+              <input type="text" id="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
               <div class="input-group-btn">
                   <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
               </div>
@@ -249,6 +250,55 @@ Prdottti tipici
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      var availableTags = [
+        "GNOCCHI SPECK NOCI E TOMA",
+        "FUSILLI AL BAFFO CON GUANCIALE",
+        "ZUPPA DI PESCE",
+        "LASAGNA CON NOCI, PRIMOSALE E ZUCCHINE",
+        "FUSILLI AL PESTO DI ZUCCHINE CON SALMONE",
+        "MEZZE PENNE AI CARCIOFI",
+        "TROFIE AL FORNO CON SALSICCIA, BESCIAMELLA E PROVOLA",
+        "SPAGHETTONI ALLA CREMA DI RICOTTA E ZAFFERANO CON GUANCIALE",
+        "PENNE ALL' ARRABBIATA CON FUNGHI",
+        "PASTA ALLA CREMA DI PATATE E PECORINO CON POLPO",
+        "ZUPPA CREMOSA DI CECI",
+        "RISOTTO ZUCCHINE E STRACCHINO",
+        "MELANZANE IN CARROZZA",
+        "ALETTE DI POLLO ALLA BIRRA",
+        "FILETTO DI MERLUZZO IN PADELLA",
+        "PESCE SPADA AI SAPORI MEDITERRANEI",
+        "PESCE SPADA ALLA BAGNARESE",
+        "POLPETTE AL SUGO DI PEPERONI",
+        "POLPETTE DI CARCIOFI CON CUORE FILANTE",
+        "POLPETTE  TONNO E PATATE",
+        "SPEZZATINO ALLA BORGOGNONA",
+        "UOVA ALLA CONTADINA",
+        "INVOLTINI DI MELANZANE E PESCE SPADA",
+        "INVOLTINI PRIMAVERA",
+        "PANETTONE SALATO",
+        "GIRELLE SFOGLIA SALATE",
+        "ROTOLO DI ZUCCHINE CON STRACCHINO E PROSCIUTTO COTTO",
+        "INVOLTINI RIPIENI DI SALSICCIA E PROVOLONE",
+        "BAILEYS CHOCOLATE POKE CAKE",
+        "CIOCCOLATA CALDA BIANCA",
+        "CREMA FREDDA AL CAFFÈ",
+        "CROSTATA DI FRUTTA",
+        "DOLCETTI CON RISO SOFFIATO",
+        "GOCCIOLAMISÙ",
+        "PASTIERA",
+        "PISTACCHIOMISÙ CON NUTELLA",
+        "TORTA CUORE DI MAMMA",
+        "TORTA FREDDA ROCHER"
+      ];
+      $( "#tags" ).autocomplete({
+        source: availableTags
+                                  
+      });
+    } );
+    </script>
 
     <script>
         var hours = new Date().getHours();
