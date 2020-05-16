@@ -18,34 +18,35 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/ricetta.css" rel="stylesheet">
-   
-</head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  </head>
 
-  <body class="text-center">
-    <header class="header clearfix" >
-      <a href="/seconda.parte/iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
-      <a href="" class="header__icon-bar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <ul class="header__menu ">
-        <li class="header__menu__item">
-          <form class="navbar-form" role="search">
-          <div class="input-group">
-              <input type="text" class="form-control" placeholder="Cerca una ricetta" name="q">
-              <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
-              </div>
-          </div>
-          </form>
-      </li>
-        <li class="header__menu__item"><a href="/seconda.parte/contatti2.html">Contatti</a></li>
-        <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
-        
-        
-      </ul>
-    </header>
+
+ <body class="text-center">
+   <header class="header clearfix" >
+     <a href="iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
+     <a href="" class="header__icon-bar">
+       <span></span>
+       <span></span>
+       <span></span>
+     </a>
+     <ul class="header__menu ">
+       <li class="header__menu__item">
+         <form class="navbar-form" role="search" action="/seconda.parte/ajax.php" method="POST">
+         <div class="input-group">
+             <input type="text" id="tags" name="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
+             <div class="input-group-btn">
+                 <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
+             </div>
+         </div>
+         </form>
+     </li>
+       <li class="header__menu__item"><a href="contatti2.html">Contatti</a></li>
+       <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
+       
+       
+     </ul>
+   </header>
     <nav class="p-3" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
@@ -201,6 +202,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/ricette.js"></script>
 
     <script>
         var hours = new Date().getHours();
