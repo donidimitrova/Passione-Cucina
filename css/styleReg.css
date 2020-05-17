@@ -259,29 +259,7 @@ input:focus {
         }
 
 
-  /*************************************************
-  ****SCRITTA REGISTRAZIONE ANDATA CON SUCCESSO ****
-  *************************************************/
-  .contenitore{
-    padding-top: 200px;
-    padding-bottom: 150px;
-  }
-  .h1_conf{ color:lightgreen;
-    font-variant: small-caps;}
-  h3{ color:white;
-    font-style: italic;
-    }
-  h6{color: white;
-    font-style: oblique;
-  }
-  
-  .btn-link{
-    border: none;
-    background: none;
-    margin-top: 0px;
-    color: white;
-  }
-
+ 
 
   @media screen and (max-height: 575px){
     #rc-imageselect, .g-recaptcha {

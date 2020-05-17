@@ -167,20 +167,9 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
       <footer class="mastfoot mt-auto">
           <div class="inner">
-            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            <p style="color: antiquewhite;">Copyright &copy; Passione Cucina Italy, All rights reserved.</p>
           </div>
         </footer>
 
@@ -199,45 +188,6 @@
           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
           <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script type="text/javascript" src="/js/open.js"> </script>
-          <script>
-            $(document).ready(function(){
-                    $("#submit").click(function(){
-                          var email = $('#inputEmail').val();
-                          var password= $('#inputPassword').val();
-                          $.ajax({
-                              type: "POST",
-                              url: "login.php",
-                              data: "email="+email+"&password="+password,
-                              success: function(html){
-                                    switch(html)
-                                        {
-      
-                                           case '1': // Login successful 
-                                                $('#inputEmail').val('');
-                                                $('#inputPassword').val('');
-                                                window.location.replace("/seconda.parte/iniziale.html?"+ email);
-                                                break;
-      
-                                            case '2': // Empty Field
-                                                $('.statusMsg').html('<span style="color:red;">Errore campi vuoti.</span>');
-                                                break;
-                                            case '3': // username doesn't exist
-                                                $('.statusMsg').html('<span style="color:red;">Errore email</span>');
-                                                break;
-                                            case '4': //Password is wrong
-                                                $('.statusMsg').html('<span style="color:red;">Errore password</span>');
-                                                break;
-                                            case '5': //Querry error
-                                                $('.statusMsg').html('<span style="color:red;">Errore query</span>');
-                                                break;
-                                          }
-                                  }
-                      
-                            });
-                      });
-              });
-            
-                      
-          </script>  
+          <script type="text/javascript" src="/js/login.js" ></script>  
     </body>
 </html>

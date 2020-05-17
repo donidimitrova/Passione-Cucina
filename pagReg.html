@@ -35,40 +35,40 @@
        <!-- Modal -->
 <div class="modal fade" id="modalForm" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog" role="document" >
-    <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header text-center">
-          <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel" style="font-family: 'Acme', sans-serif;">Login</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      
-      <!-- Modal Body -->
-      <div class="modal-body mx-3">
-          <p class="statusMsg"></p>
-          <form role="form" action="login.php">
-              <div class="form-group">
-                  <label for="inputEmail" style="font-family: 'Exo', sans-serif;">Email</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Inserisci email"/>
-              </div>
-              <div class="form-group">
-                  <label for="inputPassword" style="font-family: 'Exo', sans-serif;">Password</label>
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password"></textarea>
-              </div>
-                <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Non sei ancora registrato? Registrati</a>
-          </form>
+  <div class="modal-content">
+    <!-- Modal Header -->
+    <div class="modal-header text-center">
+        <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel" style="font-family: 'Acme', sans-serif;">Login</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      
-      <!-- Modal Footer -->
-      <div class="modal-footer align-items-center justify-content-center">
-        <button type="button" class="btn btn-lg btn-primary submitBtn" id="submit" style="background-color: rgba(5, 43, 255, 0.329);">Entra</button>
-      </div>
+    
+    <!-- Modal Body -->
+    <div class="modal-body mx-3">
+        <p class="statusMsg"></p>
+        <form role="form" action="login.php">
+            <div class="form-group">
+                <label for="inputEmail" style="font-family: 'Exo', sans-serif;">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Inserisci email"/>
+            </div>
+            <div class="form-group" style="margin: 1px;">
+                <label for="inputPassword" style="font-family: 'Exo', sans-serif;">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password"></textarea>
+            </div>
+              <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Non sei ancora registrato? Registrati</a>
+        </form>
+    </div>
+    
+    <!-- Modal Footer -->
+    <div class="modal-footer align-items-center justify-content-center">
+      <button type="button" class="btn btn-lg btn-primary submitBtn" id="submit" style="background-color: rgba(5, 43, 255, 0.226);">Entra</button>
     </div>
 </div>
 </div>
-      </li>
-    </ul>
+</div>
+  </li>
+</ul>
   </header>
 
         <div class="page-container " name="cont" >
@@ -97,7 +97,7 @@
       
       <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p style="color:aliceblue">Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          <p style="color: blanchedalmond;">Copyright &copy; Passione Cucina Italy, All rights reserved.</p>
         </div>
       </footer>
       
@@ -115,66 +115,12 @@
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script type="text/javascript" src="/js/open.js"> </script>
-          <script>
-            $(document).ready(function(){
-                    $("#submit").click(function(){ 
-                     
-                          var email = $('#inputEmail').val();
-                          var password= $('#inputPassword').val();
-                          $.ajax({
-                              type: "POST",
-                              url: "login.php",
-                              data: "email="+email+"&password="+password,
-                              success: function(html){
-                                    switch(html)
-                                        {
-      
-                                           case '1': // Login successful 
-                                                $('#inputEmail').val('');
-                                                $('#inputPassword').val('');
-                                                window.location.replace("/seconda.parte/iniziale.html?"+ email);
-                                                break;
-      
-                                            case '2': // Empty Field
-                                                $('.statusMsg').html('<span style="color:red;">Errore campi vuoti.</span>');
-                                                break;
-                                            case '3': // username doesn't exist
-                                                $('.statusMsg').html('<span style="color:red;">Errore email</span>');
-                                                break;
-                                            case '4': //Password is wrong
-                                                $('.statusMsg').html('<span style="color:red;">Errore password</span>');
-                                                break;
-                                            case '5': //Querry error
-                                                $('.statusMsg').html('<span style="color:red;">Errore query</span>');
-                                                break;
-                                          }
-                                  }
-                      
-                            });
-                         
-                      
-                      });
-                     
-              });
-          </script>
+          <script type="text/javascript" src="/js/login.js"></script>
           <!---------
             DATA
           ----------->
-          <script>
-            $( function() {
-              $( "#datepicker" ).datepicker();
-            } );
-            </script>
-              <script> 
-                function showPwd() {
-                  var input = document.getElementById('password');
-                  if (input.type === "password") {
-                    input.type = "text";
-                  } else {
-                    input.type = "password";
-                  }
-                }
-                </script>
+          <script type="text/javascript" src="/js/data.js"> </script>
+              <script type="text/javascript" src="/js/password.js"></script>
          
 
 </body>

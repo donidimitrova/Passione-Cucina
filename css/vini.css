@@ -24,7 +24,9 @@ header
 .header__menu__item button{ border-color: transparent;}
 .header__icon-bar{display: block;float: right;padding:20px;display: none;}
 .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
-
+/*****************
+AUTOCOMPLETE
+******************/
 .ui-autocomplete {
   max-height: 300px;
   width: 100px;
@@ -222,7 +224,7 @@ Smartphone
                   transform: rotateY(180deg);
           -webkit-transform-style: preserve-3d;
                   transform-style: preserve-3d;
-                  box-shadow: 4px -5px 19px 0px black;
+                  box-shadow: 3px -2px 5px 0px black;
       }
       
       .container .front{
@@ -230,7 +232,7 @@ Smartphone
                   transform: rotateY(0deg);
           -webkit-transform-style: preserve-3d;
                   transform-style: preserve-3d;
-                  box-shadow: 4px -5px 19px 0px black;
+                  box-shadow: 3px -2px 5px 0px black;
       }
       
       .container:hover .back{
