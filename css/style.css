@@ -1,5 +1,7 @@
 /* Custom default button */
 
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 html,body{height:100%;}
 body{background: #eee;}
 
@@ -12,7 +14,6 @@ general
 /*-----------------------------
 header
 -----------------------------*/
-
 .header{background: #333; padding-bottom: 5px;}
 .header__logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
 .header__menu{float:right;margin:0; padding:0;}
@@ -40,7 +41,6 @@ Cover
 .cover__caption__copy{ display: table-cell; vertical-align: middle; text-align: center; color:#fff; }
 .cover__caption__copy a{
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   color: rgb(0, 0, 0); 
   background-color: #fff; border: 2px solid rgb(95, 94, 94); 
@@ -75,10 +75,9 @@ LOGO
 
 }
 .ricette,.text-left h2{
-  font-weight: 300;
-font-style: italic;
-font-family: fantasy;
-color:  rgba(202, 91, 63, 0.781);
+
+font-family: 'Rancho', cursive;
+color:   rgba(247, 64, 18, 0.781);
 }
 
 /*************************************************
@@ -91,15 +90,14 @@ margin-bottom: 1.5rem;
 text-align: center;
 }
 .marketing h2 {
-font-weight: 300;
-font-style: italic;
-font-family: fantasy;
-color:  rgba(202, 91, 63, 0.781);
+
+font-family: 'Rancho', cursive;
+color:  rgba(247, 64, 18, 0.781);
 }
 
-.marketing p{
+ p{
 font-weight: 200;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Kurale', serif;
 color: rgb(0, 0, 0);
 text-shadow: none;
 }
@@ -184,8 +182,8 @@ margin:0;
 background: #FF512F;
 background: -webkit-linear-gradient(to right, #F09819, #FF512F);
 background: linear-gradient(to right, #F09819, #FF512F);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+-webkit-background-clip: text; /*****senza il testo non si legge***/
+-webkit-text-fill-color: transparent; /****colore della scritta sull'immagine senza è arancione lo sfondo***/
 font-size: auto;
 }
 

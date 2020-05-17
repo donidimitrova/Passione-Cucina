@@ -14,6 +14,9 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Font da Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Exo&family=Merienda+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
   </head>
 
   <body class="text-center">
@@ -34,7 +37,7 @@
       <div class="modal-content">
           <!-- Modal Header -->
           <div class="modal-header text-center">
-              <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel">Login</h4>
+              <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel" style="font-family: 'Acme', sans-serif;">Login</h4>
           </div>
           
           <!-- Modal Body -->
@@ -42,20 +45,24 @@
               <p class="statusMsg"></p>
               <form role="form" action="login.php">
                   <div class="form-group">
-                      <label for="inputEmail">Email</label>
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
+                      <label for="inputEmail" style="font-family: 'Exo', sans-serif;">Email</label>
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Inserisci email"/>
                   </div>
                   <div class="form-group">
-                      <label for="inputPassword">Password</label>
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password"></textarea>
+                      <label for="inputPassword" style="font-family: 'Exo', sans-serif;">Password</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password"></textarea>
                   </div>
+                    <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Non sei ancora registrato? Clicca qui</a>
               </form>
           </div>
           
           <!-- Modal Footer -->
-          <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary submitBtn" id="submit">SUBMIT</button>
+          <div class="modal-footer align-items-center justify-content-center">
+            <button type="button" class="btn btn-lg btn-primary submitBtn" id="submit" style="background-color: rgba(5, 43, 255, 0.233);">SUBMIT</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color:rgba(255, 0, 0, 0.24) ;">Close</button>
+            
+           
+             
           </div>
       </div>
   </div>
@@ -71,8 +78,8 @@
       </div>
       <div class="cover__caption">
         <div class="cover__caption__copy">
-          <h1>Benvenuto!</h1>
-          <h2>Scopri insieme a noi la cucina italiana</h2>
+          <h1 style="font-family: 'Satisfy', cursive;">Benvenuto!</h1>
+          <h2 style="font-family: 'Open Sans', sans-serif;">Scopri insieme a noi la cucina italiana</h2>
           <a href="pagReg.html" type="button" class="btn btn-outline-secondary" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; font-style: italic; border-radius: 24px; " > <b>Registrati</b></a>
         </div>
       </div>
@@ -81,8 +88,9 @@
 
     <section class="py-5">
       <div class="container">
-        <h2 class="font-italic" style="color: rgba(201, 58, 22, 0.979);">La cucina italiana</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat reprehenderit expedita.</p>
+        <h2 class="font-italic" style="font-family: 'Merienda One';
+        color:   rgba(253, 51, 0, 0.781);">La cucina italiana</h2>
+        <p >&Egrave; una delle cucine pi&ugrave; offerte dai ristoranti di tutto il mondo.Tutti gli ingredienti hanno la stessa importanza da abbinare con maestria e serenità...continua per capire come. </p>
         <video width="640" height="400" controls>
           <source src="video/Settimana della Cucina italiana nel Mondo 2019.mp4" type="video/mp4">
         </video>
@@ -102,17 +110,17 @@
             <div class="col-lg-4">
               <img class="rounded-circle" src="img/forchetta.jpg" alt="Generic placeholder image" width="200" height="200">
               <h2>Ricette</h2>
-              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p>I piatti e le ricette tradizionali sono stati spesso creati dalle nonne pi&ugrave; che dagli chef ed &egrave; per questo che molte ricette italiane sono adatte alla cucina casalinga e quotidiana, rispettando le specificit&agrave; territoriali, privilegiando esclusivamente materie prime e ingredienti propri della regione di origine del piatto.</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
               <img class="rounded-circle" src="img/olio.jpg" alt="Generic placeholder image" width="200" height="200">
-              <h2>Specialità delle regioni</h2>
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+              <h2>Specialit&agrave; delle regioni</h2>
+              <p> La particolarit&agrave; della cucina italiana risiede nella variet&agrave; regionale ben caratterizzata. L'Italia ha una tradizione culinaria unica al mondo: ognuna delle venti regioni italiane possiede una gran variet&agrave; di ricette, vini, e ingredienti e prodotti tipici.</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
               <img class="rounded-circle" src="img/vino.jpg" alt="Generic placeholder image" width="200" height="200">
-              <h2>Vinitaly</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <h2>Vini</h2>
+              <p>L’Italia produce grandi vini pregiati in ogni regione, con un patrimonio ampelografico che racconta la storia enologica del nostro Paese. Barolo, Barbaresco, Brunello, Chianti, Bolgheri, Amarone, Aglianico, Primitivo e Nero d’Avola sono i rossi italiani pi&ugrave; famosi. </p>
             </div><!-- /.col-lg-4 -->
           </div><!-- /.row -->
           </div>
@@ -166,8 +174,8 @@
                   <h2 style="text-align: center;">Formaggi</h2>
                 </div>
                 <!-- <h3 class="mb-4">Welcome To Our Restaurant</h3> -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ut enim quam laboriosam illum amet.</p>
-                <p>Obcaecati nisi ipsum possimus necessitatibus tempore, illo id facere magni quisquam quam quaerat accusamus dolores?</p>
+                <p>La variet&agrave; dei formaggi italiani &egrave; vastissima, vi sono circa 400 tipologie distinte in tutto il paese.</p>
+                <p>In termine di volume, l'Italia &egrave; la terza nazione europea per produzione di formaggio (1,3 milioni di tonnellate).</p>
                 
               </div>
             </div>
@@ -223,8 +231,8 @@
                   <h2 style="text-align: center;">Salumi</h2>
                 </div>
                 <!-- <h3 class="mb-4">Welcome To Our Restaurant</h3> -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ut enim quam laboriosam illum amet.</p>
-                <p>Obcaecati nisi ipsum possimus necessitatibus tempore, illo id facere magni quisquam quam quaerat accusamus dolores?</p>
+                <p>La tradizione gastronomica vanta numerosi capolavori: basti pensare che in Italia sono stati censiti circa 700 salumi diversi da nord a sud.</p>
+                <p>Tanti sono presenti su tutto il territorio, con caratteristiche che variano da regione a regione; altri, sono tipici di territori precisi e si trovano solo in quelle zone.</p>
                 
               </div>
             </div>
@@ -272,7 +280,7 @@
                   <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
                       <img src="img/melanzane-carrozza.jpg" alt="" style="height: 250px;" />
                       <div class="portfolio_images_overlay text-center">
-                        <h6 class="clrd-font">MELANZANE AL FORNO</h6>
+                        <h6 class="clrd-font">MELANZANE IN CARROZZA</h6>
                       </div>
                       <a class="fancybox" rel="ligthbox" href="img/melanzane-carrozza.jpg">
                         <div class="zoom"></div>
