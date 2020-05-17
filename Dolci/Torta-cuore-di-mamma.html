@@ -19,33 +19,35 @@
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/ricetta.css" rel="stylesheet">
    
-</head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  </head>
 
-  <body class="text-center">
-    <header class="header clearfix" >
-      <a href="/seconda.parte/iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
-      <a href="" class="header__icon-bar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <ul class="header__menu ">
-        <li class="header__menu__item">
-          <form class="navbar-form" role="search">
-          <div class="input-group">
-              <input type="text" class="form-control" placeholder="Cerca una ricetta" name="q">
-              <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
-              </div>
-          </div>
-          </form>
-      </li>
-        <li class="header__menu__item"><a href="/seconda.parte/contatti2.html">Contatti</a></li>
-        <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
-        
-        
-      </ul>
-    </header>
+
+ <body class="text-center">
+   <header class="header clearfix" >
+     <a href="/seconda.parte/iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
+     <a href="" class="header__icon-bar">
+       <span></span>
+       <span></span>
+       <span></span>
+     </a>
+     <ul class="header__menu ">
+       <li class="header__menu__item">
+         <form class="navbar-form" role="search" action="/seconda.parte/ajax.php" method="POST">
+         <div class="input-group">
+             <input type="text" id="tags" name="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
+             <div class="input-group-btn">
+                 <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
+             </div>
+         </div>
+         </form>
+     </li>
+       <li class="header__menu__item"><a href="/seconda.parte/contatti2.html">Contatti</a></li>
+       <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
+       
+       
+     </ul>
+   </header>
     <nav class="p-3" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/seconda.parte/iniziale.html" >Pagina iniziale</a></li>
@@ -210,147 +212,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js'></script>
-
-    <script>
-        var hours = new Date().getHours();
-      
-        new Vue({
-          el: '#app',
-          data: {
-            isMorning: hours < 12,
-            isAfternoon: hours >= 12 && hours < 18,
-            isEvening: hours >= 18
-          }
-        });
-      </script>
-  
-    
-    <script>
-      $(document).ready(function(){
-   
-         $(".header__icon-bar").click(function(e){
-   
-          $(".header__menu").toggleClass('is-open');
-           e.preventDefault();
-           $('.modal').appendTo("body") ;
-   
-         });
-         
-
-      });
-   </script>
-    <script>
-      function myFunction() {
-        
-  var txt;
-  if (confirm("Sei sicuro di voler uscire?")) {
-    window.location.replace("../homepage.html");
-  } 
-}
-
-</script>
-<script>
-Vue.component('serving-ingredient', {
-    template: '<div class="Recipe-Ingredient">{{ name }} : <span>{{ serving * baseValue }}</span>{{ metric }}</div>',
-    props: ['name', 'serving', 'baseValue', 'metric']
-  })
-  new Vue({
-    el: '#Vue',
-    data() {
-      return {
-        serving: 1
-      }
-    },
-    methods: {
-      decreaseServing() {
-        this.serving = this.serving - 1
-      },
-      increaseServing() {
-        this.serving = this.serving + 1
-      }
-    }
-  })
-</script>
-
-<script>
-    window.console = window.console || function(t) {};
-  </script>
-  <script>
-    if (document.location.search.match(/type=embed/gi)) {
-      window.parent.postMessage("resize", "*");
-    }
-  </script>
-  <script id="rendered-js">
-    Vue.component('star-rating', {
-    
-      props: {
-        'name': String,
-        'value': null,
-        'id': String,
-        'disabled': Boolean,
-        'required': Boolean },
-    
-    
-      template: '<div class="star-rating">\
-            <label class="star-rating__star" v-for="rating in ratings" \
-            :class="{\'is-selected\': ((value >= rating) && value != null), \'is-disabled\': disabled}" \
-            v-on:click="set(rating)" v-on:mouseover="star_over(rating)" v-on:mouseout="star_out">\
-            <input class="star-rating star-rating__checkbox" type="radio" :value="rating" :name="name" \
-            v-model="value" :disabled="disabled">★</label></div>',
-    
-      /*
-                                                                    * Initial state of the component's data.
-                                                                    */
-      data: function () {
-        return {
-          temp_value: null,
-          ratings: [1, 2, 3, 4, 5] };
-    
-      },
-    
-      methods: {
-        /*
-                  * Behaviour of the stars on mouseover.
-                  */
-        star_over: function (index) {
-          var self = this;
-    
-          if (!this.disabled) {
-            this.temp_value = this.value;
-            return this.value = index;
-          }
-    
-        },
-    
-        /*
-            * Behaviour of the stars on mouseout.
-            */
-        star_out: function () {
-          var self = this;
-    
-          if (!this.disabled) {
-            return this.value = this.temp_value;
-          }
-        },
-    
-        /*
-            * Set the rating.
-            */
-        set: function (value) {
-          var self = this;
-    
-          if (!this.disabled) {
-            this.temp_value = value;
-            return this.value = value;
-          }
-        } } });
-    
-    
-    
-    new Vue({
-      el: '#app' });
-    //# sourceURL=pen.js
-        </script>
-
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/ricette.js"></script>
+    <script type="text/javascript" src="/js/logout.js"></script>
+    <script type="text/javascript" src="/js/recipe.js"></script>
+    <script type="text/javascript" src="/js/open.js"> </script>
   </body>
 </html>
