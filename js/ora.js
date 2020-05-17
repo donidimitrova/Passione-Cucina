@@ -5,6 +5,6 @@ new Vue({
   data: {
     Mattina: hours < 12,
     Pomeriggio: hours >= 12 && hours < 18,
-    isEvening: hours >= 18
+    Sera: hours >= 18
   }
 });
