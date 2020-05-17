@@ -10,6 +10,9 @@
 
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="css/contatti.css" rel="stylesheet">
+     <!-- Font da Google -->
+   <link href="https://fonts.googleapis.com/css2?family=Acme&family=Exo&family=Merienda+One&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
         
     </head>
     
@@ -27,34 +30,37 @@
           <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
           <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
            <!-- Modal -->
-    <div class="modal fade" id="modalForm" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal fade" id="modalForm" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header text-center">
-              <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel">Login</h4>
+              <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel" style="font-family: 'Acme', sans-serif;">Login</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          
+          <!-- Modal Body -->
+          <div class="modal-body mx-3">
+              <p class="statusMsg"></p>
+              <form role="form" action="login.php">
+                  <div class="form-group" >
+                      <label for="inputEmail" style="font-family: 'Exo', sans-serif;">Email</label>
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Inserisci email"/>
+                  </div>
+                  <div class="form-group" style="margin: 1px;">
+                      <label for="inputPassword" style="font-family: 'Exo', sans-serif;">Password</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password"></textarea>
+                  </div>
+                    <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Non sei ancora registrato? Registrati</a>
+              </form>
           </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                <p class="statusMsg"></p>
-                <form role="form" action="login.php">
-                    <div class="form-group">
-                        <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password"></textarea>
-                    </div>
-                </form>
-            </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary submitBtn" id="submit">SUBMIT</button>
-            </div>
+          
+          <!-- Modal Footer -->
+          <div class="modal-footer align-items-center justify-content-center" >
+            <button type="button" class="btn btn-lg btn-primary submitBtn" id="submit" style="background-color: rgba(5, 43, 255, 0.329);">Entra</button>
+          </div>
         </div>
     </div>
     </div>
