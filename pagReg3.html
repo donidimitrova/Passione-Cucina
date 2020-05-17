@@ -122,28 +122,6 @@
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script type="text/javascript" src="/js/open.js"> </script>
           <script>
-   
-            function inizializzaStorageUtenti(){
-            if (typeof(localStorage.utenti) == "undefined") {
-            localStorage.utenti="[]";
-            }
-          }
-        
-            function inserisciUtente() {
-            
-            var u = JSON.parse(localStorage.utenti);
-            var l= u.length;
-            var o = { email:document.getElementById("Email").value, nome:document.getElementById("Nome").value};
-        
-            u[l] = o;
-            localStorage.utenti = JSON.stringify(u);
-            return true;
-            }
-        
-        
-        
-          </script>
-          <script>
             $(document).ready(function(){
                     $("#submit").click(function(){ 
                      
