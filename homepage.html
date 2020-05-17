@@ -16,7 +16,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center" onload="reset();">
     <header class="header clearfix" >
       <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;"></a>
       <a href="" class="header__icon-bar">
@@ -274,7 +274,7 @@
                       <div class="portfolio_images_overlay text-center">
                         <h6 class="clrd-font">MELANZANE AL FORNO</h6>
                       </div>
-                      <a class="fancybox" rel="ligthbox" href="img/melanzane-forno.jpg">
+                      <a class="fancybox" rel="ligthbox" href="img/melanzane-carrozza.jpg">
                         <div class="zoom"></div>
                       </a>
                   </div>
@@ -366,6 +366,11 @@
 
       });
    </script>
+   <script>
+    function reset(){
+     localStorage.nomeUtente="";
+   }
+  </script>
     <script>
       $(document).ready(function(){
               $("#submit").click(function(){
@@ -382,7 +387,7 @@
                                      case '1': // Login successful 
                                           $('#inputEmail').val('');
                                           $('#inputPassword').val('');
-                                          window.location.replace("/seconda.parte/iniziale.html");
+                                          window.location.replace("/seconda.parte/iniziale.html?"+ email);
                                           break;
 
                                       case '2': // Empty Field

@@ -16,7 +16,7 @@
  
 
 </head>
-<body class="text-center" onload="myFunction()">
+<body class="text-center" onload="inizializzaStorageUtenti();">
 
   <header class="header clearfix" >
     <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;"></a>
@@ -66,10 +66,10 @@
   </header>
 
         <div class="page-container " name="cont" >
-            <form id="contactForm" action="registrazione.php" name="reg" method="POST">
+            <form id="contactForm" action="registrazione.php" name="reg" method="POST" onSubmit="return inserisciUtente();">
          <div class="title"><h1 >Registrazione</h1></div>
-              <div><input type="email" name="email" class="Email" placeholder="Email" required></div>
-              <div> <input type="text" name="nome" class="Nome" placeholder="Nome" required></div>
+              <div><input type="email" name="email" class="Email" id="Email" placeholder="Email" required></div>
+              <div> <input type="text" name="nome" class="Nome" id="Nome" placeholder="Nome" required></div>
               <div> <input type="text" name="cognome" class="Cognome" placeholder="Cognome" required></div>
               <div> <input type="date" id="datepicker" name="DataNascita" class="Data" placeholder="Data di nascita" autocomplete="off" required></div>
               <div>
@@ -125,6 +125,28 @@
             });
          </script>
           <script>
+   
+            function inizializzaStorageUtenti(){
+            if (typeof(localStorage.utenti) == "undefined") {
+            localStorage.utenti="[]";
+            }
+          }
+        
+            function inserisciUtente() {
+            
+            var u = JSON.parse(localStorage.utenti);
+            var l= u.length;
+            var o = { email:document.getElementById("Email").value, nome:document.getElementById("Nome").value};
+        
+            u[l] = o;
+            localStorage.utenti = JSON.stringify(u);
+            return true;
+            }
+        
+        
+        
+          </script>
+          <script>
             $(document).ready(function(){
                     $("#submit").click(function(){ 
                      
@@ -141,7 +163,7 @@
                                            case '1': // Login successful 
                                                 $('#inputEmail').val('');
                                                 $('#inputPassword').val('');
-                                                $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                                                window.location.replace("/seconda.parte/iniziale.html?"+ email);
                                                 break;
       
                                             case '2': // Empty Field
