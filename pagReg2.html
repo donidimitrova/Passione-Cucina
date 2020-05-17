@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
   <title>Registrazione</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
   <!-- Bootstrap core CSS -->
@@ -14,24 +12,8 @@
    <!-- Font da Google -->
    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Exo&family=Merienda+One&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
-  <script> 
-  function showPwd() {
-    var input = document.getElementById('password');
-    if (input.type === "password") {
-      input.type = "text";
-    } else {
-      input.type = "password";
-    }
-  }
-  </script>
-  <script>
-    function myFunction(){
-    var url=new URL(window.location.href);
-                    if(url.searchParams.get("registrazione")=="false"){
-                      document.getElementById("msgErr").innerHTML()="utente già registrato";
-                    }  
-                  }
-  </script>
+</head>
+
 </head>
 <body class="text-center" onload="inizializzaStorageUtenti();">
   <header class="header clearfix" >
@@ -114,8 +96,6 @@
         </div>
       </footer>
       
-
-
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
