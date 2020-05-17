@@ -22,7 +22,7 @@
    </head>
 
 
-  <body class="text-center">
+  <body class="text-center" onload="name()">
     <header class="header clearfix" >
       <a href="iniziale.html" class="header__logo"> <img src="/logo.png" alt="Logo" style="width: 70px;"></a>
       <a href="" class="header__icon-bar">
@@ -55,9 +55,9 @@
         <div class="cover__caption">
           <div class="cover__caption__copy">
             <div id="app" class="app">
-                <p  v-if="isMorning">Buona Mattina! </p>
-                <p v-if="isAfternoon">Buongiorno! </p>
-                <p v-if="isEvening">Buonasera!</p>
+              <p  v-if="isMorning">Buona Mattina <label id='utente'></label>!</p>
+              <p v-if="isAfternoon">Buongiorno<label id='utente'></label>! </p>
+              <p v-if="isEvening">Buonasera <label id='utente'></label>!</p>
               </div>
           </div>
         </div>
@@ -268,6 +268,18 @@ Prdottti tipici
         });
       </script>
   
+    
+    <script type="text/javascript" src="/js/open.js"> </script>
+    <script>
+      function myFunction() {
+        
+  var txt;
+  if (confirm("Sei sicuro di voler uscire?")) {
+    window.location.replace("../homepage.html");
+  } 
+}
+
+</script>
 
 
  

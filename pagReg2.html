@@ -30,7 +30,7 @@
                   }
   </script>
 </head>
-<body class="text-center" onload="myFunction()">
+<body class="text-center" onload="inizializzaStorageUtenti();">
   <header class="header clearfix" >
     <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;"></a>
     <a href="" class="header__icon-bar">
@@ -78,11 +78,11 @@
     </ul>
   </header>
         <div class="page-container " name="cont" >
-            <form id="contactForm" action="registrazione.php" name="reg" method="POST">
+            <form id="contactForm" action="registrazione.php" name="reg" method="POST" onSubmit="return inserisciUtente();">
          <div class="title"><h1 >Registrazione</h1></div>
            <h5><span class="badge badge-pill badge-danger">Attenzione! Devi convalidare il campo reCaptcha </span></h5>
-              <div><input type="email" name="email" class="Email" placeholder="Email" required></div>
-              <div> <input type="text" name="nome" class="Nome" placeholder="Nome" required></div>
+              <div><input type="email" name="email" class="Email" id="Email" placeholder="Email" required></div>
+              <div> <input type="text" name="nome" class="Nome" id="Nome" placeholder="Nome" required></div>
               <div> <input type="text" name="cognome" class="Cognome" placeholder="Cognome" required></div>
               <div> <input type="date" name="DataNascita" class="Data" placeholder="Data di nascita" required></div>
               <div>
@@ -121,6 +121,7 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script type="text/javascript" src="/js/open.js"> </script>
+        
           <script>
             $(document).ready(function(){
                     $("#submit").click(function(){ 
@@ -138,7 +139,7 @@
                                            case '1': // Login successful 
                                                 $('#inputEmail').val('');
                                                 $('#inputPassword').val('');
-                                                $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                                                window.location.replace("/seconda.parte/iniziale.html?email=$email");
                                                 break;
       
                                             case '2': // Empty Field

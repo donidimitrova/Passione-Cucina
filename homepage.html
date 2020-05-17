@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center" onload="reset();">
     <header class="header clearfix" >
       <a href="homepage.html" class="header__logo"> <img src="logo.png" alt="Logo" style="width: 70px;"></a>
       <a href="" class="header__icon-bar">
@@ -375,7 +375,7 @@
                                      case '1': // Login successful 
                                           $('#inputEmail').val('');
                                           $('#inputPassword').val('');
-                                          window.location.replace("/seconda.parte/iniziale.html");
+                                          window.location.replace("/seconda.parte/iniziale.html?"+ email);
                                           break;
 
                                       case '2': // Empty Field
