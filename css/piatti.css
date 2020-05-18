@@ -104,18 +104,11 @@ Smartphone
       border-color:transparent;
       height: 550px;
     }
-    .card .header {
-      background-size: cover;
-      min-height: 350px;
-    }
    
-    .card .text .food {
-      color: #212129;
-      text-align: left;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin: 5px 30px;
+   
+    .card-text  {
+      
+      overflow:auto ;
     }
     
     
