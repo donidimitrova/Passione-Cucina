@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
+     <!--ANIMAZIONI AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- File Css Nostro che dobbiamo modificare -->
     <link href="/css/style.css" rel="stylesheet">
     <!-- Font da Google -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Exo&family=Merienda+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
+    <!--IL MIO CODICE PER ICONE BELLE-->
+    <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>  
   </head>
 
   <body class="text-center" onload="reset();">
@@ -25,9 +28,9 @@
         <span></span>
       </a>
       <ul class="header__menu ">
-        <li class="header__menu__item"><a href="homepage.html">Home</a></li>
-        <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
-        <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
+        <li class="header__menu__item"><a href="homepage.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="header__menu__item"><a href="contatti.html"><i class="fas fa-address-card"></i> Contatti</a></li>
+        <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px; line-height: 50px;"><i class="fas fa-sign-in-alt"></i> Login</button>
          <!-- Modal -->
   <div class="modal fade" id="modalForm" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document" >
@@ -67,16 +70,17 @@
         </li>
       </ul>
     </header>
-    </header>
-    </header>
+   
     
     <section class="cover">
       <div class="cover__filter">
       </div>
       <div class="cover__caption">
         <div class="cover__caption__copy">
+          <div data-aos="zoom-in"  data-aos-duration="1700">
           <h1 style="font-family: 'Satisfy', cursive;">Benvenuto!</h1>
           <h2 style="font-family: 'Open Sans', sans-serif;">Scopri insieme a noi la cucina italiana</h2>
+        </div>
           <a href="pagReg.html" type="button" class="btn btn-outline-secondary" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; font-style: italic; border-radius: 24px; " > <b>Registrati</b></a>
         </div>
       </div>
@@ -88,7 +92,7 @@
         <h2 class="font-italic" style="font-family: 'Merienda One';
         color:   rgba(253, 51, 0, 0.781);">La cucina italiana</h2>
         <p >&Egrave; una delle cucine pi&ugrave; offerte dai ristoranti di tutto il mondo.Tutti gli ingredienti hanno la stessa importanza da abbinare con maestria e serenità...continua per capire come. </p>
-        <video width="640" height="400" controls>
+        <video width="640" height="400"  data-aos="fade-down "  data-aos-duration="2500" controls>
           <source src="video/Settimana della Cucina italiana nel Mondo 2019.mp4" type="video/mp4">
         </video>
       </div>
@@ -100,7 +104,7 @@
  CONTAINER MARKETING
 -------------------------------------->
 
-        <div class="container marketing">
+        <div class="container marketing"  data-aos="fade-down "  data-aos-duration="2500">
 
           <!-- Three columns of text below the carousel -->
           <div class="row">
@@ -125,7 +129,7 @@
             <!-----------------------------
             FORMAGGI
           ------------------------------->
-          <div class="container">
+          <div class="container"  data-aos="fade-down "  data-aos-duration="2500">
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
@@ -184,7 +188,7 @@
             SALUMI
           ------------------------------->
           
-          <div class="container">
+          <div class="container"  data-aos="fade-down "  data-aos-duration="2500">
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <div id="carouselIndicators2" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover">
@@ -244,7 +248,7 @@
           ------------------------------->
 
           <h2 class="ricette">Alcuni esempi di ricette nel sito</h2>
-          <div class="container-fluid">
+          <div class="container-fluid"  data-aos="fade-down "  data-aos-duration="2500">
             <div class="row">
         
                   <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
@@ -252,7 +256,8 @@
                       <div class="portfolio_images_overlay text-center">
                         <h6 class="clrd-font">LASAGNA CON NOCI, PRIMOSALE E ZUCCHINE</h6>
                       </div>
-                      <a class="fancybox" rel="ligthbox" href="img/Lasagne-con-noci-e-primosale.jpg">
+                        <div class="zoom"></div>
+                      <a class="fancybox" rel="ligthbox" href="img/Lasagne-con-noci-e-primosale.jpg" target="popup" onclick="window.open('img/Lasagne-con-noci-e-primosale.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                         <div class="zoom"></div>
                       </a>
                   </div>
@@ -261,7 +266,7 @@
                       <div class="portfolio_images_overlay text-center ">
                         <h6 class="clrd-font">INVOLTINI PRIMAVERA</h6>
                       </div>
-                      <a class="fancybox" rel="ligthbox" href="img/InvoltiniPrimavera.webp">
+                      <a class="fancybox" rel="ligthbox" href="img/InvoltiniPrimavera.webp" target="popup" onclick="window.open('img/InvoltiniPrimavera.webp','popup','top=50,left=500,width=600,height=600');return false;">
                         <div class="zoom"></div>
                       </a>
                   </div>
@@ -270,7 +275,7 @@
                       <div class="portfolio_images_overlay text-center">
                         <h6 class="clrd-font">CROSTATA DI FRUTTA</h6>
                       </div>
-                      <a class="fancybox" rel="ligthbox" href="img/crostata-di-frutta.jpg">
+                      <a class="fancybox" rel="ligthbox" href="img/crostata-di-frutta.jpg" target="popup" onclick="window.open('img/crostata-di-frutta.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                         <div class="zoom"></div>
                       </a>
                   </div>
@@ -279,7 +284,7 @@
                       <div class="portfolio_images_overlay text-center">
                         <h6 class="clrd-font">MELANZANE IN CARROZZA</h6>
                       </div>
-                      <a class="fancybox" rel="ligthbox" href="img/melanzane-carrozza.jpg">
+                      <a class="fancybox" rel="ligthbox" href="img/melanzane-carrozza.jpg" target="popup" onclick="window.open('img/melanzane-carrozza.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                         <div class="zoom"></div>
                       </a>
                   </div>
@@ -288,7 +293,7 @@
                     <div class="portfolio_images_overlay text-center">
                       <h6 class="clrd-font">ZUPPA CREMOSA DI CECI</h6>
                     </div>
-                    <a class="fancybox" rel="ligthbox" href="img/zuppaCeci.jpg">
+                    <a class="fancybox" rel="ligthbox" href="img/zuppaCeci.jpg" target="popup" onclick="window.open('img/zuppaCeci.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                       <div class="zoom"></div>
                     </a>
                 </div>
@@ -297,7 +302,7 @@
                     <div class="portfolio_images_overlay text-center ">
                       <h6 class="clrd-font">ROTOLO DI ZUCCHINE CON STRACCHINO E PROSCIUTTO COTTO</h6>
                     </div>
-                    <a class="fancybox" rel="ligthbox" href="img/rotolo-zucchine.jpg">
+                    <a class="fancybox" rel="ligthbox" href="img/rotolo-zucchine.jpg" target="popup" onclick="window.open('img/rotolo-zucchine.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                       <div class="zoom"></div>
                     </a>
                 </div>
@@ -306,7 +311,7 @@
                     <div class="portfolio_images_overlay text-center">
                       <h6 class="clrd-font">INVOLTINI DI MELANZANE E PESCE SPADA</h6>
                     </div>
-                    <a class="fancybox" rel="ligthbox" href="img/involtinimelanzanepescespada.jpg">
+                    <a class="fancybox" rel="ligthbox" href="img/involtinimelanzanepescespada.jpg" target="popup" onclick="window.open('img/involtinimelanzanepescespada.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                       <div class="zoom"></div>
                     </a>
                 </div>
@@ -315,7 +320,7 @@
                     <div class="portfolio_images_overlay text-center">
                       <h6 class="clrd-font">TORTA CUORE DI MAMMA</h6>
                     </div>
-                    <a class="fancybox" rel="ligthbox" href="img/torta-cuore-mamma.jpg">
+                    <a class="fancybox" rel="ligthbox" href="img/torta-cuore-mamma.jpg" target="popup" onclick="window.open('img/torta-cuore-mamma.jpg','popup','top=50,left=500,width=600,height=600');return false;">
                       <div class="zoom"></div>
                     </a>
                 </div>
@@ -342,7 +347,11 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="/js/open.js"> </script>
     <script type="text/javascript" src="/js/login.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
