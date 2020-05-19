@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Colacchi A. , Dimitrova D.T.">
   <title>Registrazione</title>
+    <!--IL MIO CODICE PER ICONE BELLE-->
+    <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -24,46 +26,47 @@
       <span></span>
     </a>
     <ul class="header__menu ">
-      <li class="header__menu__item"><a href="homepage.html">Home</a></li>
-      <li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
-      <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px;">Login</button>
+      <li class="header__menu__item"><a href="homepage.html"><i class="fas fa-home"></i> Home</a></li>
+      <li class="header__menu__item"><a href="contatti.html"><i class="fas fa-address-card"></i> Contatti</a></li>
+      <li class="header__menu__item">   <button id="login" type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#modalForm" style="color: aliceblue; width:100px; margin-top:0px; line-height: 50px;"><i class="fas fa-sign-in-alt"></i> Login</button>
        <!-- Modal -->
 <div class="modal fade" id="modalForm" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog" role="document" >
-  <div class="modal-content">
-    <!-- Modal Header -->
-    <div class="modal-header text-center">
-        <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel" style="font-family: 'Acme', sans-serif;">Login</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    
-    <!-- Modal Body -->
-    <div class="modal-body mx-3">
-        <p class="statusMsg"></p>
-        <form role="form" action="login.php">
-            <div class="form-group">
-                <label for="inputEmail" style="font-family: 'Exo', sans-serif;">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Inserisci email"/>
-            </div>
-            <div class="form-group" style="margin: 1px;">
-                <label for="inputPassword" style="font-family: 'Exo', sans-serif;">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password"></textarea>
-            </div>
-              <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Non sei ancora registrato? Registrati</a>
-        </form>
+    <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header text-center">
+            <h4 class="modal-title  w-100 font-weight-bold" id="myModalLabel" style="font-family: 'Acme', sans-serif;">Login</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: right;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body mx-3">
+            <p class="statusMsg"></p>
+            <form role="form" action="login.php">
+                <div class="form-group">
+                    <label for="inputEmail" style="font-family: 'Exo', sans-serif;">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Inserisci email"/>
+                </div>
+                <div class="form-group" style="margin: 1px;">
+                    <label for="inputPassword" style="font-family: 'Exo', sans-serif;">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password"></textarea>
+                </div>
+                  <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Non sei ancora registrato? Registrati</a>
+                  <a  href="pagReg.html" style="color: red; background-color:transparent; font-family: 'Exo', sans-serif;">Password dimenticata?</a>
+            </form>
+        </div>
+        
+        <!-- Modal Footer -->
+        <div class="modal-footer align-items-center justify-content-center">
+          <button type="button" class="btn btn-lg btn-primary submitBtn" id="submit" style="background-color: rgba(5, 43, 255, 0.226);">Entra</button>
+        </div>
     </div>
-    
-    <!-- Modal Footer -->
-    <div class="modal-footer align-items-center justify-content-center">
-      <button type="button" class="btn btn-lg btn-primary submitBtn" id="submit" style="background-color: rgba(5, 43, 255, 0.226);">Entra</button>
-    </div>
 </div>
 </div>
-</div>
-  </li>
-</ul>
+      </li>
+    </ul>
   </header>
         <div class="page-container " name="cont" >
             <form id="contactForm" action="registrazione.php" name="reg" method="POST" onSubmit="return inserisciUtente();">
