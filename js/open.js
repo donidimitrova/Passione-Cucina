@@ -15,13 +15,46 @@ $(document).ready(function(){
   if (typeof(localStorage.utenti) == "undefined") {
   localStorage.utenti="[]";
   }
+  var url= new URL(window.location.href);
+  if(url.searchParams.get("reg")=="false"){
+    if(url.searchParams.get("err")){
+        var err=url.searchParams.get("err");
+        if(err=="reCap"){
+        alert("Attenzione! Devi convalidare il campo reCaptcha");
+         return false;
+        }else{
+        alert("Mi dispiace! Questa email è già stata usata");
+        return false;
+      }
+    
+    }
+  }
+  
+   /* if(url.searchParams.get("reg")=="false"){
+      if(url.searchParams.get("err")){
+          var err=url.searchParams.get("err");
+           if(err="email"){
+           alert("Mi dispiace! Questa email è già stata usata");
+           return false;
+           }
+          }
+        }*/
+      
+  return true;
 }
 
   function inserisciUtente() {
   
+  
   var u = JSON.parse(localStorage.utenti);
   var l= u.length;
+  for(i=0;i<l;i++){
+    if(u[i].email== document.getElementById("Email").value){
+      return false;
+    }
+  }
   var o = { email:document.getElementById("Email").value, nome:document.getElementById("Nome").value};
+  
 
   u[l] = o;
   localStorage.utenti = JSON.stringify(u);
