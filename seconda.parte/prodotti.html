@@ -15,6 +15,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="/js/ricette.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <!--ANIMAZIONI AOS-->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 
    </head>
 
@@ -32,16 +34,16 @@
       <ul class="header__menu ">
         <li class="header__menu__item">
           <form class="navbar-form" role="search" action="ajax.php" method="POST">
-          <div class="input-group">
-              <input type="text" id="tags" name="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
-              <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button>
-              </div>
-          </div>
-          </form>
+            <div class="input-group">
+                <input type="text" id="tags" name="tags" class="form-control" placeholder="Cerca una ricetta" name="q">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg" style="line-height: 25px;"></i></button>
+                </div>
+            </div>
+            </form>
       </li>
-        <li class="header__menu__item"><a href="contatti2.html">Contatti</a></li>
-        <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px;">Logout</button></li>
+        <li class="header__menu__item"><a href="contatti2.html"><i class="fas fa-address-card"></i> Contatti</a></li>
+        <li class="header__menu__item"> <button onclick="myFunction()" id="login" type="button" class="btn  btn-outline-dark" style="color: aliceblue; width:100px; margin-top:0px; line-height: 50px;"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
         
         
       </ul>
@@ -60,7 +62,7 @@
     <!----------------
       FORMAGGI
     ------------------->
-    <div id="formaggi" name="formaggi">
+    <div id="formaggi" name="formaggi"  data-aos="fade-down "  data-aos-duration="2500">
       <p><h4 style=" 
  margin: 30px;
  font-size: 51px;
@@ -117,7 +119,7 @@
     <!----------------
       SALUMI
     ------------------->
-    <div id="salumi" >
+    <div id="salumi"   data-aos="fade-down "  data-aos-duration="2500">
       <p><h4 style=" 
  margin: 30px;
  font-size: 51px;
@@ -169,7 +171,7 @@
 -------------------------->
 
 <div>
-  <section id="olio" class="page-section container-fluid">
+  <section id="olio" class="page-section container-fluid" data-aos="flip-left" data-aos-duration="1300">
     <div class="container">
       <div class="product-item">
         <div class="product-item-title d-flex">
@@ -190,7 +192,7 @@
   </section>
 
 
-  <section class="page-section container-fluid">
+  <section class="page-section container-fluid" data-aos="flip-right" data-aos-duration="1300">
     <div id="limoncello" class="container">
       <div class="product-item">
         <div class="product-item-title d-flex">
@@ -211,7 +213,7 @@
     </div>
   </section>
 
-  <section class="page-section container-fluid" id="gelato">
+  <section class="page-section container-fluid" id="gelato"data-aos="flip-left" data-aos-duration="1300">
     <div  class="container">
       <div class="product-item">
         <div class="product-item-title d-flex" >
@@ -232,7 +234,7 @@
   </section>
 
 
-  <section id="cappuccino" class="page-section container-fluid">
+  <section id="cappuccino" class="page-section container-fluid" data-aos="flip-right" data-aos-duration="1300">
     <div class="container">
       <div class="product-item">
         <div class="product-item-title d-flex">
@@ -282,6 +284,7 @@
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="/js/ricette.js"></script>
     <script type="text/javascript" src="/js/logout.js"></script>
     <script type="text/javascript" src="/js/open.js"> </script>
@@ -296,6 +299,9 @@
           $( "[data-toggle='popover'" ).popover( { trigger: "hover" });
         } );
     
+      </script>
+      <script>
+        AOS.init();
       </script>
   </body>
 </html>
