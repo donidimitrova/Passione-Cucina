@@ -16,7 +16,7 @@
                    $q1="select * from login where email=$1";
                    $result=pg_query_params($dbconn,$q1,array($email));
                    if($line=pg_fetch_array($result,null, PGSQL_ASSOC)){
-                       header("Location: pagReg.html?reg=false&err=email");
+                       header('Location: pagReg.html?reg=false&err=registrato');
                       
                    }
                    else{
@@ -41,7 +41,7 @@
         
               else
               {
-                header("Location: pagReg.html?reg=false&err=reCap"); /* Redirect browser */
+                header('Location: pagReg.html?reg=false&err=reCap'); /* Redirect browser */
 
                 /* Make sure that code below does not get executed when we redirect. */
                 exit;

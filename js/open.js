@@ -23,23 +23,32 @@ $(document).ready(function(){
         alert("Attenzione! Devi convalidare il campo reCaptcha");
          return false;
         }else{
-        alert("Mi dispiace! Questa email è già stata usata");
-        return false;
+          alert("Mi dispiace! Questa email è già stata usata");
+          return false;
+        }
       }
     
     }
+  return true;
+}
+
+function ok(){
+  var url= new URL(window.location.href);
+  if(url.searchParams.get("rec")=="false"){
+    if(url.searchParams.get("err")){
+        var err=url.searchParams.get("err");
+        if(err=="reCap"){
+        alert("Attenzione! Devi convalidare il campo reCaptcha");
+         return false;
+        }else if(err=="madre"){
+          alert("Anno di nascita di tua madre errato");
+         return false;
+        }else{
+        alert("Mi dispiace! Email non registrata");
+        return false;
+      }
+    }
   }
-  
-   /* if(url.searchParams.get("reg")=="false"){
-      if(url.searchParams.get("err")){
-          var err=url.searchParams.get("err");
-           if(err="email"){
-           alert("Mi dispiace! Questa email è già stata usata");
-           return false;
-           }
-          }
-        }*/
-      
   return true;
 }
 
@@ -63,6 +72,9 @@ $(document).ready(function(){
 
 
   function name(){
+    if (typeof(localStorage.nomeUtente) == "undefined") {
+      localStorage.nomeUtente="";
+      }
     var url=window.location.href;
     var urlSplit=url.split("?");
     var email=urlSplit[1];
@@ -70,8 +82,8 @@ $(document).ready(function(){
     var u=JSON.parse(localStorage.utenti);
     for(i=0;i<u.length;i++){
       if(u[i].email==email){
+        localStorage.nomeUtente = u[i].nome;
       document.getElementById("utente").innerHTML= "&nbsp" + u[i].nome;
-      localStorage.nomeUtente=u[i].nome;
       return true;
     }
   }

@@ -29,14 +29,4 @@
                     }
                       return true;
                   }
-                  function password(){
-                    var password=document.getElementById("password").value;
-                    var confPass=document.getElementById("confPassword").value;
-                    if (password != confPass) {
-                      alert("La conferma password");
-                      document.getElementById("confPassword").value = "";
-                      document.getElementById("confPassword").focus();
-                      return false;
-                      }
-                      
-                  }
+                
