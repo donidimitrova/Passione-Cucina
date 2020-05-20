@@ -31,8 +31,6 @@ Cover
 .cover{height:70%;
   background-image: url(../img/piatto.jpg);
   background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
   background-position: center center;
   position:relative;
 }
@@ -132,26 +130,6 @@ Smartphone
 }
 
 
-/* clearfix */
-
-.clearfix:after {
-visibility: hidden;
-display: block;
-font-size: 0;
-content: " ";
-clear: both;
-height: 0;
-}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-*,
-*:before,
-*:after {
--webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
-}
 
 
 .carousel-inner .carousel-item{
@@ -172,12 +150,7 @@ background-color: rgba(51, 51, 51, 0.192);
 /*-----------------------------
 Tabella Immagini con nome
 -----------------------------*/
-*{
-padding:0;
-margin:0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
+
 .clrd-font{
 background: #FF512F;
 background: -webkit-linear-gradient(to right, #F09819, #FF512F);
@@ -248,21 +221,7 @@ background: linear-gradient(to right, #F09819, #FF512F);
   box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
 opacity:0.9;
 }
-.zoom:before {
-content: "\f00e";
-  font-family: FontAwesome;
-  color: transparent;
-  font-size: 70px;
-  padding-right: 20px;
-  position: absolute;
-  top: 10px;
-  left: 30px;
-  background-image: url(../img/zoom.jpg);
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.4;
-}
+
 @media (min-width:769px) and (max-width:991px) {
 .portfolio_images_overlay {
   padding: 0px;
