@@ -1,53 +1,47 @@
 
         <?php
+
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
               $secret = '6LfVxPQUAAAAAGmjzO6wKqg8HG8yW6MnmnN-lran';
               $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
               $responseData = json_decode($verifyResponse);
               if($responseData->success){
 
-               $dbconn = pg_connect("host=localhost port=5434 dbname=login user=postgres password=12345") 
-                        or die('Could not connect:' . pg_last_error());
+                      $dbconn = pg_connect("host=localhost port=5434 dbname=login user=postgres password=12345") or die('Could not connect:' . pg_last_error());
                
 
-                   $email=$_POST['email'];
-                   $q1="select * from login where email=$1";
-                   $result=pg_query_params($dbconn,$q1,array($email));
-                   if(!($line=pg_fetch_array($result,null, PGSQL_ASSOC))){ 
+                      $email=$_POST['email'];
+                      $q1="select * from login where email=$1";
+                      $result=pg_query_params($dbconn,$q1,array($email));
+                      if(!($line=pg_fetch_array($result,null, PGSQL_ASSOC))) {  /* email non presente nel database*/
                        header("Location: pagReg.html?reg=false&err=email");
-                      
-                   }
-                   else{
+                      }
+                      else{ /*email presente nel database*/
                        
                        $annoMadre=$_POST ['domandaSegreta'];
-                       $q2="select * from login where email=$1 and annoMadre=$2";
+                       $q2="select * from login where email=$1 and annomadre=$2";
                        $result1=pg_query_params($dbconn,$q1,array($email,$annoMadre));
-                       if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){
+                       if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){  /*tupla con email e annomadre non presente*/
                             $password=md5($_POST ['password']);
                             $q1="update login set password=$1 where email=$2";
                             $data=pg_query_params($dbconn,$q1,array($password,$email));
-                            if($data){
+                            if($data){ /*successo cambiopassword*/
                                 header("Location:/seconda.parte/iniziale.html?$email");
                             }
                           }
-                    header("Location: RecuperoPassword.html?reg=false&err=madre");
-                      
+                        header("Location: RecuperoPassword.html?reg=false&err=madre");
                    }
-               }
-             
-            }
-          }
-          
-          
-
-       
-              else
+               
+                  }
+                }
+                else
               {
                 header("Location: pagReg.html?reg=false&err=reCap"); /* Redirect browser */
 
                 /* Make sure that code below does not get executed when we redirect. */
                 exit;
               }
+          
             
             
      

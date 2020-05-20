@@ -29,18 +29,6 @@ $(document).ready(function(){
     
     }
   }
-  
-   /* if(url.searchParams.get("reg")=="false"){
-      if(url.searchParams.get("err")){
-          var err=url.searchParams.get("err");
-           if(err="email"){
-           alert("Mi dispiace! Questa email è già stata usata");
-           return false;
-           }
-          }
-        }*/
-      
-  
 }
 
   function inserisciUtente() {
