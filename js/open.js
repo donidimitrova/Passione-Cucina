@@ -23,12 +23,33 @@ $(document).ready(function(){
         alert("Attenzione! Devi convalidare il campo reCaptcha");
          return false;
         }else{
-        alert("Mi dispiace! Questa email è già stata usata");
-        return false;
+          alert("Mi dispiace! Questa email è già stata usata");
+          return false;
+        }
       }
     
     }
+  return true;
+}
+
+function ok(){
+  var url= new URL(window.location.href);
+  if(url.searchParams.get("rec")=="false"){
+    if(url.searchParams.get("err")){
+        var err=url.searchParams.get("err");
+        if(err=="reCap"){
+        alert("Attenzione! Devi convalidare il campo reCaptcha");
+         return false;
+        }else if(err=="madre"){
+          alert("Anno di nascita di tua madre errato");
+         return false;
+        }else{
+        alert("Mi dispiace! Questa email è già stata usata");
+        return false;
+      }
+    }
   }
+  return true;
 }
 
   function inserisciUtente() {
@@ -59,7 +80,7 @@ $(document).ready(function(){
     for(i=0;i<u.length;i++){
       if(u[i].email==email){
       document.getElementById("utente").innerHTML= "&nbsp" + u[i].nome;
-      localStorage.nomeUtente=u[i].nome;
+      localStorage.nomeUtente= u[i].nome;
       return true;
     }
   }
