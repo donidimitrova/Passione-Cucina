@@ -14,29 +14,30 @@
                       $q1="select * from login where email=$1";
                       $result=pg_query_params($dbconn,$q1,array($email));
                       if(!($line=pg_fetch_array($result,null, PGSQL_ASSOC))) {  /* email non presente nel database*/
-                       header("Location: pagReg.html?reg=false&err=email");
+                       header("Location: RecuperoPassword.html?rec=false&err=email");
                       }
                       else{ /*email presente nel database*/
                        
                        $annoMadre=$_POST ['domandaSegreta'];
                        $q2="select * from login where email=$1 and annomadre=$2";
-                       $result1=pg_query_params($dbconn,$q1,array($email,$annoMadre));
-                       if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){  /*tupla con email e annomadre non presente*/
+                       $result1=pg_query_params($dbconn,$q2,array($email,$annoMadre));
+                       if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){ /*tupla con email e annomadre non presente*/
+                            header("Location: RecuperoPassword.html?rec=false&err=madre"); 
+                       }else {
                             $password=md5($_POST ['password']);
-                            $q1="update login set password=$1 where email=$2";
-                            $data=pg_query_params($dbconn,$q1,array($password,$email));
+                            $q3="update login set password=$1 where email=$2";
+                            $data=pg_query_params($dbconn,$q3,array($password,$email));
                             if($data){ /*successo cambiopassword*/
                                 header("Location:/seconda.parte/iniziale.html?$email");
                             }
                           }
-                        header("Location: RecuperoPassword.html?reg=false&err=madre");
                    }
                
                   }
-                }
-                else
-              {
-                header("Location: pagReg.html?reg=false&err=reCap"); /* Redirect browser */
+        
+      }
+         else{
+                header("Location: RecuperoPassword.html?rec=false&err=reCap"); /* Redirect browser */
 
                 /* Make sure that code below does not get executed when we redirect. */
                 exit;

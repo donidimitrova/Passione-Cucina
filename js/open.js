@@ -44,7 +44,7 @@ function ok(){
           alert("Anno di nascita di tua madre errato");
          return false;
         }else{
-        alert("Mi dispiace! Questa email è già stata usata");
+        alert("Mi dispiace! Email non registrata");
         return false;
       }
     }
@@ -72,6 +72,9 @@ function ok(){
 
 
   function name(){
+    if (typeof(localStorage.nomeUtente) == "undefined") {
+      localStorage.nomeUtente="";
+      }
     var url=window.location.href;
     var urlSplit=url.split("?");
     var email=urlSplit[1];
@@ -79,8 +82,8 @@ function ok(){
     var u=JSON.parse(localStorage.utenti);
     for(i=0;i<u.length;i++){
       if(u[i].email==email){
+        localStorage.nomeUtente = u[i].nome;
       document.getElementById("utente").innerHTML= "&nbsp" + u[i].nome;
-      localStorage.nomeUtente= u[i].nome;
       return true;
     }
   }
