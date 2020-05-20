@@ -40,7 +40,7 @@ $(document).ready(function(){
           }
         }*/
       
-  return true;
+  
 }
 
   function inserisciUtente() {
