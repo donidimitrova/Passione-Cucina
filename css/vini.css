@@ -91,20 +91,16 @@ Smartphone
     *,
     *:before,
     *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     }
     
     *{
         margin: 0;
         padding: 0;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
       }
       
       h1{
-        /*font-size: 2.5rem;*/
         font-family: 'Merienda', cursive !important;
         font-weight: normal;
         color: rgb(32, 32, 32);
@@ -121,14 +117,9 @@ Smartphone
       }
       
       .cols{
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
       .col{
@@ -138,9 +129,7 @@ Smartphone
       }
       
       .container{
-        -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
-          -webkit-perspective: 1000px;
                   perspective: 1000px;
                   margin:0px;
                   padding:0px;
@@ -150,13 +139,8 @@ Smartphone
       .back{
         background-size: cover;
           background-position: center;
-          -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
           transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          -webkit-backface-visibility: hidden;
-                  backface-visibility: hidden;
+          backface-visibility: hidden;
           text-align: center;
           min-height: 280px;
           height: auto;
@@ -189,11 +173,7 @@ Smartphone
       }
       .container:hover .front,
       .container:hover .back{
-          -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
           transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-          transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
       }
       
       .back{
@@ -204,48 +184,37 @@ Smartphone
       }
       
       .inner{
-          -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
-                  transform: translateY(-50%) translateZ(60px) scale(0.94);
+          transform: translateY(-50%) translateZ(60px) scale(0.94);
           top: 50%;
           position: absolute;
           left: 0;
           width: 100%;
           padding: 2rem;
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
+          box-sizing: border-box;
           outline: 1px solid transparent;
-          -webkit-perspective: inherit;
-                  perspective: inherit;
+          perspective: inherit;
           z-index: 2;
       }
       
       .container .back{
-          -webkit-transform: rotateY(180deg);
                   transform: rotateY(180deg);
-          -webkit-transform-style: preserve-3d;
                   transform-style: preserve-3d;
                   box-shadow: 3px -2px 5px 0px black;
       }
       
       .container .front{
-          -webkit-transform: rotateY(0deg);
                   transform: rotateY(0deg);
-          -webkit-transform-style: preserve-3d;
                   transform-style: preserve-3d;
                   box-shadow: 3px -2px 5px 0px black;
       }
       
       .container:hover .back{
-        -webkit-transform: rotateY(0deg);
                 transform: rotateY(0deg);
-        -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
       }
       
       .container:hover .front{
-        -webkit-transform: rotateY(-180deg);
                 transform: rotateY(-180deg);
-        -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
       }
       
