@@ -223,19 +223,11 @@ Smartphone
   line-height: 1;
   font-size: 1.5em;
   color: rgba(255, 255, 255, 0.425);
-  -webkit-transition: color .2s ease-out;
   transition: color .2s ease-out;
-}
-.star-rating__star:hover {
-  cursor: pointer;
 }
 .star-rating__star.is-selected {
   color: #FFD700;
 }
-.star-rating__star.is-disabled:hover {
-  cursor: default;
-}
-
   video {
     max-width: 100%;
     height: auto;
