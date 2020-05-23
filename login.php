@@ -3,7 +3,6 @@
         die('Could not connect:' . pg_last_error());
         $email = $_POST['email'];
         $password=$_POST ['password'];
-        // Check if any of the fields is empty
         if(empty($email) || empty($password)){
             echo '2';
         } else {
@@ -24,7 +23,6 @@
                 $num_r = pg_num_rows($res);
                 if( $num_r == 0 ) {
                     echo '4';
-                    //$_SESSION['email']=$row['email'];
                 }
                 else{
                     echo '1';

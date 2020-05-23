@@ -69,12 +69,12 @@ Smartphone
       z-index:1000 !important;
     }
     
-    .fancy span:before {
+    .carino span:before {
       right: 100%;
       margin-right: 15px;
       width: 80px;
     }
-    .fancy span:after {
+    .carino span:after {
       left: 100%;
       margin-left: 15px;
       width: 80px;
@@ -83,27 +83,7 @@ Smartphone
     }
     
     
-    /* clearfix */
-    
-    .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-    }
-    * html .clearfix             { zoom: 1; } /* IE6 */
-    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-    
-    *,
-    *:before,
-    *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    }
-
+  
     
  /**************
    Footer
@@ -122,7 +102,7 @@ Smartphone
   margin-top: 5px;
 }
 
-.fancy {
+.carino {
   text-align: center;
   font-family: 'Ruluko', sans-serif !important;
   background-size: cover;
@@ -131,12 +111,12 @@ Smartphone
  
 }
 
-.seving-ingredient{
+.Ingredienti{
   font-family: 'Titillium Web', sans-serif;
 }
 
 
-.Recipe-IngredientList  {
+.Ingredienti {
   width: inherit;
   margin-top: 0;
   border: 2px solid rgba(15, 15, 15, 0.384);
@@ -149,26 +129,26 @@ Smartphone
   max-height: 500px;
   overflow-y: auto;
 }
-.Recipe-Ingredient {
+.Ingredienti {
  border-bottom: transparent;
  padding: 5px;
 }
-.Recipe-Ingredient:last-child {
+.Ingredienti:last-child {
  border-bottom: none;
 }
-.Recipe-Ingredient span {
+.Ingredienti span {
  font-weight: 600;
 }
 
-.recepie_details_area {
+.ricette {
   margin-top: 50px;
 }
 
-.recepie_details_area .recepies_thumb {
+.ricette .ricette-foto {
   margin-bottom: 60px;
 }
 
-.recepie_details_area .recepies_thumb img {
+.ricette .ricette-foto img {
   width: 70%;
   height: inherit;
   border-radius: 5px;
@@ -225,7 +205,6 @@ Smartphone
   line-height: 1;
   font-size: 1.5em;
   color: rgba(255, 255, 255, 0.425);
-  -webkit-transition: color .2s ease-out;
   transition: color .2s ease-out;
 }
 .star-rating__star:hover {

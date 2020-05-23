@@ -25,30 +25,11 @@ header
 .header__icon-bar{display: block;float: right;padding:20px;display: none;}
 .header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
 
-
-
-.ui-autocomplete {
-  max-height: 300px;
-  width: 100px;
-  overflow-y: scroll;   /* prevent horizontal scrollbar */
-  overflow-x: hidden; /* add padding to account for vertical scrollbar */
-  z-index:1000 !important;
-}
+.ui-autocomplete {max-height: 300px;width: 100px;overflow-y: scroll;   overflow-x: hidden; z-index:1000 !important;}
 /*-----------------------------
 Cover
 -----------------------------*/
-.cover{height:45%;
-  background-image: url(../img/italy.jpg);
-  background-size: cover;
-  border-radius: 25px;
-  background-position: center center;
-  position:relative;
-  border-bottom-left-radius: 45px;
-  border-bottom-right-radius:45px ;
-  overflow: hidden;
-  box-shadow: rgb(66, 66, 66) 0px 5px 15px;
-  
-}
+.cover{height:45%;background-image: url(../img/italy.jpg);background-size: cover;border-radius: 25px;background-position: center center;position:relative;border-bottom-left-radius: 45px;border-bottom-right-radius:45px ;overflow: hidden;box-shadow: rgb(66, 66, 66) 0px 5px 15px;}
 .cover__filter{ background: rgb(0, 0, 0); width:100%; height:100%; position: absolute; z-index: 0; opacity: 0.6; }
 .cover__caption{ display: table; height: 100%; width:100%; position: relative; z-index:1; padding: 0 20px}
 .cover__caption__copy { display: table-cell; vertical-align: middle; text-align: center; color:#fff; }
@@ -61,7 +42,6 @@ LOGO
 @media (min-width: 30em) {
 .header__logo  {display: inline-block; height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
 }
-
 /*-----------------------------
 Smartphone
 -----------------------------*/
@@ -69,10 +49,7 @@ Smartphone
 
     .header{position:fixed; z-index: 100;width:100%}
     .header__icon-bar{display: block; }
-    .header__logo{
-      float: left;
-    }
-    
+    .header__logo{float: left;}
     .header__menu{width:100%;height:0px; overflow: hidden; }
     .header__menu__item{display: block;}
     .is-open{height:150px; overflow: auto; z-index: 100;}
@@ -81,428 +58,115 @@ Smartphone
     /* Cover */
     .cover{height:50%;}
     
-    .ui-autocomplete {
-      max-height: 300px;
-      width: 100px;
-      overflow-y: scroll;   /* prevent horizontal scrollbar */
-      overflow-x: hidden; /* add padding to account for vertical scrollbar */
-      z-index:1000 !important;
+    .ui-autocomplete {max-height: 300px;width: 100px;overflow-y: scroll; overflow-x: hidden;z-index:1000 !important;} 
     }
-    
-    }
-    
-    
-    /* clearfix */
-    
-    .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-    }
-    * html .clearfix             { zoom: 1; } /* IE6 */
-    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-    
-    *,
-    *:before,
-    *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    }
-
-    
+  
  /**************
    Footer
    *************/
-   .mastfoot {
-    margin-bottom: 3px;
-    color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
+   .mastfoot {margin-bottom: 3px;color: rgba(0, 0, 0, 0.616);text-align: center;}
   
-    
-
-
-  h4{
-    margin: 30px;
- font-size: 51px;
- line-height: 44px;
- letter-spacing: -2px;
- font-weight: bold;color: rgb(223, 41, 35);
- font-family: 'Merienda', cursive !important;
-  }
+  h4{margin: 30px;font-size: 51px;line-height: 44px;letter-spacing: -2px;font-weight: bold;color: rgb(223, 41, 35);font-family: 'Merienda', cursive !important;}
 /***************************
 IMMAGINI DOPO IL BUONGIORNO
 ****************************/
 
-.grid figure {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  background: #3085a3;
-  text-align: center;
-  cursor: pointer;
-}
-
-.grid figure img {
-  position: relative;
-  display: block;
-  height: 185px !important;
-  width: 100%;
-  opacity: 0.8;
-  margin: 0;
-  object-fit: cover;
-}
-
-.grid figure figcaption {
-  padding: 2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-  pointer-events: none;
-}
-
-.grid figure figcaption,
-.grid figure figcaption>a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.grid figure figcaption>a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
-
-.grid figure h2 {
-  word-spacing: -0.15em;
-  font-weight: 300;
-}
-
-.grid figure h2 span {
-  font-weight: 800;
-}
-
-.grid figure h2,
-.grid figure p {
-  margin: 0;
-}
-
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
-}
-
-
-
-figure.effect-ravi {
-  background: #303fa9;
-  margin: 0;
-}
-
-
-
-figure.effect-ravi h2 {
-  font-size: 158.75%;
-}
-
-figure.effect-ravi h2,
-figure.effect-ravi p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-}
-
-figure.effect-ravi figcaption::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  border: 2px solid #fff;
-  content: '';
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
-  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-}
-
-figure.effect-ravi p {
-  width: 100px;
-  text-transform: none;
-  font-size: 121%;
-  line-height: 2;
-}
-
-figure.effect-ravi p a {
-  color: #fff;
-}
+.grid figure {position: relative;float: left;overflow: hidden;background: #f1f1f1;text-align: center;cursor: pointer;}
+.grid figure img {position: relative;display: block;height: 185px !important;width: 100%;opacity: 0.8;margin: 0;object-fit: cover;}
+.grid figure figcaption {padding: 16px;color: #fff;text-transform: uppercase;font-size: 20px;}
+.grid figure figcaption, .grid figure figcaption>a {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.grid figure h2 span {font-weight: 800;}
+.grid figure h2,.grid figure p {margin: 0;}
+.grid figure p {letter-spacing: 1px;font-size: 68.5%;}
+figure.scelta {background: #303fa9;margin: 0;}
+figure.scelta h2 {font-size: 158.75%;}
+/*** icona zoom***/
+figure.scelta h2,figure.scelta p {position: absolute;top: 50%;left: 50%;transition: opacity 0.35s, transform 0.35s;transform: translate3d(-50%, -50%, 0);}
+figure.scelta p {width: 100px;text-transform: none;font-size: 121%;line-height: 2;}
+figure.scelta p a {color: #fff;}
 /********************************
 quando clicchi sullo zoom diventa opaco
 *********************************/
-figure.effect-ravi p a:hover,
-figure.effect-ravi p a:focus {
-  opacity: 0.6;
-}
-/***********************************
-fa vedere lo zoom nascosto
-************************************/
-figure.effect-ravi p a i {
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
-
-
+figure.scelta p a:hover,figure.scelta p a:focus {opacity: 0.6;}
 
 /***********************************************
 ROMBO
 ************************************************/
-figure.effect-ravi:hover figcaption::before {
-  opacity: 1;
-  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
-  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
-}
+figure.scelta figcaption::before {position: absolute;top: 50%;left: 50%;width: 120px;height: 120px;border: 2px solid #fff;content: '';opacity: 0;transition: opacity 0.35s, transform 0.35s;transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);}
+figure.scelta:hover figcaption::before {opacity: 1;transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);}
+figure.scelta:hover h2 {opacity: 0;}
+/***********************************
+fa vedere lo zoom nascosto
+************************************/
+figure.scelta p a i {opacity: 0;transition: opacity 0.35s, transform 0.35s;}
 
-figure.effect-ravi:hover h2 {
-  opacity: 0;
-  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
-  transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
-}
-
-figure.effect-ravi:hover p i:empty {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  /* just because it's stronger than nth-child */
-  opacity: 1;
-}
+figure.scelta:hover p i {transform: translate3d(0, 0, 0);opacity: 1;}
 /*********************************
 FINE IMMAGINI DOPO IL BUONGIORNO
 **********************************/
 
 
 /*******************************************
-VINITALY
+VINI
 ********************************************/
 
-.healthy-snacks {
-  margin: 50px auto;
-  width: 90%;
-  max-width: 680px;
-  background: #fff;
-}
-.healthy-snacks .featured-image {
-  position: relative;
-  overflow: hidden;
-}
-.healthy-snacks .featured-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
-}
+.vini {margin: 50px auto;width: 90%;max-width: 680px;background: #fff;}
+.vini .image {position: relative;overflow: hidden;}
+.vini .image img {display: block;width: 100%;height: auto;opacity: 0.9;}
 /*********************************************
 padding tra immagine e testo
 **********************************************/
-
-.healthy-snacks article {
-  padding: 1em 1em 2em;
-}
+.vini article {padding: 16px 16px 32px;}
 /*********************************************
 mette lo spazio bianco sottto all'immagine
 **********************************************/
-.healthy-snacks article::after {
-  clear: both;
-  content: "";
-  display: table;
-}
+.vini article::after {clear: both;content: "";display: table;}
 /*******************************************
 dichiara la linea verde ma (vedi sotto)
 la mette vericale
 ********************************************/
-.healthy-snacks article header {
-  border-bottom: 2px solid #9bb068;
-}
-.healthy-snacks article header h3 {
-  margin: 0 0 0.25em;
-  font-family: 'McLaren', cursive;
-  color: #767d2e;
-  text-align: center;
-  text-transform: uppercase;
-}
-.healthy-snacks article .excerpt {
-  font-family: 'Open Sans', sans-serif;
-}
-.healthy-snacks article .excerpt p {
-  line-height: 24px;
-}
-.healthy-snacks article .excerpt a {
-  display: block;
-  margin-top: 1em;
-  color: #c00413;
-  text-decoration: none;
-}
-.healthy-snacks article .excerpt a:hover {
-  color: #fb2f40;
-}
-.healthy-snacks article .excerpt a span:first-child {
-  padding-right: 1em;
-  vertical-align: middle;
-}
+.vini article header h3 { margin: 0 0 4px;font-family: 'McLaren', cursive;color: #767d2e;text-align: center;text-transform: uppercase;}
+.vini article .descrizione {font-family: 'Open Sans', sans-serif;}
+.vini article .descrizione p {line-height: 24px;}
+.vini article .descrizione a {display: block;margin-top: 16px;color: #c00413;text-decoration: none;}
+.vini article .descrizione a:hover {color: #fb2f40;}
 @media only screen and (min-width: 680px) {
   /******************************************
-  .healthy-snacks article header {
+  .vini article header {
     width: 40%;
     float: left;
     border-bottom: none;
     border-right: 2px solid #9bb068;
   } mette la linea verticale
   *******************************************/
-  .healthy-snacks article header {
-    width: 40%;
-    float: left;
-    border-bottom: none;
-    border-right: 2px solid #9bb068;
-  }
-  .healthy-snacks article header h3 {
-    margin: 1em 0;
-    font-size: 2em;
-  }
-  .healthy-snacks article header h3 span {
-    display: block;
-  }
-  .healthy-snacks article .excerpt {
-    width: 60%;
-    float: left;
-    padding-left: 2em;
-  }
+  .vini article header {width: 35%;float: left;border-right: 2px solid #9bb068;}
+  .vini article header h3 {margin: 16px 0;font-size: 32px;}
+  .vini article header h3 span {display: block;}
+  .vini article .descrizione {width: 60%;float: left;padding-left: 32px;}
 }
   /*****************************************************
-  FINE VINITALY
+  FINE VINI
   ******************************************************/
 
   /*****************************************************
   INIZIO OLIO DI OLIVA
   ******************************************************/
   
-  .portfolio-item {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    max-width: 530px;
-    margin: auto auto 1rem;
-  
-  }
-  
-  .portfolio-item .caption {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(33, 37, 41, 0.2);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-  
-  .portfolio-item .caption .caption-content {
-    color: #fff;
-    margin: auto 2rem 2rem;
-    
-  }
-  
-  .portfolio-item .caption .caption-content h2 {
-  
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 1px 1px black;
-    
-    
-  }
-  .titolo{
-    font-family: 'Merienda', cursive !important;
-  }
-  
-  .portfolio-item .caption .caption-content p {
-    font-weight: 300;
-    font-size: 1.2rem;
-  }
-  
+  .portfolio-item {display: block;position: relative;overflow: hidden;max-width: 530px;margin: auto auto 16px;}
+  .portfolio-item .prodotto {display: flex;height: 100%;width: 100%;background-color: rgba(33, 37, 41, 0.2);position: absolute;top: 0;bottom: 0;z-index: 1;}
+  .portfolio-item .prodotto .contenuto {color: #fff;margin: auto 32px 32px;}
+  .portfolio-item .prodotto .contenuto h2 {text-transform: uppercase;text-align: center;text-shadow: 1px 1px black;}
+  .titolo{font-family: 'Merienda', cursive !important;}
   @media (min-width: 992px) {
-    .portfolio-item {
-      max-width: none;
-      margin: 0;
-    }
-    .portfolio-item .caption {
-      -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
-      -webkit-clip-path: inset(0px);
-      clip-path: inset(0px);
-    }
-    .portfolio-item .caption .caption-content {
-      transition: opacity 0.25s;
-      margin-left: 5rem;
-      margin-right: 5rem;
-      margin-bottom: 5rem;
-    }
-    .portfolio-item img {
-      -webkit-transition: -webkit-clip-path 0.25s ease-out;
-      -webkit-clip-path: inset(-1px);
-      clip-path: inset(-1px);
-      height: 250px;
-      width: inherit;
-    }
-    .portfolio-item:hover img {
-      -webkit-clip-path: inset(2rem);
-      clip-path: inset(2rem);
-    }
-    .portfolio-item:hover .caption {
-      background-color: rgba(32, 32, 32, 0.719);
-      -webkit-clip-path: inset(2rem);
-      clip-path: inset(2rem);
-    }
+    .portfolio-item {max-width: none; margin: 0;}
+    .portfolio-item .prodotto {transition: clip-path 0.25s ease-out, background-color 0.7s;clip-path: inset(0px);}
+    .portfolio-item .prodotto .contenuto { margin-left: 80px;margin-right: 80px;margin-bottom: 80px;}
+    .portfolio-item img {transition:clip-path 0.25s ease-out;clip-path: inset(-1px);clip-path: inset(-1px);height: 250px;width: inherit;}
+    .portfolio-item:hover img {clip-path: inset(32px);}
+    .portfolio-item:hover .prodotto {background-color: rgba(32, 32, 32, 0.719);clip-path: inset(32px);}
   }
-  
-  .content-section {
-    padding-top: 10px;
-    padding-bottom: 7.5rem;
-  }
-  
-  .content-section-heading h2 {
-    font-family: times, Times New Roman, times-roman, georgia, serif;
-    margin: 10px;
-    font-size: 51px;
-    line-height: 44px;
-    letter-spacing: -2px;
-    font-weight: bold;color: rgb(223, 41, 35);
-  }
-  
-  .content-section-heading h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
+  .content-section-heading h2 {font-family: times, Times New Roman, times-roman, georgia, serif;margin: 10px;font-size: 51px;line-height: 44px;letter-spacing: -2px;font-weight: bold;color: rgb(223, 41, 35);}
+  .content-section-heading h3 {font-size: 16px;text-transform: uppercase;}
 
 /************************************************
 FINE OLIO DI OLIVA

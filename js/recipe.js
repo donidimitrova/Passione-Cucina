@@ -1,20 +1,20 @@
-Vue.component('serving-ingredient', {
-    template: '<div class="Recipe-Ingredient">{{ name }} : <span>{{ serving * baseValue }}</span>{{ metric }}</div>',
-    props: ['name', 'serving', 'baseValue', 'metric']
+Vue.component('porzioni', {
+    template: '<div>{{ name }} : <span>{{ servire * valori }}</span>{{ metrica }}</div>',
+    props: ['name', 'servire', 'valori', 'metrica']
   })
   new Vue({
     el: '#Vue',
     data() {
       return {
-        serving: 1
+        servire: 1
       }
     },
     methods: {
-      decreaseServing() {
-        this.serving = this.serving - 1
+      meno() {
+        this.servire = this.servire - 1
       },
-      increaseServing() {
-        this.serving = this.serving + 1
+      piu() {
+        this.servire = this.servire + 1
       }
     }
   })
@@ -28,7 +28,7 @@ Vue.component('serving-ingredient', {
     }
  
 
-    Vue.component('star-rating', {
+    Vue.component('stelle-rating', {
     
       props: {
         'name': String,
@@ -38,16 +38,13 @@ Vue.component('serving-ingredient', {
         'required': Boolean },
     
     
-      template: '<div class="star-rating">\
+      template: '<div class="stelle-rating">\
             <label class="star-rating__star" v-for="rating in ratings" \
             :class="{\'is-selected\': ((value >= rating) && value != null), \'is-disabled\': disabled}" \
             v-on:click="set(rating)" v-on:mouseover="star_over(rating)" v-on:mouseout="star_out">\
             <input class="star-rating star-rating__checkbox" type="radio" :value="rating" :name="name" \
             v-model="value" :disabled="disabled">★</label></div>',
-    
-      /*
-                                                                    * Initial state of the component's data.
-                                                                    */
+
       data: function () {
         return {
           temp_value: null,
@@ -56,9 +53,6 @@ Vue.component('serving-ingredient', {
       },
     
       methods: {
-        /*
-                  * Behaviour of the stars on mouseover.
-                  */
         star_over: function (index) {
           var self = this;
     
@@ -69,9 +63,6 @@ Vue.component('serving-ingredient', {
     
         },
     
-        /*
-            * Behaviour of the stars on mouseout.
-            */
         star_out: function () {
           var self = this;
     
@@ -80,9 +71,7 @@ Vue.component('serving-ingredient', {
           }
         },
     
-        /*
-            * Set the rating.
-            */
+     
         set: function (value) {
           var self = this;
     
@@ -96,5 +85,5 @@ Vue.component('serving-ingredient', {
     
     new Vue({
       el: '#app' });
-    //# sourceURL=pen.js
+
   
