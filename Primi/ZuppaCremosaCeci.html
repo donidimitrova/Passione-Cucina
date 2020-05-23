@@ -51,39 +51,39 @@
 
     <h1>Zuppa cremosa di ceci</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/zuppaCeci.jpg" alt="Zuppa cremosa di ceci" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Ceci già lessati" :serving="serving" base-value="350" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Carota piccola" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Sedano piccolo" :serving="serving" base-value="1" metric=" gambo"></serving-ingredient>
-                    <serving-ingredient name="Porro" :serving="serving" base-value="5" metric=" rondelle"></serving-ingredient>
-                    <serving-ingredient name="Coriandolo" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
-                    <serving-ingredient name="Cumino" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
-                    <serving-ingredient name="Curcuma" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
-                    <serving-ingredient name="Alloro" :serving="serving" base-value="3" metric=" foglie"></serving-ingredient>
-                    <serving-ingredient name="Rosmarino" :serving="serving" base-value="1" metric=" rametto"></serving-ingredient>
-                    <serving-ingredient name="Acqua" :serving="serving" base-value="1" metric=" tazza"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="2" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Ceci già lessati" :servire="servire" valori="350" misura="g"></porzioni>
+                    <porzioni name="Carota piccola" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Sedano piccolo" :servire="servire" valori="1" misura=" gambo"></porzioni>
+                    <porzioni name="Porro" :servire="servire" valori="5" misura=" rondelle"></porzioni>
+                    <porzioni name="Coriandolo" :servire="servire" valori="1" misura=" cucchiaio"></porzioni>
+                    <porzioni name="Cumino" :servire="servire" valori="1" misura=" cucchiaio"></porzioni>
+                    <porzioni name="Curcuma" :servire="servire" valori="1" misura=" cucchiaio"></porzioni>
+                    <porzioni name="Alloro" :servire="serving" valori="3" misura=" foglie"></porzioni>
+                    <porzioni name="Rosmarino" :servire="servire" valori="1" misura=" rametto"></porzioni>
+                    <porzioni name="Acqua" :servire="servire" valori="1" misura=" tazza"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura="g"></porzioni>
+                    <porzioni name="Pepe" :servire="servire" valori="qb" misura="g"></porzioni>
                   </div>
                 </div>
                 </div>
@@ -91,12 +91,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/ZUPPA CREMOSA DI CECI.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

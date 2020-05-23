@@ -51,35 +51,35 @@
 
     <h1>Fusilli al baffo con guanciale</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/fusilli-baffo.png" alt="Fusilli al baffo con guanciale" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Fusilli" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Panna Liquida" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Prezzemolo" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Guanciale" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Passata di pomodoro" :serving="serving" base-value="12" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pecorino" :serving="serving" base-value="5" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="1" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Fusilli" :servire="servire" valori="100" misura="g"></porzioni>
+                    <porzioni name="Panna Liquida" :servire="servire" valori="100" misura="g"></porzioni>
+                    <porzioni name="Prezzemolo" :servire="servire" valori="2" misura="g"></porzioni>
+                    <porzioni name="Guanciale" :servire="servire" valori="50" misura="g"></porzioni>
+                    <porzioni name="Passata di pomodoro" :servire="servire" valori="12" misura="g"></porzioni>
+                    <porzioni name="Pecorino" :servire="servire" valori="5" misura="g"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura="g"></porzioni>
+                    <porzioni name="Pepe" :servire="servire" valori="qb" misura="g"></porzioni>
                   </div>
                 </div>
                 </div>
@@ -87,12 +87,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/Fusilli al baffo con guanciale.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

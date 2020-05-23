@@ -1,6 +1,6 @@
 Vue.component('porzioni', {
-    template: '<div>{{ name }} : <span>{{ servire * valori }}</span>{{ metrica }}</div>',
-    props: ['name', 'servire', 'valori', 'metrica']
+    template: '<div>{{ name }} : <span>{{ servire * valori }}</span>{{ misura }}</div>',
+    props: ['name', 'servire', 'valori', 'misura']
   })
   new Vue({
     el: '#Vue',

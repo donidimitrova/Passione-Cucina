@@ -51,34 +51,34 @@
 
     <h1>Spaghettoni alla crema di ricotta e zafferano con guanciale</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/spaghettoni.jpg" alt="Spaghettoni alla crema di ricotta e zafferano con guanciale" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Ricotta" :serving="serving" base-value="200" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Prmigiano Reggiano" :serving="serving" base-value="60" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Guanciale" :serving="serving" base-value="125" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Spaghettoni" :serving="serving" base-value="300" metric=" g"></serving-ingredient>
-                    <serving-ingredient name="bustina di zafferano" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="2" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Ricotta" :servire="servire" valori="200" misura="g"></porzioni>
+                    <porzioni name="Prmigiano Reggiano" :servire="servire" valori="60" misura="g"></porzioni>
+                    <porzioni name="Guanciale" :servire="servire" valori="125" misura="g"></porzioni>
+                    <porzioni name="Spaghettoni" :servire="servire" valori="300" misura=" g"></porzioni>
+                    <porzioni name="bustina di zafferano" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura="g"></porzioni>
+                    <porzioni name="Pepe" :servire="servire" valori="qb" misura="g"></porzioni>
                   </div>
                 </div>
                 </div>
@@ -86,12 +86,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/SPAGHETTONI ALLA CREMA DI RICOTTA E ZAFFERANO CON GUANCIALE.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

@@ -52,34 +52,34 @@
     <h1>Mezze penne ai carciofi</h1>
 
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/mezze-penne-carciofi.webp" alt="Mezze penne ai carciofi" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
-                            </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Mezze penne" :serving="serving" base-value="400" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Carciofi grandi " :serving="serving" base-value="4" metric=""></serving-ingredient>
-                    <serving-ingredient name="Pancetta tagliata spessa" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Carote" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Cipolla" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="5" metric=" cucchiai"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
+                            <stelle-rating value="3"></stelle-rating>
+                            </div>valori
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Mezze penne" :servire="servire" valori="400" misura="g"></porzioni>
+                    <porzioni name="Carciofi grandi " :servire="servire" valori="4" misura=""></porzioni>
+                    <porzioni name="Pancetta tagliata spessa" :servire="servire" valori="100" misura="g"></porzioni>
+                    <porzioni name="Carote" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Cipolla" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Olio extravergine d'oliva" :servire="servire" valori="5" misura=" cucchiai"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura="g"></porzioni>
                   </div>
                 </div>
                 </div>
@@ -87,12 +87,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/MEZZE PENNE AI CARCIOFI.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">
