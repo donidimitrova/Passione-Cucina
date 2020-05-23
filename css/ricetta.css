@@ -83,7 +83,29 @@ Smartphone
     }
     
     
+<<<<<<< HEAD
   
+=======
+    /* clearfix */
+    
+    .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+    * html .clearfix             { zoom: 1; } /* IE6 */
+    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+    
+    *,
+    *:before,
+    *:after {
+            box-sizing: border-box;
+    }
+
+>>>>>>> 6430a6d69ee9977249f5f88dabd7a2fc6b1e58c2
     
  /**************
    Footer
@@ -207,16 +229,9 @@ Smartphone
   color: rgba(255, 255, 255, 0.425);
   transition: color .2s ease-out;
 }
-.star-rating__star:hover {
-  cursor: pointer;
-}
 .star-rating__star.is-selected {
   color: #FFD700;
 }
-.star-rating__star.is-disabled:hover {
-  cursor: default;
-}
-
   video {
     max-width: 100%;
     height: auto;
