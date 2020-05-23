@@ -59,35 +59,35 @@
 
 
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/gnocchi-speck.jpg" alt="Gnocchi speck, noci e toma" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino ">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating >
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Gnocchi" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Speck" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Gherigli di noci" :serving="serving" base-value="25" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Toma piemontese" :serving="serving" base-value="50" metric=" g"></serving-ingredient>
-                    <serving-ingredient name="Panna da cucina" :serving="serving" base-value="1" metric=" bicchiere"></serving-ingredient>
-                    <serving-ingredient name="Rosmarino" :serving="serving" base-value="1" metric=" rametto"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Asiago" :serving="serving" base-value="20" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni  name="Gnocchi" :servire="servire" valori="300" misura="g"></porzioni >
+                    <porzioni name="Speck" :servire="servire" valori="100" misura="g"></porzioni >
+                    <porzioni  name="Gherigli di noci" :servire="servire" valori="25" misura="g"></porzioni >
+                    <porzioni  name="Toma piemontese" :servire="servire" valori="50" misura=" g"></porzioni >
+                    <porzioni  name="Panna da cucina" :servire="servire" valori="1" misura=" bicchiere"></porzioni >
+                    <porzioni  name="Rosmarino" :servire="servire" valori="1" misura=" rametto"></porzioni >
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura="g"></porzioni >
+                    <porzioni  name="Asiago" :servire="servire" valori="20" misura="g"></porzioni >
                   </div>
                 </div>
                 </div>
@@ -95,12 +95,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/GNOCCHI SPECK TOMA E NOCI.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

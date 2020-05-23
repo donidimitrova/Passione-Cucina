@@ -51,39 +51,39 @@
 
     <h1>Melanzane in carrozza</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/melanzane-carrozza.jpg" alt="Melanzane in carrozza" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Melanzane" :serving="serving" base-value="2" metric=""></serving-ingredient>
-                    <serving-ingredient name="Mozzarella" :serving="serving" base-value="200" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Farina" :serving="serving" base-value="1" metric=" manciata"></serving-ingredient>
-                    <serving-ingredient name="Pomodoro" :serving="serving" base-value="400" metric=" g"></serving-ingredient>
-                    <serving-ingredient name="Cipolla bianca" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Aceto di vino bianco" :serving="serving" base-value="1" metric=" bicchiere"></serving-ingredient>
-                    <serving-ingredient name="Zucchero" :serving="serving" base-value="1" metric=" cucchiaio"></serving-ingredient>
-                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="3" metric=" cucchiai"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Olio per soffriggere" :serving="serving" base-value="300" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Pangrattato" :serving="serving" base-value="3" metric=" manciate"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Melanzane" :servire="servire" valori="2" misura=""></porzioni>
+                    <porzioni name="Mozzarella" :servire="servire" valori="200" misura="g"></porzioni>
+                    <porzioni name="Farina" :servire="servire" valori="1" misura=" manciata"></porzioni>
+                    <porzioni name="Pomodoro" :servire="servire" valori="400" misura=" g"></porzioni>
+                    <porzioni name="Cipolla bianca" :servire="servire" valori="1" misura=""></porzioni>porzioni
+                    <porzioni name="Aceto di vino bianco" :servire="servire" valori="1" misura=" bicchiere"></porzioni>
+                    <porzioni name="Zucchero" :servire="servire" valori="1" misura=" cucchiaio"></porzioni>
+                    <porzioni name="Olio extravergine d'oliva" :servire="servire" valori="3" misura=" cucchiai"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="3" misura="g"></porzioni>
+                    <porzioni name="Pepe" :servire="servire" valori="2" misura="g"></porzioni>
+                    <porzioni name="Olio per soffriggere" :servire="servire" valori="300" misura="mL"></porzioni>
+                    <porzioni name="Pangrattato" :servire="servire" valori="3" misura=" manciate"></porzioni>
                   </div>
                 </div>
                 </div>
@@ -91,12 +91,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/SECONDI/MELANZANE in CARROZZA.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

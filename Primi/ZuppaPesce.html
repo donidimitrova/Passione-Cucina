@@ -51,50 +51,50 @@
 
     <h1>Zuppa di pesce</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/zuppa-pesce.jpg" alt="Zuppa di pesce" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Cozze" :serving="serving" base-value="500" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Vongole" :serving="serving" base-value="500" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Aglio" :serving="serving" base-value="1" metric=" spicchio"></serving-ingredient>
-                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="6" metric=" cucchiai"></serving-ingredient>
-                    <serving-ingredient name="Scampi" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Gamberi" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Burro" :serving="serving" base-value="20" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Seppie" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Prezzemolo" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pomodorini ciliegino" :serving="serving" base-value="150" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Coda di rospo" :serving="serving" base-value="1" metric="kg"></serving-ingredient>
-                    <serving-ingredient name="Gallinella" :serving="serving" base-value="250" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Rombo" :serving="serving" base-value="1" metric="kg"></serving-ingredient>
-                    <serving-ingredient name="Vino bianco" :serving="serving" base-value="100" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="RanaPescatrice" :serving="serving" base-value="1" metric="kg"></serving-ingredient>
-                    <serving-ingredient name="Pagnotta di pane" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <h4 class="subtitle fancy">PER IL FUMETTO</h4>
-                    <serving-ingredient name="Sedano" :serving="serving" base-value="1" metric=" costa"></serving-ingredient>
-                    <serving-ingredient name="Carote" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Cipolla bianca" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Acqua" :serving="serving" base-value="2" metric="L"></serving-ingredient>
-                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="3" metric=" cucchiai"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="3" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Cozze" :servire="servire" valori="500" misura="g"></porzioni>
+                    <porzioni name="Vongole" :servire="servire" valori="500" misura="g"></porzioni>
+                    <porzioni name="Aglio" :servire="servire" valori="1" misura=" spicchio"></porzioni>
+                    <porzioni name="Olio extravergine d'oliva" :servire="servire" valori="6" misura=" cucchiai"></porzioni>
+                    <porzioni name="Scampi" :servire="servire" valori="300" misura="g"></porzioni>
+                    <porzioni name="Gamberi" :servire="servire" valori="300" misura="g"></porzioni>
+                    <porzioni name="Burro" :servire="servire" valori="20" misura="g"></porzioni>
+                    <porzioni name="Seppie" :servire="servire" valori="300" misura="g"></porzioni>
+                    <porzioni name="Prezzemolo" :servire="servire" valori="2" misura="g"></porzioni>
+                    <porzioni name="Pomodorini ciliegino" :servire="servire" valori="150" misura="g"></porzioni>
+                    <porzioni name="Coda di rospo" :servire="servire" valori="1" misura="kg"></porzioni>
+                    <porzioni name="Gallinella" :servire="servire" valori="250" misura="g"></porzioni>
+                    <porzioni name="Rombo" :servire="servire" valori="1" misura="kg"></porzioni>
+                    <porzioni name="Vino bianco" :servire="servire" valori="100" misura="mL"></porzioni>
+                    <porzioni name="RanaPescatrice" :servire="servire" valori="1" misura="kg"></porzioni>
+                    <porzioni name="Pagnotta di pane" :servire="servire" valori="1" misura=""></porzioni>
+                    <h4 class="carino">PER IL FUMETTO</h4>
+                    <porzioni name="Sedano" :servire="servire" valori="1" misura=" costa"></porzionit>
+                    <porzioni name="Carote" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Cipolla bianca" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Acqua" :servire="servire" valori="2" misura="L"></porzioni>
+                    <porzioni name="Olio extravergine d'oliva" :servire="servire" valori="3" misura=" cucchiai"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="3" misura="g"></porzioni>
                   </div>
                 </div>
                 </div>
@@ -102,12 +102,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/ZUPPADIPESCE.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

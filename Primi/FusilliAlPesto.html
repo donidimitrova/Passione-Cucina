@@ -57,54 +57,54 @@
 
 
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/fusilli-pesto-zucchine.jpg" alt="Fusilli al pesto di zucchine con salmone" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class="carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving" >
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Fusilli" :serving="serving" base-value="320" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Tranci di salmone" :serving="serving" base-value="260" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="20" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Sale fino" :serving="serving" base-value="2" metric=" g"></serving-ingredient>
-                    <serving-ingredient name="Pepe nero" :serving="serving" base-value="1" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Limone" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <h4 class="subtitle fancy">PER IL PESTO DI ZUCCHINE</h4>
-                    <serving-ingredient name="Zucchine" :serving="serving" base-value="200" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pinoli" :serving="serving" base-value="30" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Mandorle" :serving="serving" base-value="10" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Basilico" :serving="serving" base-value="10" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Olio extravergine d'oliva" :serving="serving" base-value="125" metric=" g"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="2" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Parmigiano Reggiano DOP  grattuggiato" :serving="serving" base-value="30" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire" >
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Fusilli" :servire="servire" valori="320" misura="g"></porzioni>
+                    <porzioni name="Tranci di salmone" :servire="servire" valori="260" misura="g"></porzioni>
+                    <porzioni name="Olio extravergine d'oliva" :servire="servire" valori="20" metric="g"></porzioni>
+                    <porzioni name="Sale fino" :servire="servire" valori="qb" misura=" g"></porzioni>
+                    <porzioni name="Pepe nero" :servire="servire" valori="qb" misura="g"></porzioni>
+                    <porzioni name="Limone" :servire="servire" valori="1" misura=""></porzioni>
+                    <h4 class="carino">PER IL PESTO DI ZUCCHINE</h4>
+                    <porzioni name="Zucchine" :servire="servire" valori="200" misura="g"></porzioni>
+                    <porzioni name="Pinoli" :servire="servire" valori="30" misura="g"></porzioni>
+                    <porzioni name="Mandorle" :servire="servire" valori="10" misura="g"></porzioni>
+                    <serving-ingredient name="Basilico" :servire="servire" valori="10" misura="g"></porzioni>
+                    <porzioni name="Olio extravergine d'oliva" :servire="servire" valori="125" misura=" g"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura="g"></serving-ingredient>
+                    <porzioni name="Parmigiano Reggiano DOP  grattuggiato" :servire="servire" valori="30" misura="g"></porzioni>
                   </div>
                 </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+porzioni
+    <h2 class="carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/PRIMI/FUSILLI AL PESTO DI ZUCCHINE CON SALMONE.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class="carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">
