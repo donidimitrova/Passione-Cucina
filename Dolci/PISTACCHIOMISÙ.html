@@ -50,36 +50,36 @@
     </nav>
     <h1>Pistacchiomis&ugrave; con Nutella</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/pistacchiomisu2.jpg" alt="pistacchiomisu" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving">
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Mascarpone" :serving="serving" base-value="500" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Zucchero" :serving="serving" base-value="120" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Panna da montare" :serving="serving" base-value="200" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Uova" :serving="serving" base-value="4" metric=""></serving-ingredient>
-                    <serving-ingredient name="Pasta di pistacchi " :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Savoiardi" :serving="serving" base-value="250" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Tazzine di caff&egrave;" :serving="serving" base-value="4" metric=""></serving-ingredient>
-                    <serving-ingredient name="Nutella" :serving="serving" base-value="400" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Granella pistacchi" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire">
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Mascarpone" :servire="servire" valori="500" misura="g"></porzioni>
+                    <porzioni name="Zucchero" :servire="servire" valori="120" misura="g"></porzioni>
+                    <porzioni name="Panna da montare" :servire="servire" valori="200" misura="mL"></porzioni>
+                    <porzioni name="Uova" :servire="servire" valori="4" misura=""></porzioni>
+                    <porzioni name="Pasta di pistacchi " :servire="servire" valori="50" misura="g"></porzioni>
+                    <porzioni name="Savoiardi" :servire="servire" valori="250" misura="g"></porzioni>
+                    <porzioni name="Tazzine di caff&egrave;" :servire="servire" valori="4" misura=""></porzioni>
+                    <porzioni name="Nutella" :servire="servire" valori="400" misura="g"></porzioni>
+                    <porzioni name="Granella pistacchi" :servire="servire" valori="q.b" misura=""></porzioni>
                   </div>
                 </div>
                 </div>
@@ -87,12 +87,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/DOLCI/PISTACCHIOMISU' CON NUTELLA.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

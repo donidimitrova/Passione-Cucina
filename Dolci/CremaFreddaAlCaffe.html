@@ -57,31 +57,31 @@
 
 
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/crema-di-caffe.jpg" alt="crema-di-caffe" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving">
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Caff&egrave; freddo" :serving="serving" base-value="200" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Panna fresca (o panna per dolci)" :serving="serving" base-value="200" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Zucchero a velo" :serving="serving" base-value="35" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Chicchi di caff&egrave;" :serving="serving" base-value="3" metric=""></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire">
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Caff&egrave; freddo" :servire="servire" valori="200" misura="mL"></porzioni>
+                    <porzioni name="Panna fresca (o panna per dolci)" :servire="servire" valori="200" misura="mL"></porzioni>
+                    <porzioni name="Zucchero a velo" :servire="servire" valori="35" misura="g"></porzioni>
+                    <porzioni name="Chicchi di caff&egrave;" :servire="servire" valori="3" misura=""></porzioni>
                   </div>
                 </div>
                 </div>
@@ -89,12 +89,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/DOLCI/CREMA FREDDA AL CAFFÈ.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

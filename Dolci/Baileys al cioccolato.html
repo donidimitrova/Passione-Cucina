@@ -59,44 +59,44 @@
 
 
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/bay.jpg" alt="Baileys" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving">
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Farina" :serving="serving" base-value="260" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Zucchero" :serving="serving" base-value="414" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cacao" :serving="serving" base-value="85" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Uova" :serving="serving" base-value="2" metric=""></serving-ingredient>
-                    <serving-ingredient name="Latte" :serving="serving" base-value="180" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Olio vegetale" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Baileys Irish Cream" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Cucchiaino di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Acqua bollente" :serving="serving" base-value="180" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Latte condensato zuccherato" :serving="serving" base-value="240" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Gocce di cioccolato" :serving="serving" base-value="127" metric="g"></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire">
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Farina" :servire="servire" valori="260" misura="g"></porzioni>
+                    <porzioni name="Zucchero" :servire="servire" valori="414" misura="g"></porzioni>
+                    <porzioni name="Cacao" :servire="servire" valori="85" misura="g"></porzioni>
+                    <porzioni name="Uova" :servire="servire" valori="2" misura=""></porzioni>
+                    <porzioni name="Latte" :servire="servire" valori="180" misura="mL"></porzioni>
+                    <porzioni name="Olio vegetale" :servire="servire" valori="240" misura="mL"></porzioni>
+                    <porzioni name="Baileys Irish Cream" :servire="servire" valori="240" misura="mL"></porzioni>
+                    <porzioni name="Cucchiaino di vaniglia" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Acqua bollente" :servire="servire" valori="180" misura="mL"></porzioni>
+                    <porzioni name="Latte condensato zuccherato" :servire="servire" valori="240" misura="mL"></porzioni>
+                    <porzioni name="Gocce di cioccolato" :servire="servire" valori="127" misura="g"></porzioni>
                     <h4 >TOPPING DI CREMA FRUTTA</h4>
-                    <serving-ingredient name="Panna da montare" :serving="serving" base-value="480" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Zucchero a velo" :serving="serving" base-value="86" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cacao in polvere" :serving="serving" base-value="29" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Baileys Irish Cream" :serving="serving" base-value="30" metric="mL"></serving-ingredient>
-                    <serving-ingredient name="Cucchiaino di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <porzioni name="Panna da montare" :servire="servire" valori="480" misura="mL"></porzioni>
+                    <porzioni name="Zucchero a velo" :servire="servire" valori="86" misura="g"></porzioni>
+                    <porzioni name="Cacao in polvere" :servire="servire" valori="29" misura="g"></porzioni>
+                    <porzioni name="Baileys Irish Cream" :servire="servire" valori="30" misura="mL"></porzioni>
+                    <porzioni name="Cucchiaino di vaniglia" :servire="servire" valori="1" misura=""></porzioni>
                   </div>
                 </div>
                 </div>
@@ -104,12 +104,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/DOLCI/Baileys al cioccolato!.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

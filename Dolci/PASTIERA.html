@@ -51,53 +51,53 @@
 
     <h1>Pastiera Napoletana</h1>
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/Pastiera-napoletana.jpg" alt="Pastiera-napoletana" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving">
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire">
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
                   <h4 >PER LA PASTA FROLLA</h4>
-                    <serving-ingredient name="Farina 00" :serving="serving" base-value="315" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Strutto freddo" :serving="serving" base-value="180" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Burro" :serving="serving" base-value="150" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Tuorli" :serving="serving" base-value="3" metric=""></serving-ingredient>
-                    <serving-ingredient name="Zucchero " :serving="serving" base-value="135" metric="g"></serving-ingredient>
+                    <porzioni name="Farina 00" :servire="servire" valori="315" misura="g"></porzioni>
+                    <porzioni name="Strutto freddo" :servire="servire" valori="180" misura="g"></porzioni>
+                    <porzioni name="Burro" :servire="servire" valori="150" misura="g"></porzioni>
+                    <porzioni name="Tuorli" :servire="servire" valori="3" misura=""></porzioni>
+                    <porzioni name="Zucchero " :servire="servire" valori="135" misura="g"></porzioni>
                     
                     <h4>PER CUOCERE IL GRANO</h4>
-                    <serving-ingredient name="Scorza di limone" :serving="serving" base-value="1" metric=""></serving-ingredient>
-                    <serving-ingredient name="Grano cotto" :serving="serving" base-value="350" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Strutto" :serving="serving" base-value="30" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Latte intero" :serving="serving" base-value="250" metric="g"></serving-ingredient>
+                    <porzioni name="Scorza di limone" :servire="servire" valori="1" misura=""></porzioni>
+                    <porzioni name="Grano cotto" :servire="servire" valori="350" misura="g"></porzioni>
+                    <porzioni name="Strutto" :servire="servire" valori="30" misura="g"></porzioni>
+                    <porzioni name="Latte intero" :servire="servire" valori="250" misura="g"></porzioni>
                     <h4 >PER LA CREMA</h4>
-                    <serving-ingredient name="Ricotta vaccina" :serving="serving" base-value="200" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Ricotta di pecora" :serving="serving" base-value="200" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Zucchero" :serving="serving" base-value="350" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Uova" :serving="serving" base-value="3" metric=""></serving-ingredient>
-                    <serving-ingredient name="Cedro candito" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Arancia candita" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Acqua di fiori d'arancio" :serving="serving" base-value="15" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cannella in polvere (1 pizzico)" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Baccello di vaniglia" :serving="serving" base-value="1" metric=""></serving-ingredient>
+                    <porzioni name="Ricotta vaccina" :servire="servire"valorie="200" misura="g"><porzionit>
+                    <porzioni name="Ricotta di pecora" :servire="servire" valori="200" misura="g"></porzioni>
+                    <porzioni name="Zucchero" :servire="servire" valori="350" misura="g"></porzioni>
+                    <porzioni name="Uova" :servire="servire" valori="3" misura=""></porzioni>
+                    <porzioni name="Cedro candito" :servire="servire" valori="50" misura="g"></porzioni>
+                    <porzioni name="Arancia candita" :servire="servire" valori="50" misura="g"></porzioni>
+                    <porzioni name="Acqua di fiori d'arancio" :servire="servire" valori="15" misura="g"></porzioni>
+                    <porzioni name="Cannella in polvere (1 pizzico)" :servire="servire" valori="q.b" misura=""></porzioni>
+                    <porzioni name="Baccello di vaniglia" :servire="servire" valori="1" misura=""></porzioni>
                    
                     <h4 >PER UNGERE E INFARINARE LO STAMPO</h4>
-                    <serving-ingredient name="Strutto" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
-                    <serving-ingredient name="Farina 00" :serving="serving" base-value="q.b" metric=""></serving-ingredient>
+                    <porzioni name="Strutto" :servire="servire" valori="q.b" misura=""></porzioni>
+                    <porzioni name="Farina 00" :servire="servire" valori="q.b" misura=""></porzioni>
                 </div>
                 </div>
                 </div>
@@ -105,12 +105,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/DOLCI/PASTIERA.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" cavire">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">
