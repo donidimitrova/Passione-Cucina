@@ -83,29 +83,7 @@ Smartphone
     }
     
     
-<<<<<<< HEAD
   
-=======
-    /* clearfix */
-    
-    .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-    }
-    * html .clearfix             { zoom: 1; } /* IE6 */
-    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-    
-    *,
-    *:before,
-    *:after {
-            box-sizing: border-box;
-    }
-
->>>>>>> 6430a6d69ee9977249f5f88dabd7a2fc6b1e58c2
     
  /**************
    Footer

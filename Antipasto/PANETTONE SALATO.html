@@ -53,44 +53,44 @@
    
        
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/panettone-salato.jpg" alt="panettone-salato" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving">
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Uova grandi" :serving="serving" base-value="3" metric=""></serving-ingredient>
-                    <serving-ingredient name="Yogurt bianco (magro o inter)" :serving="serving" base-value="125" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Latte" :serving="serving" base-value="100" metric="ml"></serving-ingredient>
-                    <serving-ingredient name="Olio di semi di arachidi" :serving="serving" base-value="100" metric="ml"></serving-ingredient>
-                    <serving-ingredient name="Farina 00" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Lievito istantaneo per torte salate" :serving="serving" base-value="1" metric="bustina"></serving-ingredient>
-                    <serving-ingredient name="Parmeggiano reggiano" :serving="serving" base-value="3" metric="cucchiai"></serving-ingredient>
-                    <serving-ingredient name="Scamorza" :serving="serving" base-value="150" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Prosciutto cotto" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Pancetta dolce (o salame)" :serving="serving" base-value="100" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Olive taggiasche snocciolate" :serving="serving" base-value="70" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Rosmarino (opzionale)" :serving="serving" base-value="qb" metric=""></serving-ingredient>
-                    <serving-ingredient name="Pepe" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire">
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Uova grandi" :servire="servire" valori="3" misura=""></porzioni>
+                    <porzioni name="Yogurt bianco (magro o inter)" :servire="servire" valori="125" misura="g"></porzioni>
+                    <porzioni name="Latte" :servire="servire" valori="100" misura="ml"></porzioni>
+                    <porzioni name="Olio di semi di arachidi" :servire="servire" valori="100" misura="ml"></porzioni>
+                    <porzioni name="Farina 00" :servire="servire" valori="300" misura="g"></porzioni>
+                    <porzioni name="Lievito istantaneo per torte salate" :servire="servire" valori="1" misura="bustina"></porzioni>
+                    <porzioni name="Parmeggiano reggiano" :servire="servire" valori="3" misura="cucchiai"></porzioni>
+                    <porzioni name="Scamorza" :servire="servire" valori="150" misura="g"></porzioni>
+                    <porzioni name="Prosciutto cotto" :servire="servire" valori="100" misura="g"></porzioni>
+                    <porzioni name="Pancetta dolce (o salame)" :servire="servire" valori="100" misura="g"></porzioni>
+                    <porzioni name="Olive taggiasche snocciolate" :servire="servire" valori="70" misura="g"></porzioni>
+                    <porzioni name="Rosmarino (opzionale)" :servire="servire" valori="qb" misura=""></porzioni>
+                    <porzioni name="Pepe" :servire="servire" valori="qb" misura=""></porzioni>
                     <h4 >PER DECORARE</h4>
-                    <serving-ingredient name="Albume" :serving="serving" base-value="1" metric="cucchiaio"></serving-ingredient>
-                    <serving-ingredient name="Mandorle" :serving="serving" base-value="50" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Sale" :serving="serving" base-value="qb" metric=""></serving-ingredient>
+                    <porzioni name="Albume" :servire="servire" valori="1" misura="cucchiaio"></porzioni>
+                    <porzioni name="Mandorle" :servire="servire" valori="50" misura="g"></porzioni>
+                    <porzioni name="Sale" :servire="servire" valori="qb" misura=""></porzioni>
                   </div>
                 </div>
                 </div>
@@ -98,12 +98,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/ANTIPASTO/PANETTONE SALATO.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">

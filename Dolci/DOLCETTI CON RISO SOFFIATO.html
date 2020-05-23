@@ -57,30 +57,30 @@
 
 
 
-<div class="recepie_details_area">
+<div class="ricette">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-md-6">
-                <div class="recepies_thumb">
+                <div class="ricette-foto">
                     <img  src="/img/dolcetti-con-riso-soffiato.jpg" alt="dolcetti-con-riso-soffiato" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                 </div>
             </div>
             <div class="col-xl-6 col-md-6 ">
                 <div id="Vue"> 
-                    <div class="Recipe-IngredientList " style="position: relative;
+                    <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
-                        <h2 class="subtitle fancy">Ingredienti</h2>
+                        <h2 class=" carino">Ingredienti</h2>
                         <div id="app">
-                            <star-rating value="3"></star-rating>
+                            <stelle-rating value="3"></stelle-rating>
                             </div>
-                  <label for="serving">Porzioni :</label>
-                  <input type="number" v-model="serving">
-                  <button @click="decreaseServing">-</button>
-                  <button @click="increaseServing">+</button>
-                    <serving-ingredient name="Riso soffiato bianco" :serving="serving" base-value="60" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Cioccolato fondente (o al latte,bianco)" :serving="serving" base-value="300" metric="g"></serving-ingredient>
-                    <serving-ingredient name="Granella di pistacchi (mandorle, nocciole,cocco) " :serving="serving" base-value="" metric=""></serving-ingredient>
+                  <label for="servire">Porzioni :</label>
+                  <input type="number" v-model="servire">
+                  <button @click="meno">-</button>
+                  <button @click="piu">+</button>
+                    <porzioni name="Riso soffiato bianco" :servire="servire" valori="60" misura="g"></porzioni>
+                    <porzioni name="Cioccolato fondente (o al latte,bianco)" :servire="servire" valori="300" misura="g"></porzioni>
+                    <porzioni name="Granella di pistacchi (mandorle, nocciole,cocco) " :servire="servire" valori="" misura=""></porzioni>
                   </div>
                 </div>
                 </div>
@@ -88,12 +88,12 @@
         </div>
     </div>
 
-    <h2 class="subtitle fancy" style="padding-top: 30px;">Video Ricetta</h2>
+    <h2 class=" carino" style="padding-top: 30px;">Video Ricetta</h2>
     <video controls loop>
         <source src="/video/DOLCI/DOLCETTI CON RISO SOFFIATO e CIOCCOLATO.mp4" type="video/mp4">
       </video>
     
-      <h2 class="subtitle fancy">Preparazione</h2>
+      <h2 class=" carino">Preparazione</h2>
     <div class="container ">
         <div class="filter"></div>
      <div class="procedura">
