@@ -13,17 +13,17 @@ general
 /*-----------------------------
 header
 -----------------------------*/
-
 .header{background: #333; padding-bottom: 5px;}
-.header__logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
-.header__menu{float:right;margin:0; padding:0;}
-.header__menu__item{display: inline-block;}
-.header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
-.header__menu__item a:hover{background: #000}
-.header__menu__item button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
-.header__menu__item button{ border-color: transparent;}
-.header__icon-bar{display: block;float: right;padding:20px;display: none;}
-.header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+.logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
+.Navigazione{float:right;margin:0; padding:0;}
+.tasti{display: inline-block;}
+.tasti a{color:#fff;display: block;padding:20px;text-decoration: none}
+.tasti a:hover{background: #000}
+.tasti button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
+.tasti button{ border-color: transparent;}
+.icona{display: block;float: right;padding:20px;display: none;}
+.icona span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+
 
 .ui-autocomplete {max-height: 300px;width: 100px;overflow-y: scroll;   overflow-x: hidden; z-index:1000 !important;}
 /*-----------------------------
@@ -40,18 +40,18 @@ LOGO
 *********/
 
 @media (min-width: 30em) {
-.header__logo  {display: inline-block; height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
+.logo  {display: inline-block; height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
 }
 /*-----------------------------
 Smartphone
 -----------------------------*/
 @media (max-width: 767px){
 
-    .header{position:fixed; z-index: 100;width:100%}
-    .header__icon-bar{display: block; }
-    .header__logo{float: left;}
-    .header__menu{width:100%;height:0px; overflow: hidden; }
-    .header__menu__item{display: block;}
+  .header{position:fixed; z-index: 100;width:100%}
+  .icona{display: block; }
+  .logo{float: left;}
+  .Navigazione{width:100%;height:0px; overflow: hidden; }
+  .tasti{display: block;}
     .is-open{height:150px; overflow: auto; z-index: 100;}
     .is-open form{ margin-top: 13px; }
     .is-open-modal{height:250px;}
