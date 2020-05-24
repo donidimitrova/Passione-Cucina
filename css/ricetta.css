@@ -14,26 +14,17 @@ general
 /*-----------------------------
 header
 -----------------------------*/
-
 .header{background: #333; padding-bottom: 5px;}
-.header__logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
-.header__menu{float:right;margin:0; padding:0;}
-.header__menu__item{display: inline-block;}
-.header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
-.header__menu__item a:hover{background: #000}
-.header__menu__item button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
-.header__menu__item button{ border-color: transparent;}
-.header__icon-bar{display: block;float: right;padding:20px;display: none;}
-.header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
-
-.ui-autocomplete {
-  max-height: 300px;
-  width: 100px ;
-  overflow-y: scroll;   /* prevent horizontal scrollbar */
-  overflow-x: hidden; /* add padding to account for vertical scrollbar */
-  z-index:1000 !important;
-}
-
+.logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
+.Navigazione{float:right;margin:0; padding:0;}
+.tasti{display: inline-block;}
+.tasti a{color:#fff;display: block;padding:20px;text-decoration: none}
+.tasti a:hover{background: #000}
+.tasti button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
+.tasti button{ border-color: transparent;}
+.icona{display: block;float: right;padding:20px;display: none;}
+.icona span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+.ui-autocomplete {max-height: 300px;width: 100px;overflow-y: scroll;   overflow-x: hidden; z-index:1000 !important;}
 .app{color: #f8d059d7; font-family: 'Droid serif', serif; font-size: 65px; font-style: italic;line-height: 44px; text-align: center;text-shadow: 2px 1px;}
 
 /********
@@ -41,7 +32,7 @@ LOGO
 *********/
 
 @media (min-width: 30em) {
-.header__logo  {display: inline-block; height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
+.logo  {display: inline-block; height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
 }
 
 /*-----------------------------
@@ -49,175 +40,38 @@ Smartphone
 -----------------------------*/
 @media (max-width: 767px){
 
-    .header{position:0; z-index: 100;width:100%}
-    .header__icon-bar{display: block; }
-    .header__logo{
-      float: left;
+  .header{position:fixed; z-index: 100;width:100%}
+  .icona{display: block; }
+  .logo{float: left;}
+  .Navigazione{width:100%;height:0px; overflow: hidden; }
+  .tasti{display: block;}
+  .is-open{height:150px; overflow: auto; z-index: 100;}
+  .is-open form{ margin-top: 13px; }
+  .is-open-modal{height:250px;}
+  .ui-autocomplete {max-height: 300px;width: 100px;overflow-y: scroll; overflow-x: hidden;z-index:1000 !important;} 
+  .carino span:before {right: 100%;margin-right: 15px;width: 80px;}
+  .carino span:after {left: 100%;margin-left: 15px;width: 80px;} 
     }
-    
-    .header__menu{width:100%;height:0px; overflow: hidden; }
-    .header__menu__item{display: block;}
-    .is-open{height:150px; overflow: auto; z-index: 100;}
-    .is-open form{ margin-top: 13px; }
-    .is-open-modal{height:250px;}
-   
-    .ui-autocomplete {
-      max-height: 300px;
-      width: 100px !important;
-      overflow-y: scroll;   /* prevent horizontal scrollbar */
-      overflow-x: hidden; /* add padding to account for vertical scrollbar */
-      z-index:1000 !important;
-    }
-    
-    .carino span:before {
-      right: 100%;
-      margin-right: 15px;
-      width: 80px;
-    }
-    .carino span:after {
-      left: 100%;
-      margin-left: 15px;
-      width: 80px;
-    }
-    
-    }
-    
-    
-  
-    
+
  /**************
    Footer
    *************/
-   .mastfoot {
-    margin-bottom: 3px;
-    color: rgba(0, 0, 0, 0.699);
-    text-align: center;
-  }
-  
-  h1 {
-    font-family: 'Merienda', cursive !important;
-  background-size: cover;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  margin-top: 5px;
-}
-
-.carino {
-  text-align: center;
-  font-family: 'Ruluko', sans-serif !important;
-  background-size: cover;
-  color: rgb(0, 0, 0);
-  text-align: center;
- 
-}
-
-.Ingredienti{
-  font-family: 'Titillium Web', sans-serif;
-}
-
-
-.Ingredienti {
-  width: inherit;
-  margin-top: 0;
-  border: 2px solid rgba(15, 15, 15, 0.384);
-  border-radius: 23px;
-  margin: 2px;
-  background-image: url(/img/sfondo.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 500px;
-  overflow-y: auto;
-}
-.Ingredienti {
- border-bottom: transparent;
- padding: 5px;
-}
-.Ingredienti:last-child {
- border-bottom: none;
-}
-.Ingredienti span {
- font-weight: 600;
-}
-
-.ricette {
-  margin-top: 50px;
-}
-
-.ricette .ricette-foto {
-  margin-bottom: 60px;
-}
-
-.ricette .ricette-foto img {
-  width: 70%;
-  height: inherit;
-  border-radius: 5px;
-  border: 2px solid rgba(15, 15, 15, 0.384);
-  
-}
-.procedura h3{
-  font-family: 'Ruluko', sans-serif !important;
-  color: #000;
-}
-
-
-
-.procedura{
-  border-radius: 20px;
-  margin-top: 20px;
-  max-height: 450px;
-  border: 2px solid rgba(15, 15, 15, 0.384);
-  overflow-y:auto;
-  background-image: url(/img/bay2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.steps {
-    border-bottom: 1px solid white;
-    padding: 1rem;
-    font-size: 1.2rem;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Titillium Web', sans-serif;
-    
-}
-
-
-.star-rating__checkbox {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
-.star-rating__star {
-  display: inline-block;
-  padding: 3px;
-  vertical-align: middle;
-  line-height: 1;
-  font-size: 1.5em;
-  color: rgba(255, 255, 255, 0.425);
-  transition: color .2s ease-out;
-}
-.star-rating__star.is-selected {
-  color: #FFD700;
-}
-  video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; 
-    overflow: hidden;
-    margin-bottom: 30px;
-  }
-
-  .breadcrumb{
-    background-color: rgba(0, 0, 0, 0.041);
-  }
+   .mastfoot {margin-bottom: 3px;color: rgba(0, 0, 0, 0.699);text-align: center;}
+  h1 {font-family: 'Merienda', cursive !important;background-size: cover;color: rgb(0, 0, 0);text-align: center;margin-top: 5px;}
+  .carino {text-align: center;font-family: 'Ruluko', sans-serif !important;background-size: cover;color: rgb(0, 0, 0);text-align: center; }
+  .Ingredienti{font-family: 'Titillium Web', sans-serif;}
+  .Ingredienti {width: inherit;margin-top: 0;border: 2px solid rgba(15, 15, 15, 0.384);border-radius: 23px;margin: 2px;background-image: url(/img/sfondo.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;max-height: 500px;overflow-y: auto;}
+  .Ingredienti {border-bottom: transparent;padding: 5px;}
+  .Ingredienti:last-child {border-bottom: none;}
+  .Ingredienti span {font-weight: 600;}
+  .ricette {margin-top: 50px;}
+  .ricette .ricette-foto {margin-bottom: 60px;}
+  .ricette .ricette-foto img {width: 70%;height: inherit;border-radius: 5px;border: 2px solid rgba(15, 15, 15, 0.384);}
+  .procedura h3{font-family: 'Ruluko', sans-serif !important;color: #000;}
+  .procedura{border-radius: 20px;margin-top: 20px;max-height: 450px;border: 2px solid rgba(15, 15, 15, 0.384);overflow-y:auto;background-image: url(/img/bay2.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;}
+  .steps {border-bottom: 1px solid white;padding: 1rem;font-size: 1.2rem;color: white;text-align: center;display: flex;flex-direction: column;justify-content: center;font-family: 'Titillium Web', sans-serif;  }
+  .star-rating__checkbox {position: absolute;overflow: hidden;clip: rect(0 0 0 0);height: 1px;width: 1px;margin: -1px;padding: 0;border: 0;}
+  .star-rating__star {display: inline-block;padding: 3px;vertical-align: middle;line-height: 1;font-size: 1.5em;color: rgba(255, 255, 255, 0.425);transition: color .2s ease-out;}
+  .star-rating__star.is-selected {color: #FFD700;}
+  video {max-width: 100%;height: auto;border-radius: 10px; overflow: hidden;margin-bottom: 30px;}
+  .breadcrumb{background-color: rgba(0, 0, 0, 0.041);}
