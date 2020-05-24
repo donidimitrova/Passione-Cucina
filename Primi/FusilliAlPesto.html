@@ -195,6 +195,11 @@
     <label class="votazione__stelle" v-for="voto in voti" :class="{'selezionato': ((valore >= voto) && valore != null), 'disabilitato': disabled}" @mouseover="sopra(voto)" @mouseout="lascia">
       <input class="votazione votazione__checkbox" type="radio" :name="name" :disabled="disabled" :id="id" :required="required" v-model="valore" @click="imposta(voto)"> <i class="fas fa-star"></i> 
     </label>
+    <label class="scritta" v-if="valore==1">1/5</label>
+    <label class="scritta" v-if="valore==2">2/5</label>
+    <label class="scritta" v-if="valore==3">3/5</label>
+    <label class="scritta" v-if="valore==4">4/5</label>
+    <label class="scritta" v-if="valore==5">5/5</label>
   </div>
 </template>
         <!----------------------------------------------->

@@ -76,3 +76,14 @@ Smartphone
 .votazione__stelle {padding: 3px;line-height: 1;font-size: 30px;color: rgb(155, 151, 151);}
 .votazione__stelle.selezionato {color: #FFD700;text-shadow: 2px 2px  black;}
 
+label.scritta {
+  text-shadow: 0 0 0px black;
+  box-shadow: 1px -1px 4px 1px black;
+  color: rgb(182, 12, 12);
+  font-size: 25px;
+  font-weight: bolder;
+  border-radius: 6px;
+  margin-left: 5px;
+
+}
+

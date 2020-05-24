@@ -62,9 +62,6 @@
                     <div class="Ingredienti " style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                         <h2 class=" carino">Ingredienti</h2>
-                        <div id="app">
-                            <stelle-rating value="3"></stelle-rating>
-                            </div>
                   <label for="servire">Porzioni :</label>
                   <input type="number" v-model="servire">
                   <button @click="meno">-</button>
@@ -206,7 +203,23 @@
     
 </div>
     
+<div id="stelle">
+  <h2 class="carino pt-3">Che voto dai a questa ricetta?</h2>
+  <votazione ></votazione>
+</div>   
 
+<template id="template-stelle">
+  <div class="votazione">
+    <label class="votazione__stelle" v-for="voto in voti" :class="{'selezionato': ((valore >= voto) && valore != null), 'disabilitato': disabled}" @mouseover="sopra(voto)" @mouseout="lascia">
+      <input class="votazione votazione__checkbox" type="radio" :name="name" :disabled="disabled" :id="id" :required="required" v-model="valore" @click="imposta(voto)"> <i class="fas fa-star"></i> 
+    </label>
+    <label class="scritta" v-if="valore==1">1/5</label>
+    <label class="scritta" v-if="valore==2">2/5</label>
+    <label class="scritta" v-if="valore==3">3/5</label>
+    <label class="scritta" v-if="valore==4">4/5</label>
+    <label class="scritta" v-if="valore==5">5/5</label>
+  </div>
+</template>
 
 
 
