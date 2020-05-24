@@ -70,8 +70,9 @@ Smartphone
   .procedura h3{font-family: 'Ruluko', sans-serif !important;color: #000;}
   .procedura{border-radius: 20px;margin-top: 20px;max-height: 450px;border: 2px solid rgba(15, 15, 15, 0.384);overflow-y:auto;background-image: url(/img/bay2.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;}
   .steps {border-bottom: 1px solid white;padding: 1rem;font-size: 1.2rem;color: white;text-align: center;display: flex;flex-direction: column;justify-content: center;font-family: 'Titillium Web', sans-serif;  }
-  .star-rating__checkbox {position: absolute;overflow: hidden;clip: rect(0 0 0 0);height: 1px;width: 1px;margin: -1px;padding: 0;border: 0;}
-  .star-rating__star {display: inline-block;padding: 3px;vertical-align: middle;line-height: 1;font-size: 1.5em;color: rgba(255, 255, 255, 0.425);transition: color .2s ease-out;}
-  .star-rating__star.is-selected {color: #FFD700;}
   video {max-width: 100%;height: auto;border-radius: 10px; overflow: hidden;margin-bottom: 30px;}
   .breadcrumb{background-color: rgba(0, 0, 0, 0.041);}
+.votazione__checkbox {width: 0px;}
+.votazione__stelle {padding: 3px;line-height: 1;font-size: 30px;color: rgb(155, 151, 151);}
+.votazione__stelle.selezionato {color: #FFD700;text-shadow: 2px 2px  black;}
+

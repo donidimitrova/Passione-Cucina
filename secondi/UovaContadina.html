@@ -72,9 +72,8 @@
                     <div class="Ingredienti" style="position: relative;
                     box-shadow: 0 24px 10px -20px rgba(0, 0, 0, 0.5);">
                         <h2 class="carino">Ingredienti</h2>
-                        <div id="app">
-                            <stelle-rating value="3"></stelle-rating>
-                            </div>
+                        
+                      
                   <label for="servire">Porzioni :</label>
                   <input type="number" v-model="servire" >
                   <button @click="meno">-</button>
@@ -129,8 +128,22 @@
 <section class='steps' data-step='consiglio'>
   <h3>CONSIGLIO</h3>
   <p>In alternativa ai tomini potete utilizzare altri formaggi come il brie, la fontina o la provola.</p>
-</section>                 
+</section>  
 </div>
+
+<div id="stelle">
+  <h2 class="carino pt-3">Che voto dai a questa ricetta?</h2>
+  <votazione ></votazione>
+</div>   
+
+<template id="template-stelle">
+  <div class="votazione">
+    <label class="votazione__stelle" v-for="voto in voti" :class="{'selezionato': ((valore >= voto) && valore != null), 'disabilitato': disabled}" @mouseover="sopra(voto)" @mouseout="lascia">
+      <input class="votazione votazione__checkbox" type="radio" :name="name" :disabled="disabled" :id="id" :required="required" v-model="valore" @click="imposta(voto)"> <i class="fas fa-star"></i> 
+    </label>
+  </div>
+</template>
+
 
 
  
@@ -151,11 +164,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
     <script type="text/javascript" src="/js/ricette.js"></script>
     <script type="text/javascript" src="/js/logout.js"></script>
     <script type="text/javascript" src="/js/recipe.js"></script>
