@@ -16,7 +16,6 @@
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
    <!--IL MIO CODICE PER ICONE BELLE-->
    <script src="https://kit.fontawesome.com/1aa4ba836e.js" crossorigin="anonymous"></script>  
-
 </head>
 <body class="text-center" onload="return inizializzaStorageUtenti();">
 
@@ -77,7 +76,8 @@
               <div><input type="email" name="email" class="Email" id="Email" placeholder="Email" required onchange="return emailValida();"></div>
               <div> <input type="text" name="nome" class="Nome" id="Nome" placeholder="Nome" required></div>
               <div> <input type="text" name="cognome" class="Cognome" placeholder="Cognome" required></div>
-              <div> <input type="date" id="datepicker" name="DataNascita" class="Data" placeholder="Data di nascita" autocomplete="off" required></div>
+              <div> <input type="date" id="datepicker" name="DataNascita" class="Data" placeholder="Data di nascita" autocomplete="off" required>
+              </div>
               <div>
                 <input type="text" name="domandaSegreta" id="domandaSegreta" class="domandaSegreta" placeholder="Anno di nascita di tua madre" required >
               </div>
@@ -87,9 +87,7 @@
               <div class="showpwd" >
                 <label style="display: inline-block; color: ivory; "><input style="width:30px; height:15px; " type="checkbox" onclick="showPwd();"/>Mostra Password</label>
               </div>
-              
               <div class="g-recaptcha" data-theme="dark"   data-sitekey="6LfVxPQUAAAAAB40vHKxjk02LmjmMLIgmbgrcD16" data-callback="onSuccess" ></div>
-              
               <div> <button class="btn-reg" type="submit" value="Registrati" name="submit"id ="reg" >  Registrati</button></div>
             </form>
         </div>
@@ -104,8 +102,6 @@
         </div>
       </footer>
       
-
-
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -117,10 +113,12 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
         <script type="text/javascript" src="/js/open.js"> </script>
         <script type="text/javascript" src="/js/login.js"></script>
         <script type="text/javascript" src="/js/password.js"></script>
-         
+        
+        
 
 
 </body>
