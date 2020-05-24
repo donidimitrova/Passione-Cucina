@@ -4,11 +4,6 @@ body {
        background-repeat: no-repeat;
        background-size:cover;
     }
- 
-  /*-----------------------------
-  general
-  -----------------------------*/
-  
   .button{display: inline-block; background: #fff; color:#000;padding: 15px 30px; border-radius:3px; text-decoration: none; }
   
   /*-----------------------------
@@ -16,222 +11,73 @@ body {
   -----------------------------*/
   
   .header{background: #333; padding-bottom: 5px;}
-.header__logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
-.header__menu{float:right;margin:0; padding:0;}
-.header__menu__item{display: inline-block;}
-.header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
-.header__menu__item a:hover{background: #000}
-.header__menu__item button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
-.header__menu__item button{ border-color: transparent;}
-.header__icon-bar{display: block;float: right;padding:20px;display: none;}
-.header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+  .logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
+  .Navigazione{float:right;margin:0; padding:0;}
+  .tasti{display: inline-block;}
+  .tasti a{color:#fff;display: block;padding:20px;text-decoration: none}
+  .tasti a:hover{background: #000}
+  .tasti button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
+  .tasti button{ border-color: transparent;}
+  .icona{display: block;float: right;padding:20px;display: none;}
+  .icona span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
   
 /********
 LOGO
 *********/
-
 @media (min-width: 30em) {
-    .header__logo  {
-      display: inline-block;
-              height: inherit;
-              left: 1px;
-              line-height: inherit;
-              margin: 0;
-              padding: 0;
-              position: absolute;
-        top: 0;
-        
-    }
-   
-  }
+  .logo  {display: inline-block;height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}
+}
 
-  
 /*-----------------------------
 Smartphone
 -----------------------------*/
 @media (max-width: 767px){
-
 	.header{position:fixed; z-index: 100;width:100%}
-  .header__icon-bar{display: block; }
-  .header__logo{
-    float: left;
-  }
-
-  .modal-content{
-    z-index: 9999;
-  }
-
-	.header__menu{width:100%;height:0px; overflow: hidden; }
-	.header__menu__item{display: block;}
+  .icona{display: block; }
+  .logo{float: left;}
+  .Navigazione{width:100%;height:0px; overflow: hidden; }
+	.tasti{display: block;}
+  .modal-content{z-index: 9999;}
   .is-open{height:200px; overflow: auto; }
-  
-
 	/* Cover */
 	.cover{height:100%;}
 }
-
-/* clearfix */
-
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-	}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-*,
-*:before,
-*:after {
-          box-sizing: border-box;
-}
-
-
-
-
-
  /**************
    Footer
    *************/
-   .mastfoot {
-    padding-top: 45px;
-    color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
+   .mastfoot { padding-top: 45px;color: rgba(0, 0, 0, 0.5);text-align: center;}
   
-
-
 /**********************************
 REGISTRAZIONE
 ************************************/
-form {
-    width: 100%;
-}
-
-.title {
-	font-size: 50px;
-	font-weight: 700px;
-	text-shadow:0 1px 4px rgba(0,0,0,.2);
-    text-align:center;
-     font-family: calibri;
-     color: beige;
-     text-shadow: 20px -12px 20px black;
-     padding-top: 3px;
-}
+form {width: 100%;}
+.title {font-size: 50px;font-weight: 700px;text-shadow:0 1px 4px rgba(0,0,0,.2);text-align:center;font-family: calibri;color: beige;text-shadow: 20px -12px 20px black;padding-top: 3px;}
 
 @media (max-width: 680px) {
-	.title {
-        padding-top: 70px;
-        font-size: 20px;
-        font-weight: auto;
-        padding-bottom: 0px;
-    }
-    
+	.title {padding-top: 70px;font-size: 20px;font-weight: auto;padding-bottom: 0px;}
 }
 
-input {
-    width:270px;
-    height:42px;
-    margin-top:15px;
-    background:#2d2d2d;
-    background:rgba(45,45,45,.15);
-    text-align:center;
-    border-radius:6px;
-    border:1px solid #3d3d3d;
-    border:1px solid rgba(255,255,255,.15);
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    font-size:16px;
-    color:#fff;
-    text-shadow:0 1px 2px rgba(0,0,0,.1);
-    }
-    input[type=checkbox]  {
-      vertical-align: middle;
-      position: relative;
-      bottom: 1px;
-      margin-top: 0;
-  }
-  
-
-input:focus {
-    outline:none;
-    box-shadow:
-            0 2px 3px 0 rgba(0,0,0,.1) inset,
-            0 2px 7px 0 rgba(0,0,0,.2);
-    }
-
-
-  .g-recaptcha{
+input {width:270px;height:42px;margin-top:15px;background:#2d2d2d;background:rgba(45,45,45,.15);text-align:center;border-radius:6px;border:1px solid #3d3d3d;border:1px solid rgba(255,255,255,.15);box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;font-family: 'PT Sans', Helvetica, Arial, sans-serif;font-size:16px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.1);}
+input[type=checkbox]  {vertical-align: middle;position: relative;bottom: 1px;margin-top: 0;}
+input:focus {outline:none;box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset,0 2px 7px 0 rgba(0,0,0,.2);}
+.g-recaptcha{
     display: inline-block;
     background-color: #2d2d2d;
     margin-top: 11px;
   }
-    .btn-reg {
-        width: 270px;
-        height:44px;
-        margin-top:25px;
-        padding:0;
-        background:#a30f0f;
-        border-radius: 6px;
-        border:1px solid #8b140b;
-        box-shadow:
-                0 15px 30px 0 rgba(255,255,255,.25) inset,
-                0 2px 7px 0 rgba(0,0,0,.2);
-        font-family:'PT Sans', Helvetica, Arial, sans-serif;
-        font-size:14px;
-        font-weight:700;
-        color:#fff;
-        text-shadow:0 1px 2px rgba(0,0,0,.1);
-        }
-
-
-        .btn-reg:hover {
-            box-shadow:
-                0 15px 30px 0 rgba(255,255,255,.15) inset,
-                0 2px 7px 0 rgba(0,0,0,.2);
-        }
-        
-        .btn-reg:active {
-            box-shadow:        
-                0 5px 8px 0 rgba(0,0,0,.1) inset,
-                0 1px 4px 0 rgba(0,0,0,.1);
-        
-            border: 0px solid #ef1c00;
-        }
-        
-    
-
-    @media (max-width: 991px) {
-        .page-container {
-          min-width: 768px; } }
-      @media (max-width: 767px) {
-        .page-container {
-          min-width: auto;
-          background: none;
-          padding-top: 0;
-          padding-bottom: 0; }
-      
-        form {
-          width: 100%;
-          padding-right: 15px;
-          padding-left: 15px; }
-          input{
-            margin-top: 10px;
-          }
-          .g-recaptcha{margin-top: 0px;}
-          #reg{margin-top: 0px;}
-        .mastfoot{ padding-top: 10px;} 
-        }
-
-
- 
-
-  @media screen and (max-height: 575px){
-    #rc-imageselect, .g-recaptcha {
-    transform:scale(0.77);
-    transform-origin:0 0;
-    }
-    }
+.btn-reg {width: 270px;height:44px;margin-top:25px;padding:0;background:#a30f0f;border-radius: 6px;border:1px solid #8b140b;box-shadow:0 15px 30px 0 rgba(255,255,255,.25) inset,0 2px 7px 0 rgba(0,0,0,.2);font-family:'PT Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.1);}
+.btn-reg:hover {box-shadow: 0 15px 30px 0 rgba(255,255,255,.15) inset, 0 2px 7px 0 rgba(0,0,0,.2);}
+.btn-reg:active {box-shadow: 0 5px 8px 0 rgba(0,0,0,.1) inset,0 1px 4px 0 rgba(0,0,0,.1); border: 0px solid #ef1c00;}
+@media (max-width: 991px) {
+  .page-container {min-width: 768px; } }
+@media (max-width: 767px) {
+  .page-container {min-width: auto;background: none;padding-top: 0;padding-bottom: 0; }
+  form {width: 100%;padding-right: 15px;padding-left: 15px; }
+  input{margin-top: 10px;}
+  .g-recaptcha{margin-top: 0px;}
+  #reg{margin-top: 0px;}
+  .mastfoot{ padding-top: 10px;} 
+}
+@media screen and (max-height: 575px){
+  #rc-imageselect, .g-recaptcha {transform:scale(0.77);transform-origin:0 0;}
+}

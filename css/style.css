@@ -1,29 +1,23 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 html,body{height:100%;}
 body{background: #eee;}
-
-/*-----------------------------
-generali
------------------------------*/
-
 .button{display: inline-block; background: #fff; color:#000;padding: 15px 30px; border-radius:3px; text-decoration: none; }
 
 /*-----------------------------
 header
 -----------------------------*/
 .header{background: #333; padding-bottom: 5px;}
-.header__logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
-.header__menu{float:right;margin:0; padding:0;}
-.header__menu__item{display: inline-block;}
-.header__menu__item a{color:#fff;display: block;padding:20px;text-decoration: none}
-.header__menu__item a:hover{background: #000}
-.header__menu__item button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
-.header__menu__item button{ border-color: transparent;}
-.header__icon-bar{display: block;float: right;padding:20px;display: none;}
-.header__icon-bar span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
+.logo{color:#fff; float:left;display: block;text-decoration: none; opacity: 0.5;}
+.Navigazione{float:right;margin:0; padding:0;}
+.tasti{display: inline-block;}
+.tasti a{color:#fff;display: block;padding:20px;text-decoration: none}
+.tasti a:hover{background: #000}
+.tasti button:hover{ background: rgb(0, 0, 0);border-color: transparent; justify-self: center;}
+.tasti button{ border-color: transparent;}
+.icona{display: block;float: right;padding:20px;display: none;}
+.icona span{display: block;height:3px; width: 30px;background: #fff; margin-bottom: 5px;}
 
 /*-----------------------------
 Cover
@@ -39,63 +33,24 @@ Cover
 .cover_centrale_testo{ display: table-cell; vertical-align: middle; text-align: center; color:#fff; }
 .cover_centrale_testo a{text-decoration: none;font-style: normal;color: rgb(0, 0, 0); background-color: #fff; border: 2px solid rgb(95, 94, 94); }
 
-video {
-  width: 100%    !important;
-  height: auto   !important;
-}
+video {width: 100%    !important;height: auto   !important;}
 
 /********
 LOGO
 *********/
 
 @media (min-width: 30em) {
-.header__logo  {
-  display: inline-block;
-    height: inherit;
-    left: 1px;
-    line-height: inherit;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    
-}
-
-}
-.ricette,.text-left h2{
-
-font-family: 'Rancho', cursive;
-color:   rgba(247, 64, 18, 0.781);
-}
+.logo  {display: inline-block;height: inherit;left: 1px;line-height: inherit;margin: 0;padding: 0;position: absolute;top: 0;}}
+.ricette,.text-left h2{font-family: 'Rancho', cursive;color:   rgba(247, 64, 18, 0.781);}
 
 /*************************************************
 Presentazione le 3 immagini
 -------------------------------------------------- */
 
-.presentazione .col-lg-4 {
-margin-bottom: 24px;
-text-align: center;
-}
-.presentazione h2 {
-
-font-family: 'Rancho', cursive;
-color:  rgba(247, 64, 18, 0.781);
-}
-
- p{
-font-weight: 200;
-font-family: 'Kurale', serif;
-color: rgb(0, 0, 0);
-text-shadow: none;
-}
-.presentazione .col-lg-4 p {
-margin-right: 10px;
-margin-left: 10px;
-}
-
-
-
-
+.presentazione .col-lg-4 {margin-bottom: 24px;text-align: center;}
+.presentazione h2 {font-family: 'Rancho', cursive;color:  rgba(247, 64, 18, 0.781);}
+ p{font-weight: 200;font-family: 'Kurale', serif;color: rgb(0, 0, 0);text-shadow: none;}
+.presentazione .col-lg-4 p {margin-right: 10px;margin-left: 10px;}
 
 /*-----------------------------
 Smartphone
@@ -103,151 +58,48 @@ Smartphone
 @media (max-width: 767px){
 
 .header{position:fixed; z-index: 100;width:100%}
-.header__icon-bar{display: block; }
-.header__logo{
-  float: left;
-}
-
-.header__menu{width:100%;height:0px; overflow: hidden; }
-.header__menu__item{display: block;}
+.icona{display: block; }
+.logo{float: left;}
+.Navigazione{width:100%;height:0px; overflow: hidden; }
+.tasti{display: block;}
 .is-open{height:200px; overflow: auto; z-index: 100;}
 .is-open-modal{height:250px;}
 /* Cover */
 .cover{height:100%;}
-
-
 }
-
-.carousel-inner .carousel-item{
-height: 300px;
-overflow: hidden;
-background-size:cover;
-background-position: center center;
-}
-
+.carousel-inner .carousel-item{height: 300px;overflow: hidden;background-size:cover;background-position: center center;}
 .carousel-control-prev-icon ,
-.carousel-control-next-icon  {
-height: 50px;
-width: 50px;
-background-size: 100%, 100%;
-background-color: rgba(51, 51, 51, 0.192);
-}
+.carousel-control-next-icon  {height: 50px;width: 50px;background-size: 100%, 100%;background-color: rgba(51, 51, 51, 0.192);}
 
 /*-----------------------------
 Tabella Immagini con nome
 -----------------------------*/
 
-.nome{
-background: #FF512F;
-background: -webkit-linear-gradient(to right, #F09819, #FF512F);
-background: linear-gradient(to right, #F09819, #FF512F);
--webkit-background-clip: text; /*****senza il testo non si legge***/
--webkit-text-fill-color: transparent; /****colore della scritta sull'immagine senza è arancione lo sfondo***/
-font-size: auto;
-}
-
-.btn-primary:hover {
-background-color:transparent;
-border-color: #d6962c;
-color: #d6962c;
-border-radius: 20px;
-}
-
-.testo{
-display:inline-block;
-padding:0;
-position:relative;
-overflow:hidden;
-}
-.testo img{
-width:100%;
-
-}
-
-.testo:hover .testo-immagine{
-top:5%;
-left: 5%;
-}
-
-.testo-immagine{
-width: 90%;
-height: 90%;
-background: rgba(0, 0, 0, 0.8);
-padding: 20px;
-margin: 0 auto;
-top: -100%;
-left: 5%;
-position: absolute;
-transition:.6s;
-
-}
-.testo-immagine h6{
-text-transform: uppercase;
-font-size: 30px;
-border: 2px solid #fff;
-padding-top: 10px;
-padding-bottom: 10px;
-}
-
-
-
-.zoom{
-width: 200px;
-height: 200px;
-position: absolute;
-bottom: -100px;
-right: -100px;
-border-radius: 50%;
-background: linear-gradient(to right, #F09819, #FF512F);
-box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
-opacity:0.9;
-}
-
-.zoom:before {
-  content: "\f00e";
-  color: transparent;
-  font-size: 70px;
-  padding-right: 20px;
-  position: absolute;
-  top: 10px;
-  left: 30px;
-  background-image: url(../img/zoom.jpg);
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.4;
-  }
+.nome{background: #FF512F;background:linear-gradient(to right, #F09819, #FF512F);background-clip: text; /*****senza il testo non si legge***/font-size: auto;}
+.btn-primary:hover {background-color:transparent;border-color: #d6962c;color: #d6962c;border-radius: 20px;}
+.testo{display:inline-block;padding:0;position:relative;overflow:hidden;}
+.testo img{width:100%;}
+.testo:hover .testo-immagine{top:5%;left: 5%;}
+.testo-immagine{width: 90%;height: 90%;background: rgba(0, 0, 0, 0.8);padding: 20px;margin: 0 auto;top: -100%;left: 5%;position: absolute;transition:.6s;}
+.testo-immagine h6{text-transform: uppercase;font-size: 30px;border: 2px solid #fff;padding-top: 10px;padding-bottom: 10px;}
+.zoom{width: 200px;height: 200px;position: absolute;bottom: -100px;right: -100px;border-radius: 50%;background: linear-gradient(to right, #F09819, #FF512F);box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);opacity:0.9;}
+.zoom:before {content: "\f00e";color: transparent;font-size: 70px;padding-right: 20px;position: absolute;top: 10px; left: 30px;background-image: url(../img/zoom.jpg);background-size: 70px;background-repeat: no-repeat;background-position: center;opacity: 0.4;}
+.testo-immagine .nome{font-size: inherit;font-weight:800;line-height:30px;}
 
 @media (min-width:769px) and (max-width:991px) {
-.testo-immagine {
-  padding: 0px;
-}
+.testo-immagine {padding: 0px;}
 }
 @media (max-width:768px) {
-.testo-immagine{
-  padding: 170px 20px;
-}
+.testo-immagine{padding: 170px 20px;}
 }
 @media (max-width:580px) {
-.testo-immagine{
-  padding: 100px 20px;
-}
+.testo-immagine{padding: 100px 20px;}
 }
 @media (max-width:480px) {
-.testo-immagine{
-  padding: 40px 20px;
-}
+.testo-immagine{padding: 40px 20px;}
 }
 @media (max-width:320px) {
-.testo-immagine{
-  padding: 20px;
-}
-}
-
-.testo-immagine .nome{
-font-size: inherit;
-font-weight:800;
-line-height:30px;
+.testo-immagine{padding: 20px;}
 }
 
 
