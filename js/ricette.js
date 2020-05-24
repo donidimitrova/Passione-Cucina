@@ -1,5 +1,5 @@
 $( function() {
-    var availableTags = [
+    var ricette = [
       "Gnocchi Speck Noci e Toma",
       "Fusilli al baffo con guanciale",
       "Zuppa di pesce",
@@ -40,7 +40,8 @@ $( function() {
       "Torta fredda Rocher"
     ];
     $( "#tags" ).autocomplete({
-      source: availableTags
+      source: ricette,
+      autoFocus: true
                                 
     });
   });
