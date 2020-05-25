@@ -59,7 +59,7 @@ function ok(){
   var l= u.length;
   for(i=0;i<l;i++){
     if(u[i].email== document.getElementById("Email").value){
-      return false;
+      return true;
     }
   }
   var o = { email:document.getElementById("Email").value, nome:document.getElementById("Nome").value};
@@ -87,6 +87,8 @@ function ok(){
       return true;
     }
   }
+  
+
   }
   var n=localStorage.nomeUtente;
   document.getElementById("utente").innerHTML= "&nbsp" + n;
