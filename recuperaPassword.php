@@ -28,7 +28,7 @@
                             $q3="update login set password=$1 where email=$2";
                             $data=pg_query_params($dbconn,$q3,array($password,$email));
                             if($data){ /*successo cambiopassword*/
-                                header("Location:/seconda.parte/iniziale.html?$email");
+                                header("Location:/seconda.parte/iniziale.html?reg=true&email=$email");
                             }
                           }
                    }

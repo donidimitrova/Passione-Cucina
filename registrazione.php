@@ -28,7 +28,7 @@
                        $q2="insert into login values ($1,$2,$3,$4,$5,$6)";
                        $data=pg_query_params($dbconn,$q2,array($nome,$cognome,$email,$DataNascita,$password,$annoMadre));
                        if($data){
-                           header("Location:/seconda.parte/iniziale.html?$email");
+                           header("Location:/seconda.parte/iniziale.html?reg=true&email=$email");
                            
    
                        }
