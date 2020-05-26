@@ -1,5 +1,5 @@
 (function ($) {
-    'use strict';
+    'use strict'; 
 
     var form = $('.contact__form'),
         message = $('.contact__msg'),
@@ -17,7 +17,7 @@
 
     // fail function
     function fail_func(data) {
-        message.fadeIn().removeClass('alert-success').addClass('alert-success');
+        message.fadeIn().removeClass('alert-success').addClass('alert-danger');
         message.text(data.responseText);
         setTimeout(function () {
             message.fadeOut();

@@ -2,13 +2,14 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $mail_to = "dimitrovadonika@gmail.com";
+        $mail_to = " Donika <dimitrovadonika@gmail.com>, Aurora <ambra.colacchi@gmail.com>";
         $subject = trim($_POST["subject"]);
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["message"]);
         
-        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL)  OR empty($subject) OR empty($message)) {
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL)  
+        OR empty($subject) OR empty($message)) {
             http_response_code(400);
             echo "Completa il form prima del invio!";
             exit;

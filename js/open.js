@@ -75,10 +75,9 @@ function ok(){
     if (typeof(localStorage.nomeUtente) == "undefined") {
       localStorage.nomeUtente="";
       }
-    var url=window.location.href;
-    var urlSplit=url.split("?");
-    var email=urlSplit[1];
-    if(email != "undefined"){
+    var url=new URL(window.location.href);
+    if(url.searchParams.get("reg")== "true"){
+    var email=url.searchParams.get("email")
     var u=JSON.parse(localStorage.utenti);
     for(i=0;i<u.length;i++){
       if(u[i].email==email){

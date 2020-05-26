@@ -13,7 +13,7 @@ $(document).ready(function(){
                            case '1': // Login successful 
                                 $('#inputEmail').val('');
                                 $('#inputPassword').val('');
-                                window.location.replace("/seconda.parte/iniziale.html?"+ email);
+                                window.location.replace("/seconda.parte/iniziale.html?reg=true&email="+ email);
                                 break;
 
                             case '2': // Empty Field
@@ -25,8 +25,8 @@ $(document).ready(function(){
                             case '4': //Password is wrong
                                 $('.statusMsg').html('<span style="color:red;">Errore password</span>');
                                 break;
-                            case '5': //Querry error
-                                $('.statusMsg').html('<span style="color:red;">Errore query</span>');
+                            case '5': //Connection error
+                                $('.statusMsg').html('<span style="color:red;">Errore connessione</span>');
                                 break;
                           }
                   }

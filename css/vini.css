@@ -63,7 +63,7 @@ h1{font-family: 'Merienda', cursive !important;font-weight: normal;color: rgb(32
 .container:hover .front,
 .container:hover .back{transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);}
 .back{position: absolute;top: 0;left: 0;width: 100%;}
-.inner{transform: translateY(-50%) translateZ(60px) scale(0.94);top: 50%;position: absolute;left: 0;width: 100%;padding: 32px;box-sizing: border-box;outline: 1px solid transparent;perspective: inherit;z-index: 2;}
+.inner{ transform: translateY(-50%) translateZ(60px) scale(0.94);top: 50%;position: absolute;left: 0;width: 100%;padding: 32px;box-sizing: border-box;outline: 1px solid transparent;perspective: inherit;z-index: 2;}
 .container .back{transform: rotateY(180deg);transform-style: preserve-3d;box-shadow: 3px -2px 5px 0px black;}
 .container .front{transform: rotateY(0deg);transform-style: preserve-3d;box-shadow: 3px -2px 5px 0px black;}
 .container:hover .back{transform:rotateY(0deg);transform-style: preserve-3d;}
